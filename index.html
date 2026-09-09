@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="Проекты мебели для дома: шкафы в спальне, прихожей и постирочной, тумба в ванной. Схемы, фасады, размеры и наполнение.">
+  <title>Мебель для дома</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/site.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#projects">К проектам</a>
+  <div class="page">
+    <header class="masthead">
+      <div>
+        <p class="eyebrow">Альбом проектов</p>
+        <h1>Мебель для дома<span aria-hidden="true">.</span></h1>
+      </div>
+      <p class="edition">Четыре помещения<br><span>Размеры и наполнение</span></p>
+    </header>
+
+    <main id="projects">
+      <div class="room-tabs" role="tablist" aria-label="Помещение">
+        <button type="button" role="tab" id="tab-bedroom" aria-controls="panel-bedroom" aria-selected="true" tabindex="0" data-room="bedroom"><span class="room-number" aria-hidden="true">01</span>Спальня</button>
+        <button type="button" role="tab" id="tab-hallway" aria-controls="panel-hallway" aria-selected="false" tabindex="-1" data-room="hallway"><span class="room-number" aria-hidden="true">02</span>Прихожая</button>
+        <button type="button" role="tab" id="tab-laundry" aria-controls="panel-laundry" aria-selected="false" tabindex="-1" data-room="laundry"><span class="room-number" aria-hidden="true">03</span>Постирочная</button>
+        <button type="button" role="tab" id="tab-bathroom" aria-controls="panel-bathroom" aria-selected="false" tabindex="-1" data-room="bathroom"><span class="room-number" aria-hidden="true">04</span>Ванная</button>
+      </div>
+      <div class="project-sheet">
+        <div class="sheet-toolbar">
+          <p id="load-status" role="status" aria-live="polite"></p>
+          <a id="standalone-link" href="wardrobe-preview.html" target="_blank" rel="noopener">Открыть отдельно <span aria-hidden="true">↗</span></a>
+        </div>
+        <section role="tabpanel" id="panel-bedroom" aria-labelledby="tab-bedroom">
+          <iframe title="Шкаф в спальне: схемы и размеры" data-src="wardrobe-preview.html" data-room="bedroom" height="740"></iframe>
+        </section>
+        <section role="tabpanel" id="panel-hallway" aria-labelledby="tab-hallway" hidden>
+          <iframe title="Шкаф в прихожей: схемы и размеры" data-src="hallway-preview.html" data-room="hallway" height="740"></iframe>
+        </section>
+        <section role="tabpanel" id="panel-laundry" aria-labelledby="tab-laundry" hidden>
+          <iframe title="Шкаф в постирочной: схемы и размеры" data-src="laundry-preview.html" data-room="laundry" height="740"></iframe>
+        </section>
+        <section role="tabpanel" id="panel-bathroom" aria-labelledby="tab-bathroom" hidden>
+          <iframe title="Тумба в ванной: схемы и размеры" data-src="bathroom-preview.html" data-room="bathroom" height="740"></iframe>
+        </section>
+        <noscript>
+          <p class="no-script">Для переключения вкладок нужен JavaScript. Проекты можно открыть отдельно:</p>
+          <ul>
+            <li><a href="wardrobe-preview.html">Спальня</a></li>
+            <li><a href="hallway-preview.html">Прихожая</a></li>
+            <li><a href="laundry-preview.html">Постирочная</a></li>
+            <li><a href="bathroom-preview.html">Ванная</a></li>
+          </ul>
+          <style>.room-tabs,[role="tabpanel"],.sheet-toolbar{display:none}</style>
+        </noscript>
+      </div>
+    </main>
+    <footer><span>Мебель для дома</span><span>Концепты для обсуждения с мебельщиком</span></footer>
+  </div>
+</body>
+</html>

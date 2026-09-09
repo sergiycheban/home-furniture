@@ -1,0 +1,1431 @@
+<!doctype html>
+<html lang="ru" data-furniture-preview>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Тумба в ванной — Мебель для дома</title>
+<style>:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, "Segoe UI", sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath d='M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z'/%3E%3C/svg%3E");
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html > body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive > .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align="right"]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align="center"]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget > :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls > .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls > .form-label > :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled="true"]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type="file"] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type="file"]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type="file"]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type="color"] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type="color"]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type="checkbox"] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type="checkbox"]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type="checkbox"]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: "";
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type="radio"]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: "";
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed="true"],
+  [aria-selected="true"],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed="true"], [aria-selected="true"], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type="file"]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type="color"] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="time"],
+    [type="week"]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget > svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html>body{padding:0}</style>
+</head>
+<body>
+<div id="bathroom-vanity">
+  <div class="nav nav-pills" role="tablist" aria-label="Тумба в ванной">
+    <button class="nav-link active" id="bv-fill-tab" type="button" role="tab" aria-controls="bv-fill" aria-selected="true">Наполнение</button>
+    <button class="nav-link" id="bv-front-tab" type="button" role="tab" aria-controls="bv-front" aria-selected="false">Фасады</button>
+    <button class="nav-link" id="bv-store-tab" type="button" role="tab" aria-controls="bv-store" aria-selected="false">Что хранить</button>
+  </div>
+  <div class="bv-meta">Тумба · 175 × 60 см · столешница на высоте 87 см</div>
+  <div class="bv-legend text-small"><span><i class="bv-swatch bv-storage"></i>Хранение</span><span><i class="bv-swatch bv-cat"></i>Кошачий отсек</span><span><i class="bv-swatch bv-service"></i>Раковина и коммуникации</span></div>
+
+  <div id="bv-fill" role="tabpanel" aria-labelledby="bv-fill-tab">
+    <div class="viz-controls" role="group" aria-label="Проекция наполнения">
+      <button class="btn" type="button" data-projection="front" aria-pressed="true">Спереди</button>
+      <button class="btn" type="button" data-projection="side" aria-pressed="false">Разрез сбоку</button>
+      <button class="btn" type="button" data-projection="drawer" aria-pressed="false">Ящик Б</button>
+    </div>
+    <div class="bv-stage" data-stage="fill"><svg role="img" aria-label="Четыре боковых ящика и центральный ящик с вырезом; лоток слева внизу, хранение справа, утопленный цоколь высотой 10"></svg></div>
+    <div class="bv-caption text-small" data-caption>А1–А2 и В1–В2 — четыре личных ящика. Б — общий с вырезом. Цоколь показан условно прозрачным; его вырез для ног виден в разрезе сбоку.</div>
+    <details class="bv-details" open><summary>Ниши и монтажные поля · Ш × В × Г</summary>
+      <table class="table table-sm text-small"><thead><tr><th>Зона</th><th>Размер, см</th><th>Отметки от пола</th></tr></thead><tbody data-dimensions></tbody></table>
+    </details>
+    <details class="bv-details" open><summary>Четыре боковых ящика и место для ног</summary>
+      <table class="table table-sm text-small"><tbody>
+        <tr><td>А1–А2 / В1–В2</td><td>Четыре фасадных поля по 51,3 × 17,1. Между ящиками дополнительной полки нет; 17,1 — монтажное поле, не полезная высота.</td></tr>
+        <tr><td>Короба боковых ящиков</td><td>Ориентировочно 45 × 12 × 45 снаружи; 42,6 × 10,8 × 42,6 внутри. Расчёт при стенках и дне 1,2; органайзеры до 9 по высоте.</td></tr>
+        <tr><td>Утопленный цоколь</td><td>10 высотой в свету для носков ног; отступ 9 от лицевой плоскости фасада, или 10 от переднего края столешницы. Проходит под всей тумбой.</td></tr>
+        <tr><td>Основание выбора</td><td>В каталоге American Woodmark цоколь 4″ × 3½″ ≈ 10,2 × 8,9. Здесь принято 10 × 9; это выбранный размер для стояния, не единая обязательная норма и не расчёт доступа на коляске.</td></tr>
+        <tr><td>Закрытая конструкция</td><td>Опоры спрятаны за утопленной панелью. Нижние двери начинаются на 10; панель цоколя на 9 глубже них. Боковины и средняя опора не выступают в место для ног.</td></tr>
+        <tr><td>Высокие флаконы</td><td>Г1: ниша высотой 24 под флаконы ориентировочно до 22. Г2: 11,4 для плоских запасов. Полка съёмная; без неё справа единый проём высотой 37,2.</td></tr>
+      </tbody></table>
+    </details>
+    <details class="bv-details" open><summary>Б · выдвижной ящик с П-образным вырезом</summary>
+      <table class="table table-sm text-small"><tbody>
+        <tr><td>Фасад</td><td>68,4 × 34,2; ручка на 77, в линии с А2 и В2. Фасад движется вместе с ящиком.</td></tr>
+        <tr><td>Короб ящика · эскиз</td><td>63 × 14 × 45, Ш × В × Г. Низ 53 / верх 67; до нижнего габарита чаши около 2. Ниша 66,6 × 34,2 — общий объём с чашей, а не полезный размер ящика.</td></tr>
+        <tr><td>Дно и бортики · допущение</td><td>По 1,2. Полезная высота 12,8; для хранения предметы примерно до 10 по высоте. Направляющие и толщины окончательно по выбранной системе.</td></tr>
+        <tr><td>Вырез сзади · предварительно</td><td>20 в свету по ширине × 30 в глубину, открыт к задней стене. Защитный П-образный бортик 1,2; точный контур назначить по выпуску, сифону и трубам.</td></tr>
+        <tr><td>Полезные участки дна</td><td>Слева и справа по 19,1 × 42,6; между ними спереди перемычка 22,4 × 12,6. Размеры без органайзеров, по эскизному коробу.</td></tr>
+        <tr><td>Проверка движения</td><td>Вырез остаётся открытым назад по всей высоте короба. Сифон и трубы должны проходить в нём на всём ходе; высокие вещи не должны задевать чашу. Снять ящик с направляющих для сервиса.</td></tr>
+      </tbody></table>
+    </details>
+    <details class="bv-details"><summary>Толщины, перегородки и размеры корпуса</summary>
+      <table class="table table-sm text-small"><tbody>
+        <tr><td>Общая ширина 175</td><td>Доборы 2 + 2; корпус 171. Размеры окончательно по замеру стен.</td></tr>
+        <tr><td>Верх по ширине</td><td>2 + 1,8 + 48,6 + 1,8 + 66,6 + 1,8 + 48,6 + 1,8 + 2 = 175</td></tr>
+        <tr><td>Низ по ширине</td><td>2 + 1,8 + 82,8 + 1,8 + 82,8 + 1,8 + 2 = 175. Нижняя перегородка 86,6–88,4; её ось на 87,5.</td></tr>
+        <tr><td>Кошачий отсек К</td><td>82,8 в свету, без средней стойки между парой его дверец. Перегородка между К и Г идёт от пола до потолка нижних отсеков.</td></tr>
+        <tr><td>Горизонтальная перегородка</td><td>Низ 49 / верх 50,8. Под сифоном — съёмная герметизируемая часть; нижняя стойка не продолжается в чашу раковины.</td></tr>
+        <tr><td>Полка справа</td><td>Низ 35,8 / верх 37,6, съёмная; глубина 50. Дно правой секции 10–11,8, над местом для ног.</td></tr>
+        <tr><td>Столешница</td><td>175 × 60 × 2; низ 85 / верх 87. Влагостойкий материал для подстольного монтажа Roca.</td></tr>
+        <tr><td>Глубина</td><td>От задней стены: задняя облицовка 0,8; внутренний проём до 57,2; фасад 1,8; передний свес 1. Итого 60.</td></tr>
+        <tr><td>Под туалетом</td><td>Подложка около 1 на готовом полу, за утопленным цоколем. Впереди порог 11,8: крыша места для ног. Прямоугольная глубина отсека до внутренней стороны цоколя 48.</td></tr>
+        <tr><td>Несущие элементы</td><td>Крепление к подходящим стенам и рассчитанная рама вокруг чаши. Опоры не должны уменьшать указанные проёмы; сечения рамы пока не назначены.</td></tr>
+      </tbody></table>
+    </details>
+    <details class="bv-details" open><summary>Лоток, сифон и вентиляция — проверка совместимости</summary>
+      <table class="table table-sm text-small"><tbody>
+        <tr><td>Открытый лоток</td><td>60 вдоль тумбы × 40 в глубину × 28 в высоту. Чистая ниша за цоколем 82,8 × 48 × 48: над бортом 20; суммарный запас по глубине 8.</td></tr>
+        <tr><td>Положение лотка</td><td>Справа до перегородки 1; перед коротким торцом слева 21,8. В глубину — 4 от задней облицовки и 4 до внутренней стороны цоколя. Положение уточнить под стеновой вход.</td></tr>
+        <tr><td>Прямой вход</td><td>Вход на коротком торце подтверждён пользователем, направлен к левой стене. 82,8 − 60 − 1 = 21,8 перед лотком. Тоннель 30 × 30 подводим прямо к входу; его высота и координата по глубине ещё требуют замера.</td></tr>
+        <tr><td>Уборка с новым цоколем</td><td>За дверцами проём 82,8 × 37,2 над порогом 11,8. Лоток высотой 28 проходит: поднять его дно с 1 до 12,5, затем вытянуть. Верх лотка будет 40,5, до потолка ещё 8,5. Левую панель цоколя можно снять для уборки пола; порог при этом остаётся.</td></tr>
+        <tr><td>Сифон — ещё не выбран</td><td>Низ керамики около 69; до верха перегородки 50,8 остаётся 18,2. В этот размер должны войти выпуск, сифон и запас для сборки. Подобрать комплект по чертежу и фактическому канализационному выводу.</td></tr>
+        <tr><td>Вход из прихожей</td><td>Отверстие 25 × 25; проход 30 × 30. Низ предварительно 7,8, как в схеме прихожей; перепад относительно подложки 6,8. Высоту и положение по глубине состыковать с отверстием в стене.</td></tr>
+        <tr><td>Воздух</td><td>Проход слева → кошачий отсек на уровне пола → решётки в утопленном цоколе → ванная. Подложка не перекрывает решётки; между ними и лотком нет глухого дна.</td></tr>
+        <tr><td>Решётки</td><td>Два поля 34 × 6 на высоте 2–8, в съёмной левой панели цоколя. Живое сечение ещё не рассчитано. Направление потока зависит от вытяжки ванной.</td></tr>
+        <tr><td>Изоляция хранения</td><td>Герметизированные стыки перегородок; сплошная правая стенка отделяет вещи от лотка. Доступ к сантехнике — после снятия ящика Б с направляющих.</td></tr>
+      </tbody></table>
+    </details>
+    <details class="bv-details"><summary>Roca и GROHE · посадка в столешницу</summary>
+      <table class="table table-sm text-small"><tbody>
+        <tr><td>Roca A3270YF000</td><td>Подстольный монтаж. Наружный габарит 60 × 40 × 16; номинальная чаша 55 × 35. Фактический вырез — только по шаблону Roca.</td></tr>
+        <tr><td>Расположение чаши</td><td>Ось по ширине 87,5; наружные края 57,5 и 117,5. По глубине: задняя полоса 12 + раковина 40 + передняя полоса 8 = 60.</td></tr>
+        <tr><td>GROHE 24172DC1</td><td>Вылет 11,6; излив на 10,2 над столешницей; высота 17,4, с поднятым рычагом 20,8; основание Ø4,8; монтажная толщина по чертежу до 3.</td></tr>
+        <tr><td>Ось смесителя</td><td>Предлагается 7,5 от задней стены. Основание заканчивается на 9,9; до наружного края раковины 2,1. Проекция излива на 19,1, то есть на 4,6 внутрь номинальной чаши от заднего края.</td></tr>
+        <tr><td>Перед сверлением</td><td>Проверить шаблон чаши, нижнее крепление смесителя и клипсы раковины; настроить AquaGuide и проверить струю. Эти отступы — расчёт концепта, а не монтажные нормы производителя.</td></tr>
+      </tbody></table>
+    </details>
+  </div>
+
+  <div id="bv-front" role="tabpanel" aria-labelledby="bv-front-tab" hidden>
+    <div class="bv-meta text-small">Распашные нижние дверцы · вершина треугольника — петли</div>
+    <div class="bv-stage" data-stage="front"><svg role="img" aria-label="Четыре небольших боковых ящика, один центральный ящик, четыре нижние двери и утопленный цоколь с вентиляцией"></svg></div>
+    <table class="table table-sm text-small"><thead><tr><th>Фасад / элемент</th><th>Поле, см</th><th>Открывание / положение</th></tr></thead><tbody>
+      <tr><td>А1 / В1 · нижние личные</td><td>По 51,3 × 17,1</td><td>50,8–67,9; ручки на 60. Выдвижные.</td></tr>
+      <tr><td>А2 / В2 · верхние личные</td><td>По 51,3 × 17,1</td><td>67,9–85; ручки на 77. Выдвижные.</td></tr>
+      <tr><td>Б · ящик под раковиной</td><td>68,4 × 34,2</td><td>50,8–85; ручка на 77, на линии А2 / В2. Низкий короб с вырезом.</td></tr>
+      <tr><td>К-Л / К-П · левая пара</td><td>По 42,75 × 40,8</td><td>10–50,8; петли на внешних краях пары, ручки у стыка на 41.</td></tr>
+      <tr><td>Г-Л / Г-П · правая пара</td><td>По 42,75 × 40,8</td><td>10–50,8; петли на внешних краях пары, ручки у стыка на 41.</td></tr>
+      <tr><td>Цоколь</td><td>Высота 10 / отступ 9</td><td>Закрывает опоры, оставляет место для ног. Решётки в левой съёмной панели.</td></tr>
+      <tr><td>Зеркало Ø100</td><td>Центр: 87,5 по ширине / 165 от пола</td><td>Низ 115 / верх 215. Высота предложена для роста 160 и 180; примерить перед креплением.</td></tr>
+      <tr><td>Два бра · условно</td><td>Оси: 18,75 и 156,25 от левой стены</td><td>Высота центров 165. Габариты светильников и положение относительно мокрых зон ещё не заданы.</td></tr>
+    </tbody></table>
+    <details class="bv-details" open><summary>Фурнитура и свободное место спереди</summary>
+      <table class="table table-sm text-small"><tbody>
+        <tr><td>Фасадные размеры</td><td>Указаны поля, а не размеры деталей для распила. Межфасадные зазоры, наложение и доборы уточняет мебельщик по выбранным петлям.</td></tr>
+        <tr><td>Боковые стены</td><td>Доборы по 2 — предварительно. Петли, толщина ручек и фактическая кривизна стен должны позволять открыть двери для извлечения лотка.</td></tr>
+        <tr><td>Проход перед тумбой</td><td>Нижняя дверь выносится примерно на 42,75 при 90°. Для вынимания туалета и работы перед ним предлагается около 90 свободного места; фактический проход неизвестен.</td></tr>
+        <tr><td>Верхние ящики</td><td>Всего пять: четыре личных по бокам и общий Б с вырезом. Все выдвигаются; Б снимается для сервиса.</td></tr>
+      </tbody></table>
+    </details>
+  </div>
+
+  <div id="bv-store" role="tabpanel" aria-labelledby="bv-store-tab" hidden>
+    <div class="bv-stage" data-stage="storage"><svg role="img" aria-label="По два личных ящика каждому, общий ящик под раковиной; флаконы справа внизу и плоский запас на верхней полке"></svg></div>
+    <table class="table table-sm text-small"><thead><tr><th>Зона</th><th>Предложение по хранению</th></tr></thead><tbody data-storage></tbody></table>
+    <details class="bv-details"><summary>Полезный размер ящиков и ёмкостей</summary>
+      <table class="table table-sm text-small"><tbody>
+        <tr><td>Ящики А1–А2 / В1–В2</td><td>По 42,6 × 10,8 × 42,6 полезного объёма в эскизе; органайзеры до 9 по высоте. Верхние ящики для повседневного, нижние для запаса и аксессуаров.</td></tr>
+        <tr><td>Ящик Б</td><td>Низкие органайзеры до 10 по высоте. Два боковых участка по 19,1 × 42,6 и передняя перемычка 22,4 × 12,6; вырез под трубы оставлять свободным.</td></tr>
+        <tr><td>Правая секция</td><td>Г1: 82,8 × 24 × 50, флаконы до 22. Г2: 82,8 × 11,4 × 50, плоские запасы до 10. Полку можно снять для высокого хранения до 37,2.</td></tr>
+        <tr><td>Туалет</td><td>Открытый лоток 60 × 40 × 28; прямой вход с левого короткого торца. Свободную полосу перед ним 21,8 оставить для прохода.</td></tr>
+      </tbody></table>
+    </details>
+    <details class="bv-details"><summary>Основания расчёта</summary>
+      <div class="bv-sources text-small">
+        <a href="https://www.roca.bg/produkti/umivalnik-za-vgrazhdane-pod-plot-3270YF..0?sku=A3270YF000" target="_blank" rel="noopener noreferrer">Roca: A3270YF000 и размерный чертёж</a>
+        <a href="https://www.grohe-mena.com/en_cy/essence-single-lever-basin-mixer-1-2-s-size-24172DC1.html" target="_blank" rel="noopener noreferrer">GROHE: Essence 24172DC1</a>
+        <a href="https://bmsupplies.com/Content/docs/products/12019/web/G-3410027142S.pdf" target="_blank" rel="noopener noreferrer">Технический лист GROHE с чертежом — копия у поставщика</a>
+        <a href="https://www.blum.com/us/en/products/cabinet-applications/sinkunit/overview/" target="_blank" rel="noopener noreferrer">Blum: принцип П-образного выдвижного ящика</a>
+        <a href="https://woodmarkcabinetry.com/content/dam/sites/woodmark-site/documents/catalogs-guides-and-planning-documents/American%20Woodmark%20Spec%20Guide%20-%20July%202024.pdf#page=37" target="_blank" rel="noopener noreferrer">American Woodmark: цоколь 4″ × 3½″, печатная стр. 28</a>
+      </div>
+      <div class="bv-caption text-small">175 / 87 / Ø100, лоток, отсек 48 и деление низа пополам — данные пользователя. Размеры короба Б и выреза — эскизные предложения, не типовые размеры Blum. Комплект сифона, ход ящика и стыковка кошачьего прохода ещё требуют проверки.</div>
+    </details>
+  </div>
+
+  <style>
+    #bathroom-vanity{color-scheme:light;--background:#fff;--foreground:#292c2b;--muted-foreground:#626966;--border:#d8ddda;--primary:#e8ece9;--primary-foreground:#292c2b;--secondary:#f3f5f3;--secondary-foreground:#292c2b;--accent:#edf1ee;--accent-foreground:#292c2b;--input:#cdd4cf;--ring:#47775e;--viz-series-1:#47775e;--viz-series-2:#a77333;--viz-series-3:#668ba4;background:var(--background);color:var(--foreground);padding:12px}
+    #bathroom-vanity .bv-meta{margin:10px 0}
+    #bathroom-vanity .bv-legend{display:flex;flex-wrap:wrap;gap:8px 18px;margin:10px 0 14px}
+    #bathroom-vanity .bv-legend span{display:inline-flex;align-items:center;gap:6px}
+    #bathroom-vanity .bv-swatch{display:inline-block;width:11px;height:11px}
+    #bathroom-vanity .bv-storage{background:var(--viz-series-1)}
+    #bathroom-vanity .bv-cat{background:var(--viz-series-2)}
+    #bathroom-vanity .bv-service{background:var(--viz-series-3)}
+    #bathroom-vanity .bv-stage{max-width:680px;margin:12px auto}
+    #bathroom-vanity .bv-stage svg{display:block;width:100%}
+    #bathroom-vanity .bv-stage text{font-family:inherit;fill:var(--foreground);font-weight:400}
+    #bathroom-vanity .bv-stage .outline{fill:none;stroke:var(--muted-foreground);stroke-width:1.1}
+    #bathroom-vanity .bv-stage .panel{fill:var(--border);stroke:var(--muted-foreground);stroke-width:.7}
+    #bathroom-vanity .bv-stage .guide{fill:none;stroke:var(--muted-foreground);stroke-width:1;stroke-dasharray:4 4}
+    #bathroom-vanity .bv-stage .dim{fill:none;stroke:var(--muted-foreground);stroke-width:1}
+    #bathroom-vanity .bv-caption{margin:10px 0 16px}
+    #bathroom-vanity .bv-details{margin:18px 0}
+    #bathroom-vanity summary{cursor:pointer}
+    #bathroom-vanity td,#bathroom-vanity th{overflow-wrap:anywhere}
+    #bathroom-vanity .bv-sources{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+  </style>
+  <script>
+  (()=>{
+    const root=document.getElementById('bathroom-vanity');
+    const zones=[
+      {id:'А1',name:'Ваш нижний ящик',x:3.8,z:50.8,w:48.6,h:17.1,d:50,c:1,use:'Запас тюбиков, насадки триммера, аксессуары; невысокие органайзеры.'},
+      {id:'А2',name:'Ваш верхний ящик',x:3.8,z:67.9,w:48.6,h:17.1,d:50,c:1,use:'Повседневные средства для бритья и ухода, расчёска. Флаконы лёжа, если они выше ящика.'},
+      {id:'Б',name:'Ящик + чаша',x:54.2,z:50.8,w:66.6,h:34.2,d:56.4,c:3,use:'Общий неглубокий ящик: зубные принадлежности, паста, ватные диски, запас мыла, небольшие тюбики и аксессуары. Вырез под сантехнику оставлять свободным; флаконы до 22 по высоте — в Г1.'},
+      {id:'В1',name:'Её нижний ящик',x:122.6,z:50.8,w:48.6,h:17.1,d:50,c:1,use:'Запас косметики, аксессуары для волос, небольшие упаковки.'},
+      {id:'В2',name:'Её верхний ящик',x:122.6,z:67.9,w:48.6,h:17.1,d:50,c:1,use:'Ежедневный уход и косметика в низких органайзерах.'},
+      {id:'К',name:'Кошачий отсек за цоколем',x:3.8,z:1,w:82.8,h:48,d:48,c:2,use:'Открытый лоток с прямым входом слева; перед выниманием приподнять над порогом цоколя.'},
+      {id:'Г1',name:'Высокая нижняя полка',x:88.4,z:11.8,w:82.8,h:24,d:50,c:1,use:'Флаконы ориентировочно до 22 по высоте, запас средств в моющихся лотках. Полка над ними снимается для более высоких предметов.'},
+      {id:'Г2',name:'Плоский запас',x:88.4,z:37.6,w:82.8,h:11.4,d:50,c:1,use:'Салфетки, небольшие полотенца и плоские упаковки до 10 по высоте.'}
+    ];
+    const drawerB={w:63,h:14,d:45,t:1.2,x:56,z:53,y:12.2,cutW:20,cutD:30};
+    const sideDrawer={w:45,h:12,d:45,t:1.2,lowerZ:53.8,upperZ:70.9};
+    const toe={h:10,recess:9,face:50,t:1.2,lip:11.8};
+    const fmt=n=>Number(n.toFixed(2)).toLocaleString('ru-RU');
+    root.querySelector('[data-dimensions]').innerHTML=zones.map(c=>`<tr><td>${c.id} · ${c.name}</td><td>${fmt(c.w)} × ${fmt(c.h)} × ${fmt(c.d)}</td><td>${fmt(c.z)} → ${fmt(c.z+c.h)}</td></tr>`).join('');
+    root.querySelector('[data-storage]').innerHTML=zones.map(c=>`<tr><td>${c.id} · ${c.name}</td><td>${c.use}</td></tr>`).join('');
+    const NS='http://www.w3.org/2000/svg';let projection='front';
+    function el(parent,tag,attrs={},content){const e=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));if(content!==undefined)e.textContent=content;parent.appendChild(e);return e;}
+    function base(svg,width,W,H,cap=3.25){
+      svg.replaceChildren();const s=Math.min(cap,(width-72)/W),ox=(width-W*s)/2,oy=H*s+30;
+      svg.setAttribute('viewBox',`0 0 ${width} ${oy+80}`);svg.setAttribute('height',oy+80);
+      const X=x=>ox+x*s,Y=z=>oy-z*s;
+      const line=(a,z,b,t,cls='outline')=>el(svg,'line',{x1:X(a),y1:Y(z),x2:X(b),y2:Y(t),class:cls});
+      const box=(x,z,w,h,attrs={})=>el(svg,'rect',{x:X(x),y:Y(z+h),width:w*s,height:h*s,...attrs});
+      const text=(x,z,value,anchor='middle',attrs={})=>el(svg,'text',{x:X(x),y:Y(z),'text-anchor':anchor,'dominant-baseline':'middle','font-size':12,'paint-order':'stroke',stroke:'var(--background)','stroke-width':3,'stroke-linejoin':'round',...attrs},value);
+      const lines=(x,z,values)=>values.forEach((v,i)=>text(x,z-i*15/s,v));
+      const hd=(a,b,z,value)=>{line(a,z,b,z,'dim');line(a,z-2/s,a,z+2/s,'dim');line(b,z-2/s,b,z+2/s,'dim');text((a+b)/2,z-10/s,value);};
+      const vd=(x,a,b,value)=>{line(x,a,x,b,'dim');line(x-2/s,a,x+2/s,a,'dim');line(x-2/s,b,x+2/s,b,'dim');const xx=X(x)-7,yy=Y((a+b)/2);el(svg,'text',{x:xx,y:yy,'text-anchor':'middle','font-size':12,transform:`rotate(-90 ${xx} ${yy})`},value);};
+      return{svg,s,X,Y,line,box,text,lines,hd,vd};
+    }
+    function carcass(d){
+      const{box,line}=d;
+      box(0,85,175,2,{class:'panel'});line(-2,0,177,0);line(0,0,0,91);line(175,0,175,91);
+      box(2,1,1.8,84,{class:'panel'});box(171.2,1,1.8,84,{class:'panel'});
+      box(52.4,50.8,1.8,34.2,{class:'panel'});box(120.8,50.8,1.8,34.2,{class:'panel'});box(86.6,0,1.8,49,{class:'panel'});
+      box(3.8,49,167.4,1.8,{class:'panel'});box(88.4,10,82.8,1.8,{class:'panel'});box(88.4,35.8,82.8,1.8,{class:'panel'});
+      line(3.8,67.9,52.4,67.9,'guide');line(122.6,67.9,171.2,67.9,'guide');
+      box(2,0,171,10,{fill:'var(--muted-foreground)','fill-opacity':.04,stroke:'var(--muted-foreground)','stroke-dasharray':'4 4'});
+    }
+    function basinFront(d){
+      const{box,svg,X,Y}=d;
+      el(svg,'path',{d:`M ${X(57.5)} ${Y(85)} L ${X(60)} ${Y(76)} Q ${X(61)} ${Y(73)} ${X(66)} ${Y(73)} L ${X(109)} ${Y(73)} Q ${X(114)} ${Y(73)} ${X(115)} ${Y(76)} L ${X(117.5)} ${Y(85)} Z`,fill:'var(--background)',stroke:'var(--muted-foreground)','stroke-width':1.2});
+      box(85,69,5,4,{class:'panel'});
+      box(78,51.8,19,17.2,{fill:'var(--viz-series-3)','fill-opacity':.07,stroke:'var(--viz-series-3)','stroke-dasharray':'4 4'});
+    }
+    function fill(svg,width,store=false){
+      const d=base(svg,width,175,104),{s,box,line,text,lines,hd,vd,X,Y}=d;
+      zones.forEach(c=>box(c.x,c.z,c.w,c.h,{fill:`var(--viz-series-${c.c})`,'fill-opacity':.08}));carcass(d);
+      [5.6,124.4].forEach(x=>[sideDrawer.lowerZ,sideDrawer.upperZ].forEach(z=>box(x,z,sideDrawer.w,sideDrawer.h,{fill:'var(--viz-series-1)','fill-opacity':.1,stroke:'var(--muted-foreground)','stroke-width':.7})));
+      box(drawerB.x,drawerB.z,drawerB.w,drawerB.h,{fill:'var(--viz-series-1)','fill-opacity':.14,stroke:'var(--viz-series-1)','stroke-width':1});
+      box(drawerB.x,drawerB.z,drawerB.w,drawerB.t,{class:'panel'});basinFront(d);
+      box(3.8,0,82.8,1,{fill:'var(--viz-series-2)','fill-opacity':.3});
+      el(svg,'path',{d:`M ${X(25.6)} ${Y(29)} L ${X(28)} ${Y(1)} L ${X(83.2)} ${Y(1)} L ${X(85.6)} ${Y(29)}`,fill:'var(--background)',stroke:'var(--muted-foreground)','stroke-width':1.2});
+      line(28,7,83.2,7,'guide');
+      line(5,22,23,22);el(svg,'path',{d:`M ${X(20)} ${Y(25)} L ${X(23)} ${Y(22)} L ${X(20)} ${Y(19)}`,class:'outline'});
+      box(0,7.8,3.8,25,{fill:'var(--background)',stroke:'var(--viz-series-2)','stroke-dasharray':'3 2'});
+      if(s>=2){
+        lines(28.1,79,['А2','48,6 × 17,1']);lines(28.1,62,['А1','48,6 × 17,1']);lines(146.9,79,['В2','48,6 × 17,1']);lines(146.9,62,['В1','48,6 × 17,1']);
+        text(87.5,97,'Б · ящик под чашей');text(87.5,59,'Сифон');text(66,61,'Б-Л');text(109,61,'Б-П');
+        text(14.7,37,'21,8');text(55.6,40,'20 над бортом');lines(55.6,21,['К · открытый лоток',store?'60 × 40 × 28':'60 × 28']);
+        lines(129.8,43.3,store?['Г2 · плоский запас']:['Г2 · 82,8 × 11,4']);
+        lines(129.8,25,store?['Г1 · флаконы до 22']:['Г1 · 82,8 × 24']);
+      }else{
+        text(28.1,77,'А2');text(28.1,59,'А1');text(146.9,77,'В2');text(146.9,59,'В1');text(87.5,97,'Раковина');text(87.5,60,'Б · ящик');
+        text(55.6,39,'20 сверху');text(55.6,17,'К · лоток');text(129.8,43.3,'Г2');text(129.8,24,'Г1');
+      }
+      vd(-9,0,87,'87');hd(3.8,86.6,-8,'82,8');hd(88.4,171.2,-8,'82,8');hd(0,175,-8-24/s,'175 между стенами');
+    }
+    function facade(svg,width){
+      const d=base(svg,width,175,222,2.6),{s,box,line,text,lines,hd,vd,X,Y}=d;
+      box(0,85,175,2,{class:'panel'});line(0,0,175,0);line(0,0,0,220);line(175,0,175,220);
+      el(svg,'circle',{cx:X(87.5),cy:Y(165),r:50*s,fill:'var(--viz-series-3)','fill-opacity':.06,stroke:'var(--muted-foreground)','stroke-width':1.2});
+      lines(87.5,170,['Зеркало Ø100','центр 165']);
+      [18.75,156.25].forEach(x=>{box(x-4,156,8,18,{rx:4,fill:'var(--viz-series-2)','fill-opacity':.08,stroke:'var(--muted-foreground)'});if(s>2)text(x,147,'Бра');});
+      box(85.1,87,4.8,17.4,{rx:2,fill:'var(--border)',stroke:'var(--muted-foreground)'});line(87.5,104.4,93,104.4);
+      function panel(x,z,w,h,label,type,hinge,handleZ=77){
+        box(x,z,w,h,{fill:'var(--viz-series-1)','fill-opacity':.055,stroke:'var(--muted-foreground)','stroke-width':1});
+        if(type==='door'){
+          const a=hinge==='left'?x+1:x+w-1,b=hinge==='left'?x+w-2:x+2;
+          el(svg,'path',{d:`M ${X(b)} ${Y(z+4)} L ${X(a)} ${Y(z+h/2)} L ${X(b)} ${Y(z+h-4)}`,class:'guide'});
+          const hx=hinge==='left'?x+w-4:x+4;line(hx,38,hx,44);
+        }else{line(x+w/2-5,handleZ,x+w/2+5,handleZ);}
+        if(s>2&&h>20)lines(x+w/2,z+h/2+(type==='door'?4:2),[label,`${fmt(w)} × ${fmt(h)}`]);else text(x+w/2,z+h/2-3/s,label.split(' · ')[0]);
+      }
+      panel(2,50.8,51.3,17.1,'А1','drawer',null,60);panel(2,67.9,51.3,17.1,'А2','drawer',null,77);
+      panel(53.3,50.8,68.4,34.2,'Б · ящик','drawer',null,77);
+      panel(121.7,50.8,51.3,17.1,'В1','drawer',null,60);panel(121.7,67.9,51.3,17.1,'В2','drawer',null,77);
+      panel(2,10,42.75,40.8,'К-Л','door','left');panel(44.75,10,42.75,40.8,'К-П','door','right');panel(87.5,10,42.75,40.8,'Г-Л','door','left');panel(130.25,10,42.75,40.8,'Г-П','door','right');
+      box(2,0,171,10,{fill:'var(--muted-foreground)','fill-opacity':.16,stroke:'var(--muted-foreground)','stroke-width':.7});
+      [6.375,49.125].forEach(x=>{box(x,2,34,6,{fill:'var(--background)',stroke:'var(--muted-foreground)','stroke-width':.6});for(let i=0;i<4;i++)line(x+1,3+i*1.2,x+33,3+i*1.2);});
+      vd(-12,0,87,'87');if(s>1.3)vd(186,115,215,'100');hd(0,175,-10,'175');text(87.5,-10-29/s,'Цоколь 10 высотой · утоплен на 9');
+    }
+    function side(svg,width){
+      const d=base(svg,width,60,114,3.8),{s,box,line,text,lines,hd,vd,X,Y}=d;
+      line(0,0,60,0);line(0,0,0,110);box(.8,1,48,48,{fill:'var(--viz-series-2)','fill-opacity':.07});
+      box(.8,49,56.4,1.8,{class:'panel'});box(57.2,10,1.8,75,{class:'guide'});
+      box(48.8,0,1.2,10,{class:'panel'});box(48.8,10,8.4,1.8,{class:'panel'});
+      box(50,0,9,10,{fill:'var(--viz-series-3)','fill-opacity':.1});
+      line(48.8,2,50,2,'guide');line(48.8,8,50,8,'guide');
+      box(0,85,12,2,{class:'panel'});box(52,85,8,2,{class:'panel'});
+      el(svg,'path',{d:`M ${X(12)} ${Y(85)} L ${X(15)} ${Y(76)} Q ${X(16)} ${Y(73)} ${X(21)} ${Y(73)} L ${X(44)} ${Y(73)} Q ${X(48)} ${Y(73)} ${X(49)} ${Y(77)} L ${X(52)} ${Y(85)}`,class:'outline'});
+      box(42.2,53,15,14,{fill:'var(--viz-series-1)','fill-opacity':.12,stroke:'var(--viz-series-1)','stroke-width':1});
+      box(42.2,53,1.2,14,{class:'panel'});box(43.4,53,13.8,1.2,{class:'panel'});box(56,53,1.2,14,{class:'panel'});
+      box(29.5,69,5,4,{class:'panel'});box(5,51.8,33,17.2,{fill:'var(--viz-series-3)','fill-opacity':.08,stroke:'var(--viz-series-3)','stroke-dasharray':'4 4'});
+      box(5.1,87,4.8,17.4,{fill:'var(--border)',stroke:'var(--muted-foreground)'});line(7.5,99,16,99);line(16,99,19.1,97.2);line(7.5,104.4,13,104.4);line(7.5,104.4,12,107.8,'guide');
+      line(19.1,97.2,25,88,'guide');
+      el(svg,'path',{d:`M ${X(4.8)} ${Y(29)} L ${X(6.8)} ${Y(1)} L ${X(42.8)} ${Y(1)} L ${X(44.8)} ${Y(29)}`,fill:'var(--background)',stroke:'var(--muted-foreground)','stroke-width':1.2});line(6.8,7,42.8,7,'guide');
+      lines(24.8,21,['Лоток без крыши','40 × 28']);text(24.8,40,'20 над бортом');text(20,60,'Сифон');text(49.7,60,'Б');
+      text(37,104,'Вылет 11,6');
+      vd(-4,50.8,69,'18,2');vd(-4,1,49,'48 в свету');vd(68,0,87,'87');vd(64,0,10,'10');hd(50,59,5,'9');
+      text(0,116,'Стена','start');text(60,116,'Фасад','end');
+      hd(.8,48.8,-7,'48 за цоколем');hd(0,60,-7-24/s,'60 столешница');
+    }
+    function drawer(svg,width){
+      svg.replaceChildren();const s=Math.min(5.6,(width-64)/83.25),ox=(width-83.25*s)/2,oy=48+35.95*s,H=oy+80;
+      svg.setAttribute('viewBox',`0 0 ${width} ${H}`);svg.setAttribute('height',H);
+      const P=(x,y,z=0)=>[ox+(x+.45*(45-y))*s,oy+(-.55*(45-y)-.8*z)*s];
+      const poly=(points,attrs)=>el(svg,'polygon',{points:points.map(p=>P(...p).join(',')).join(' '),...attrs});
+      const line=(a,b,cls='outline')=>{const p=P(...a),q=P(...b);el(svg,'line',{x1:p[0],y1:p[1],x2:q[0],y2:q[1],class:cls});};
+      const label=(x,y,z,str,dy=0)=>{const p=P(x,y,z);el(svg,'text',{x:p[0],y:p[1]+dy,'text-anchor':'middle','dominant-baseline':'middle','font-size':12,'paint-order':'stroke',stroke:'var(--background)','stroke-width':3},str);};
+      const footprint=[[0,45],[63,45],[63,0],[41.5,0],[41.5,30],[21.5,30],[21.5,0],[0,0]];
+      poly(footprint.map(p=>[...p,1.2]),{fill:'var(--viz-series-1)','fill-opacity':.1,stroke:'var(--muted-foreground)','stroke-width':1});
+      for(let i=0;i<footprint.length;i++){
+        const a=footprint[i],b=footprint[(i+1)%footprint.length];
+        poly([[...a,0],[...b,0],[...b,14],[...a,14]],{fill:i>=3&&i<=5?'var(--viz-series-3)':'var(--viz-series-1)','fill-opacity':.09,stroke:'var(--muted-foreground)','stroke-width':1});
+      }
+      line([31.5,0,15],[31.5,28,15],'guide');
+      label(10.5,20,1.2,'Б-Л');label(52.5,20,1.2,'Б-П');
+      label(31.5,15,15,s>3?'Вырез 20 × 30*':'Вырез*');
+      if(s>3){label(10.5,20,1.2,'19,1 × 42,6',17);label(52.5,20,1.2,'19,1 × 42,6',17);label(31.5,38,1.2,'22,4 × 12,6');}
+      label(31.5,45,0,'Короб 63 × 14 × 45 · Ш × В × Г',28);
+      label(31.5,45,0,'* Вырез уточнить по сантехнике',49);
+      el(svg,'text',{x:width/2,y:17,'text-anchor':'middle','font-size':12},'Б · низкий короб, фасад не показан');
+    }
+    function draw(){root.querySelectorAll('[data-stage]').forEach(stage=>{const w=stage.clientWidth;if(w<200)return;const svg=stage.querySelector('svg');if(stage.dataset.stage==='fill'&&projection==='drawer')drawer(svg,w);else if(stage.dataset.stage==='fill'&&projection==='side')side(svg,w);else if(stage.dataset.stage==='front')facade(svg,w);else fill(svg,w,stage.dataset.stage==='storage');});}
+    const captions={front:'А1–А2 и В1–В2 — четыре личных ящика. Б — общий с вырезом. Цоколь показан условно прозрачным; вырез для ног виден в разрезе сбоку.',side:'Совмещённый разрез: лоток слева и ящик Б по центру. Для ног 10 по высоте × 9 от фасада. Лоток стоит на полу за цоколем; перед выниманием его нужно приподнять над порогом 11,8.',drawer:'Объёмный эскиз ящика Б без высокого фасада. Полезная высота 12,8; низкие органайзеры до 10. Вырез 20 × 30 — предварительный, не размер для распила.'};
+    root.querySelectorAll('[data-projection]').forEach(button=>button.addEventListener('click',()=>{projection=button.dataset.projection;root.querySelectorAll('[data-projection]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));root.querySelector('[data-caption]').textContent=captions[projection];draw();}));
+    const observer=new ResizeObserver(draw);root.querySelectorAll('[data-stage]').forEach(e=>observer.observe(e));new MutationObserver(draw).observe(root,{subtree:true,attributes:true,attributeFilter:['hidden']});draw();
+  })();
+  </script>
+</div>
+
+
+
+
+<script id="codex-visualization-tabs">
+(() => {
+  const selector = '.nav[role="tablist"] [role="tab"]';
+  const disabled = ':disabled,[aria-disabled="true"]';
+  const selectTab = (selected) => {
+    const panelId = selected.getAttribute("aria-controls");
+    for (const tab of selected.closest('[role="tablist"]').querySelectorAll('[role="tab"]')) {
+      const active = tab === selected;
+      tab.classList.toggle("active", active);
+      tab.setAttribute("aria-selected", String(active));
+      const id = tab.getAttribute("aria-controls");
+      const panel = id && document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden && selected.id) {
+          panel.setAttribute("aria-labelledby", selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) => {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === "click") {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest('[role="tablist"]').querySelectorAll('[role="tab"]'),
+    ).filter((candidate) => !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === "Home") {
+      next = 0;
+    } else if (event.key === "End") {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll('.nav[role="tablist"]')) {
+    const selected =
+      list.querySelector('[role="tab"][aria-selected="true"]') ??
+      list.querySelector('[role="tab"].active') ??
+      list.querySelector('[role="tab"]');
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener("click", interact);
+  document.addEventListener("keydown", interact);
+  window.addEventListener("pagehide", () => {
+    document.removeEventListener("click", interact);
+    document.removeEventListener("keydown", interact);
+  }, { once: true });
+})();
+</script>
+
+
+
+<!-- furniture-preview:start -->
+<style>:root{color-scheme:light!important;--background:#fff;background:#fff!important}
+html{margin:0;min-height:0}html>body{display:flow-root;margin:0;padding:0;min-height:0;background:#fff}
+body>div[id]{max-width:960px;margin-inline:auto}</style>
+<script>
+// Embedded into each standalone preview by tools/prepare-previews.py.
+(() => {
+  'use strict';
+  if (window.parent === window) return;
+  const targetOrigin = location.protocol === 'file:' ? '*' : location.origin;
+  let scheduled = false;
+  let previousHeight = 0;
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => {
+      scheduled = false;
+      if (document.body.getBoundingClientRect().width === 0) return;
+      // Measure content, not the iframe viewport, so shorter tabs can shrink.
+      const height = Math.ceil(document.body.getBoundingClientRect().height) + 2;
+      if (height < 100 || height === previousHeight) return;
+      previousHeight = height;
+      window.parent.postMessage({type: 'furniture:height', height}, targetOrigin);
+    });
+  }
+  new ResizeObserver(schedule).observe(document.body);
+  window.addEventListener('load', schedule);
+  window.addEventListener('message', event => {
+    if (event.source !== window.parent || event.data?.type !== 'furniture:measure') return;
+    if (location.protocol !== 'file:' && event.origin !== location.origin) return;
+    previousHeight = 0;
+    schedule();
+  });
+  document.fonts?.ready.then(schedule);
+  schedule();
+})();
+
+</script>
+<!-- furniture-preview:end -->
+</body>
+</html>

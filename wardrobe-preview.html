@@ -1,0 +1,1433 @@
+<!doctype html>
+<html lang="ru" data-furniture-preview>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Шкаф в спальне — Мебель для дома</title>
+<style>:root {
+  color-scheme: light;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, "Segoe UI", sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath d='M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z'/%3E%3C/svg%3E");
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html > body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive > .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align="right"]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align="center"]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget > :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls > .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls > .form-label > :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled="true"]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type="file"] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type="file"]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type="file"]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type="color"] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type="color"]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type="checkbox"] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type="checkbox"]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type="checkbox"]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: "";
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type="radio"]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: "";
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed="true"],
+  [aria-selected="true"],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed="true"], [aria-selected="true"], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type="file"]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type="color"] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="time"],
+    [type="week"]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget > svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html>body{padding:0}</style>
+</head>
+<body>
+<div id="wardrobe-reviewed">
+  <div class="nav nav-pills" role="tablist" aria-label="Схемы шкафа">
+    <button class="nav-link active" type="button" id="wr-inside-tab" role="tab" aria-controls="wr-inside" aria-selected="true">Наполнение</button>
+    <button class="nav-link" type="button" id="wr-front-tab" role="tab" aria-controls="wr-front" aria-selected="false">Фасады</button>
+    <button class="nav-link" type="button" id="wr-storage-tab" role="tab" aria-controls="wr-storage" aria-selected="false">Что хранить</button>
+  </div>
+  <div class="text-small wr-meta">Вариант № 9 · обновлённые фасады · 200 × 260 × 60 см</div>
+  <div class="text-small wr-meta">А–Б: одна штанга ≈ 95 см, четыре ящика. В–Г: по четыре личные полочные ниши. Г2: общий запас за общей дверью Г2–Г4.</div>
+  <div class="wr-owner-legend text-small" aria-label="Принадлежность ниш">
+    <span><i class="wr-swatch wr-own-his" aria-hidden="true"></i> Т — твои</span>
+    <span><i class="wr-swatch wr-own-hers" aria-hidden="true"></i> Е — её</span>
+    <span><i class="wr-swatch wr-own-shared" aria-hidden="true"></i> О — общие</span>
+  </div>
+
+  <div id="wr-inside" role="tabpanel" aria-labelledby="wr-inside-tab">
+    <div class="text-small">Размеры в свету, см. Глубина: плечики 57,4; полки А–Б и антресоли 56; В и Г2 — 40; Г3–Г4 — 35.</div>
+    <div class="wr-stage" data-view="inside"><svg role="img" aria-label="Все ниши шкафа с размерами и высотами штанг"></svg></div>
+    <div class="text-small">Штанга проходит через А–Б без вертикальной перегородки. А1–А2 — её ящики, Б1–Б2 — твои. В1–В3 и Г3 — её полки; В4–В6 и Г4 — твои. Распределение можно менять.</div>
+    <div class="text-small">170 — верх штанги от пола. Штриховка — тумба 40 × 52 см перед шкафом. На рисунке размеры округлены; точные значения ниже.</div>
+    <div class="text-small wr-meta">В общие 200 см включён условный добор 5 см справа: корпус 195 см. Плиты 18 мм; зазоры, добор и фурнитура уточняются. Размеры для концепта, не распила.</div>
+    <details class="wr-details" open>
+      <summary>Все размеры ниш: ширина × высота × глубина, см</summary>
+      <table class="table table-sm text-small"><thead><tr><th class="text-nowrap">Ниша</th><th>Ш × В × Г</th><th>Низ / верх от пола</th></tr></thead><tbody data-dimensions></tbody></table>
+      <div class="text-small">Четыре ящика: по два в А и Б. В таблице — место под ящик с направляющими; полезный короб меньше. АБ3 — одна общая ниша шириной 94,8 см.</div>
+      <div class="text-small">Ящики: ориентир MOVENTO NL 400. Расчётная внутренняя ширина 42,3 см; полезные глубина ≈ 36 и высота ≈ 14 см — пока цели для подбора короба.</div>
+    </details>
+    <details class="wr-details">
+      <summary>Штанги, полки и толщина перегородок</summary>
+      <table class="table table-sm text-small"><thead><tr><th>Элемент</th><th>Отметки от пола, см</th></tr></thead><tbody data-levels></tbody></table>
+    </details>
+    <details class="wr-details">
+      <summary>Основание выбранных размеров</summary>
+      <table class="table table-sm text-small"><thead><tr><th>Размер</th><th>Основание</th></tr></thead><tbody>
+        <tr><td>Футболки: 27 см</td><td>Стопка ≈ 25 + выбранный запас 2 см. <a href="https://www.ikea.com/ie/en/files/pdf/49/62/49622dc9/iepax_komplement_buying_guide_a4.pdf" target="_blank" rel="noopener noreferrer">Рекомендации IKEA, с. 2</a></td></tr>
+        <tr><td>Свитеры: 33,4 см</td><td>Стопка ≈ 30 + выбранный запас 3,4 см; шаг регулировки 3,2 см</td></tr>
+        <tr><td>Подвес: 118,4 см</td><td>Короткая одежда — проходит; длинная — не обеспечена. <a href="https://files.stroyinf.ru/Data/32/3238.pdf" target="_blank" rel="noopener noreferrer">ГОСТ 13025.1-85, черт. 1–2</a></td></tr>
+        <tr><td>Ящик внутри: ширина 42,3 см</td><td>Для MOVENTO: 46,5 − 4,2. <a href="https://d2.blum.com/services/BEC003/me22648737_ep_dok_bau_%24sen-au_%24aof_%24v1.pdf" target="_blank" rel="noopener noreferrer">Чертёж Blum, с. 20–21</a></td></tr>
+        <tr><td>Плиты 1,8; цоколь 8; добор 5 см</td><td>Проектные допущения, требуют уточнения</td></tr>
+      </tbody></table>
+    </details>
+  </div>
+
+  <div id="wr-front" role="tabpanel" aria-labelledby="wr-front-tab" hidden>
+    <div class="text-small">Предложенные фасады: ширина × высота, см, до назначения зазоров. Вершина треугольника — сторона петель.</div>
+    <div class="wr-stage" data-view="front"><svg role="img" aria-label="Распашные фасады с размерами, цоколем и панелью за тумбой"></svg></div>
+    <div class="text-small">А–Б — пара дверей в общую зону. Основная В: петли справа, ручка слева. Г2–Г4 закрыты одной дверью: петли справа, ручка слева. Центры ручек В и Г — на одной высоте 109 см. Цвет показывает принадлежность вещей за фасадом; штриховка — тумбу.</div>
+    <table class="table table-sm text-small"><thead><tr><th>Зона</th><th>Размер, см</th><th>Примечание</th></tr></thead><tbody>
+      <tr><td>Ширина зон А / Б / В / Г</td><td>49,2 / 48,3 / 48,3 / 49,2</td><td>Корпус 195 см; ещё 5 см зарезервировано у стены</td></tr>
+      <tr><td>Верхние дверцы А0–Г0</td><td>Высота 50</td><td>От 210 до 260 см</td></tr>
+      <tr><td>Основные А–В</td><td>Высота 202</td><td>От 8 до 210 см</td></tr>
+      <tr><td>Общая дверь Г2–Г4</td><td>49,2 × 150</td><td>От 60 до 210 см; петли справа. Полки внутри сохраняются</td></tr>
+      <tr><td>Ручки основных В и Г</td><td>Центры на 109 см</td><td>Обе слева; у Г ручка утопленная. Высота выбрана по центру основной двери В</td></tr>
+      <tr><td>Глухая панель под Г</td><td>49,2 × 52</td><td>От 8 до 60 см; за ней недоступная зона</td></tr>
+      <tr><td>Цоколь</td><td>195 × 8</td><td>Не отделение для хранения</td></tr>
+    </tbody></table>
+    <div class="text-small">Общая дверь Г начинается на 60 см — на 8 см выше столешницы тумбы. Предметы выше этого уровня и бра на отметке 100 см могут мешать её ходу. Теперь эта проверка относится ко всем полкам Г2–Г4; объединение дверей само по себе препятствия не устраняет.</div>
+    <div class="text-small wr-meta">Петли перед ящиками, взаимный ход соседних дверей, добор у стены и проход до кровати уточняются. Треугольники обозначают сторону петель; траектории открывания здесь не показаны.</div>
+  </div>
+
+  <div id="wr-storage" role="tabpanel" aria-labelledby="wr-storage-tab" hidden>
+    <div class="text-small">Одна штанга на двоих; по два ящика и четыре полочные ниши каждому. А0, Г0 и Г2 — общие запасы. Верхняя одежда — на отдельной штанге 100 см в прихожей.</div>
+    <div class="wr-stage" data-view="storage"><svg role="img" aria-label="Предложения по хранению в каждой нише шкафа"></svg></div>
+    <div class="text-small">Числа у штанг — высота от пола. Штриховка — тумба 40 × 52 см перед шкафом.</div>
+    <details class="wr-details" open>
+      <summary>Что хранить в каждой нише</summary>
+      <table class="table table-sm text-small"><thead><tr><th class="text-nowrap">Ниша</th><th class="text-nowrap">Чья</th><th>Предложение и доступ</th></tr></thead><tbody data-storage></tbody></table>
+    </details>
+    <details class="wr-details" open>
+      <summary>Проверка конфигурации: что ещё нужно решить</summary>
+      <table class="table table-sm text-small"><thead><tr><th>Узел</th><th>Вывод</th></tr></thead><tbody>
+        <tr><td>Разделение вещей</td><td>Плечики можно разделить цветом или меткой на общей штанге. У каждого два ящика, четыре полочные ниши и личная антресоль. Высоты и доступ к полкам различаются; назначение можно переставить.</td></tr>
+        <tr><td>Плечики в спальне</td><td>Проём 94,8 см; длина трубы зависит от держателей. При условном шаге вещи 3–5 см получится примерно 18–31 вещь на двоих до вычета концевых зон. Шаг проверить на своей одежде.</td></tr>
+        <tr><td>Плечики в прихожей</td><td>Отдельная штанга 100 см — для курток и другой верхней одежды. Суммарно в двух шкафах получается около 2 м штанг.</td></tr>
+        <tr><td>Рост 180 / 160</td><td>Верх штанги 170 см — проектный выбор, доступ примерить девушке с плечиками. Рост сам по себе не определяет досягаемость. Нижние полки В — её, верхние — твои.</td></tr>
+        <tr><td>Длинные вещи</td><td>От верха штанги до полки под ней 118,4 см. Свес вместе с плечиками до ≈ 115 см с выбранным запасом 3 см. Нормативный габарит для длинной одежды 140 см здесь не обеспечен.</td></tr>
+        <tr><td>Общий пролёт А–Б</td><td>Над ящиками нет центральной стойки. Штангу подобрать по нагрузке на пролёт ≈ 95 см; при необходимости подвесить к усиленной верхней полке. Полку над штангой проверить на прогиб и крепление.</td></tr>
+        <tr><td>Г1 за тумбой</td><td>Глухая зона. Полезное хранение здесь не обещаем: снятие панели и перемещение тумбы не подтверждены.</td></tr>
+        <tr><td>Общая ниша Г2</td><td>46,5 × 68,2 × 40 см: глубина увеличена под сложенное постельное бельё. Одна дверь вместе с Г3–Г4; её ход требует проверки бра и предметов на тумбе.</td></tr>
+        <tr><td>Личные Г3–Г4</td><td>Г3 — её запасные вещи, Г4 — твои. Полки на 131,8 и 173,8 см, глубина 35 см. Доступ со стороны В; проверить досягаемость сбоку от тумбы.</td></tr>
+        <tr><td>Проход 60 см</td><td>При выступе ящика на 40 см до кровати остаётся 20 см, на 50 см — 10 см. Прямой подход к открытому ящику некомфортен; пользоваться сбоку, открывая по одному. Свободное место для такого положения ещё нужно проверить.</td></tr>
+        <tr><td>Петли перед ящиками</td><td>Нужно согласовать петли и направляющие: открытая дверь не должна перекрывать ход ящика. <a href="https://www.blum.com/au/en/products/news-specials/new-hinges/overview/" target="_blank" rel="noopener noreferrer">Пример решения Blum</a>.</td></tr>
+        <tr><td>Антресоли</td><td>Каждая 46,5 × 46,4 × 56 см, около 120,8 л до фурнитуры. Объём увеличен; размер сложенного одеяла проверить отдельно. Нужна ступенька, доступ к Г0 ограничен тумбой.</td></tr>
+        <tr><td>Монтаж</td><td>В 200 см включён предварительный добор 5 см справа. Потолочный зазор, кривизну стены, плинтус, петли и ручки уточнить до заказа.</td></tr>
+        <tr><td>Статус</td><td>Габариты пересчитаны. Комфорт ящиков в проходе 60 см, длинная одежда, досягаемость и столкновения с бра не подтверждены. Это уточнённый концепт, не готовый расчёт для производства.</td></tr>
+      </tbody></table>
+    </details>
+  </div>
+
+  <style>
+    #wardrobe-reviewed {
+      color-scheme:light;
+      --background:#ffffff;--foreground:#242424;--muted:#f3f3f3;--muted-foreground:#686868;
+      --border:#dedede;--primary:#e7e7e7;--primary-foreground:#242424;--secondary:#f2f2f2;--secondary-foreground:#242424;
+      --accent:#eeeeee;--accent-foreground:#242424;--input:#d4d4d4;--ring:#4b91d6;
+      --viz-series-1:#4b91d6;--viz-series-2:#d8892f;--viz-series-3:#4d9a62;--viz-series-4:#ba6ea7;
+      color:var(--foreground);background:var(--background);padding:12px;
+    }
+    #wardrobe-reviewed .wr-meta { margin:8px 0 12px; }
+    #wardrobe-reviewed .wr-owner-legend { display:flex; flex-wrap:wrap; gap:8px 18px; margin:8px 0 12px; }
+    #wardrobe-reviewed .wr-owner-legend > span { display:inline-flex; align-items:center; gap:6px; }
+    #wardrobe-reviewed .wr-swatch { display:inline-block; width:12px; height:12px; }
+    #wardrobe-reviewed .wr-own-his { background:var(--viz-series-1); }
+    #wardrobe-reviewed .wr-own-hers { background:var(--viz-series-2); }
+    #wardrobe-reviewed .wr-own-shared { background:var(--viz-series-3); }
+    #wardrobe-reviewed .wr-stage { max-width:640px; margin:0 auto 10px; }
+    #wardrobe-reviewed svg { display:block; width:100%; }
+    #wardrobe-reviewed svg text { fill:var(--foreground); font-family:inherit; font-weight:400; }
+    #wardrobe-reviewed .wr-line { fill:none; stroke:var(--foreground); stroke-width:1.2; }
+    #wardrobe-reviewed .wr-dim { fill:none; stroke:var(--muted-foreground); stroke-width:1; }
+    #wardrobe-reviewed .wr-board { fill:var(--muted); stroke:var(--muted-foreground); stroke-width:0.8; }
+    #wardrobe-reviewed .wr-drawer { fill:var(--muted); stroke:var(--muted-foreground); stroke-width:1; }
+    #wardrobe-reviewed .wr-face { fill:var(--background); stroke:var(--foreground); stroke-width:1.2; }
+    #wardrobe-reviewed .wr-details { margin-top:16px; }
+    #wardrobe-reviewed summary { cursor:pointer; }
+  </style>
+  <script>
+    (() => {
+      const root = document.getElementById('wardrobe-reviewed');
+      const T = 1.8, W = 195, OUTER = 200, H = 260, DEPTH = 56, TOP = 210;
+      const CLEAR = (W - 5*T)/4, BOTTOM = 8+T;
+      const MAIN_DOOR_BOTTOM = 8, CORNER_DOOR_BOTTOM = 60, HANDLE_HEIGHT = (MAIN_DOOR_BOTTOM+TOP)/2;
+      const letters = ['А','Б','В','Г'];
+      const bayX = i => T + i*(CLEAR+T);
+      const niches = [];
+      const ownership = {
+        his:{ids:['В0','Б1','Б2','В4','В5','В6','Г4'],label:'Твои',mark:'Т',series:1},
+        hers:{ids:['А1','А2','Б0','В1','В2','В3','Г3'],label:'Её',mark:'Е',series:2},
+        shared:{ids:['А0','Г0','Г1','Г2','АБ3','А4','Б4'],label:'Общие',mark:'О',series:3}
+      };
+      const add = (id,bay,bottom,top,kind,short,storage,access,span=1) => {
+        const owner=Object.entries(ownership).find(([,o])=>o.ids.includes(id))[0];
+        const depth=kind==='hang'?57.4:id==='Г2'||bay===2&&bottom<TOP?40:bay===3&&bottom>=130&&top<=TOP?35:DEPTH;
+        niches.push({id,bay,span,x:bayX(bay),bottom,top,kind,short,storage,access,owner,width:span*CLEAR+(span-1)*T,height:top-bottom,depth});
+      };
+      const seasonal = [
+        ['Постель','Общее постельное бельё и запасное одеяло, если входит в нишу'],
+        ['Сезон','Её сезонный трикотаж и лёгкая одежда в мягком кофре'],
+        ['Сезон','Твой сезонный трикотаж и лёгкая одежда в мягком кофре'],
+        ['Полотенца','Общие полотенца и запас текстиля в кофре']
+      ];
+      letters.forEach((l,i)=>add(l+'0',i,TOP+T,H-T,'shelf',[seasonal[i][0]],seasonal[i][1],'Редкий; верхняя зона'));
+      const drawerSlot=20, drawerTop=BOTTOM+2*drawerSlot, railHeight=170;
+      const drawerShort=['Носки','Бельё'];
+      const drawerUse=['носки, мелочи или домашняя одежда','нижнее бельё и аксессуары'];
+      [0,1].forEach(bay=>{
+        for(let i=0;i<2;i++) add(letters[bay]+(i+1),bay,BOTTOM+i*drawerSlot,BOTTOM+(i+1)*drawerSlot,'drawer',[drawerShort[i]],`${bay===0?'Её':'Твои'} ${drawerUse[i]}`,'Ежедневный; нижний ящик требует наклона');
+      });
+      add('АБ3',0,drawerTop+T,185,'hang',['Общая штанга','Рубашки · блузки','Брюки на плечиках'],'Общая штанга: рубашки, блузки и сложенные на плечиках брюки. Свес вместе с вешалкой — до ≈ 115 см','Верх штанги 170 см; сначала примерить девушке',2);
+      add('А4',0,186.8,TOP,'shelf',['Сумки'],'Общие небольшие сумки, чехлы или кофр высотой до 19 см','Высоко; редкое хранение');
+      add('Б4',1,186.8,TOP,'shelf',['Запас'],'Общие лёгкие запасные вещи в кофре высотой до 19 см','Высоко; редкое хранение');
+      const foldCuts=[9.8,51.4,86.6,115.4,144.2,179.4];
+      ['Запас','Джинсы','Футболки','Футболки','Свитеры','Запас'].forEach((s,i)=>add('В'+(i+1),2,foldCuts[i],i===5?TOP:foldCuts[i+1]-T,'shelf',[s],`${i<3?'Её':'Твои'} ${s.toLowerCase()}`,i===0?'Низкая полка: запасные вещи':i===5?'Высокая полка: редкие вещи':'Повседневное хранение'));
+      add('Г1',3,BOTTOM,60,'service',['Нет доступа'],'Не учитывается в полезном хранении','За глухой панелью и тумбой');
+      add('Г2',3,60+T,130,'rare',['Общий запас'],'Общий запасной текстиль: плед, полотенца или бельё в мягком кофре, если входят по габаритам','Общая дверь Г2–Г4; убрать предметы из траектории и проверить неподвижное бра');
+      add('Г3',3,130+T,172,'shelf',['Запас'],'Её запасной трикотаж или вещи в небольшом кофре','Полка 131,8 см, подход слева от тумбы; примерить рукой');
+      add('Г4',3,172+T,TOP,'shelf',['Запас'],'Твой запасной трикотаж или редко нужные вещи','Полка 173,8 см: верхняя зона, глубина 35 см');
+      const fmt = n => Number(n.toFixed(1)).toLocaleString('ru-RU',{maximumFractionDigits:1});
+      const ordered = [...niches].sort((a,b)=>a.bay-b.bay || a.bottom-b.bottom);
+      root.querySelector('[data-dimensions]').innerHTML = ordered.map(n=>`<tr data-niche="${n.id}" data-owner="${n.owner}" data-kind="${n.kind}" data-x="${n.x}" data-width="${n.width}" data-height="${n.height}" data-depth="${n.depth}" data-bottom="${n.bottom}" data-top="${n.top}"><td>${n.id} · ${ownership[n.owner].mark}</td><td class="tabular-nums">≈ ${fmt(n.width)} × ${fmt(n.height)} × ${fmt(n.depth)}</td><td class="tabular-nums">${fmt(n.bottom)} / ${fmt(n.top)}</td></tr>`).join('');
+      root.querySelector('[data-storage]').innerHTML = ordered.map(n=>`<tr><td>${n.id}</td><td class="text-nowrap">${ownership[n.owner].label}</td><td>${n.storage} ${n.access}.</td></tr>`).join('');
+      const levels = [
+        ['АБ3 · общая штанга','Верх 170; до полки под ней 118,4; сверху до полки 15; проём по ширине 94,8'],
+        ['А и Б · четыре ящика','По два места высотой 20; блок от 9,8 до 49,8'],
+        ['А–Б · полки, верхние поверхности','Над ящиками 51,6; над штангой 186,8'],
+        ['Перегородка между А и Б','Только в блоке ящиков и от 185 см вверх; в зоне плечиков её нет'],
+        ['В · полки, верхние поверхности','9,8; 51,4; 86,6; 115,4; 144,2; 179,4; регулировка с шагом 3,2'],
+        ['Г · полки, верхние поверхности','61,8; 131,8; 173,8'],
+        ['Антресоль · полка сверху','211,8; верх проёма 258,2; высота в свету 46,4'],
+        ['Дно · верхняя поверхность','9,8; цоколь 8'],
+        ['Стенки, перегородки, полки','Условно 1,8 см (18 мм)'],
+        ['Глубина','60 с дверью; дверь 1,8, задняя стенка 0,8 → внутри 57,4. Полки А–Б и верхние 56; В и Г2 — 40, Г3–Г4 — 35. Укороченные полки сдвинуты к фасаду; задний остаток не считается хранением'],
+        ['Ширина','195 корпус + 5 условный добор = 200; четыре проёма по 46,5 + пять плит по 1,8 = 195']
+      ];
+      root.querySelector('[data-levels]').innerHTML = levels.map(([a,b])=>`<tr><td>${a}</td><td>${b}</td></tr>`).join('');
+
+      function draw(host) {
+        const view = host.dataset.view, svg = host.querySelector('svg');
+        const w = host.getBoundingClientRect().width;
+        if (!w) return;
+        const scale = Math.min((w-88)/OUTER,2.1);
+        const x0 = (w-OUTER*scale)/2, y0 = 82;
+        const X = x => x0+x*scale, Y = z => y0+(H-z)*scale;
+        const floor = Y(0), narrow = w<430;
+        const line=(x1,y1,x2,y2,cls='wr-dim',extra='')=>`<line class="${cls}" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" ${extra}/>`;
+        const rect=(x,b,width,height,cls,extra='')=>`<rect class="${cls}" x="${X(x)}" y="${Y(b+height)}" width="${width*scale}" height="${height*scale}" ${extra}/>`;
+        const text=(x,y,value,extra='')=>`<text class="text-small" x="${x}" y="${y}" text-anchor="middle" ${extra}>${value}</text>`;
+        const block=(x,y,lines)=>lines.map((s,i)=>text(x,y+(i-(lines.length-1)/2)*15+4,s)).join('');
+        const dim=(a,b,y,label)=>`${line(a,y,b,y)}${line(a-3,y+3,a+3,y-3)}${line(b-3,y+3,b+3,y-3)}${text((a+b)/2,y-7,label)}`;
+        const railLabel=(cx,z,value)=>`<rect x="${X(cx)-17}" y="${Y(z)-9}" width="34" height="18" fill="var(--background)"/>${text(X(cx),Y(z)+4,value)}`;
+        let markup=`<title>${view==='front'?'Фасады':view==='storage'?'Что хранить':'Размеры ниш'} шкафа 200 × 260 × 60 см</title><desc>В первых двух секциях общая штанга в проёме 94,8 сантиметра, под ней четыре ящика, по два каждому. Третья и четвёртая секции содержат личные полки обоих. Основная дверь В имеет петли справа. Общий запас Г2 и полки Г3–Г4 закрыты одной дверью с петлями справа от 60 до 210 сантиметров. Центры ручек В и Г на высоте 109 сантиметров. Тумба и бра ограничивают открывание Г; габариты бра ещё нужны.</desc><defs><pattern id="wr-hatch-${view}" width="9" height="9" patternUnits="userSpaceOnUse"><path d="M-2 2L2 -2 M0 9L9 0 M7 11L11 7" stroke="var(--muted-foreground)" stroke-width="1"/></pattern></defs>`;
+        markup += rect(0,0,W,H,'wr-line');
+        markup += rect(W,0,OUTER-W,H,'wr-board');
+        markup += rect(0,0,W,8,'wr-board');
+        if(view!=='front') {
+          markup += rect(0,8,W,T,'wr-board') + rect(0,H-T,W,T,'wr-board');
+          [0,...[2,3].map(i=>bayX(i)-T),W-T].forEach(x=>markup+=rect(x,8,T,H-8,'wr-board'));
+          markup+=rect(bayX(1)-T,8,T,drawerTop-8,'wr-board');
+          markup+=rect(bayX(1)-T,185,T,H-185,'wr-board');
+          markup += rect(0,TOP,W,T,'wr-board');
+          [drawerTop,185].forEach(z=>markup+=rect(bayX(0),z,2*CLEAR+T,T,'wr-board'));
+          [...foldCuts.slice(1).map(z=>[2,z-T]),[3,60],[3,130],[3,172]].forEach(([i,z])=>markup+=rect(bayX(i),z,CLEAR,T,'wr-board'));
+          niches.filter(n=>n.kind==='drawer').forEach(n=>markup+=rect(bayX(n.bay)+0.8,n.bottom+0.3,CLEAR-1.6,n.height-0.6,'wr-drawer'));
+          niches.forEach(n=>markup+=rect(n.x,n.bottom,n.width,n.height,'',`data-owner-fill="${n.owner}" style="fill:color-mix(in srgb,var(--viz-series-${ownership[n.owner].series}) 13%,transparent)"`));
+          markup += rect(160,0,40,52,'wr-dim',`style="fill:url(#wr-hatch-${view})"`);
+          markup+=line(X(bayX(0)),Y(railHeight),X(bayX(0)+2*CLEAR+T),Y(railHeight),'wr-line','data-rail="shared"');
+          for(const n of niches) {
+            const cx=X(n.x+n.width/2), cy=Y((n.bottom+n.top)/2);
+            const code=`${n.id}·${ownership[n.owner].mark}`;
+            if(n.kind==='hang') {
+              markup += block(cx,Y(123),view==='inside'?[code,`${fmt(n.width)}×${fmt(n.height)}`,'Одна штанга']:narrow?[code,'На двоих','Рубашки / блузки']:[code,...n.short]);
+              markup += block(cx,Y(75),['Свес до ≈ 115 см']);
+            } else if(n.kind==='drawer') {
+              const drawerWord=narrow&&n.short[0]==='Домашнее'?'Дом.':n.short[0];
+              if(view==='inside') markup += text(cx,cy+4,`${code} ${Math.round(n.height)}`);
+              else if(narrow) markup += text(cx,cy+4,code);
+              else markup += block(cx,cy,[code,drawerWord]);
+            } else {
+              const shortWords=n.short.map(s=>narrow&&s==='Полотенца'?'Полот.':narrow&&s==='Футболки'?'Футбол.':narrow&&s==='Нет доступа'?'Глухо':narrow&&s==='Общий запас'?'Запас':s);
+              const lines = view==='inside'?[code,`${Math.round(CLEAR)}×${Math.round(n.height)}`]:[code,...shortWords];
+              if(n.kind==='service') {
+                markup += `<rect x="${cx-23}" y="${cy-18}" width="46" height="36" fill="var(--background)"/>`;
+              }
+              markup += block(cx,cy,lines);
+            }
+          }
+          markup+=railLabel(bayX(0)+(2*CLEAR+T)/2,railHeight,String(railHeight));
+        } else {
+          const cuts=[0,bayX(1)-T/2,bayX(2)-T/2,bayX(3)-T/2,W];
+          for(let i=0;i<4;i++) {
+            const left=cuts[i], width=cuts[i+1]-left;
+            const drawDoor=(b,top,caption,rightHinge=i%2===1,handleHeight=(b+top)/2,doorId=letters[i]+'0')=>{
+              markup += `<g data-door="${doorId}" data-hinge="${rightHinge?'right':'left'}" data-bottom="${b}" data-top="${top}" data-width="${width}" data-height="${top-b}" data-handle-height="${handleHeight}">`;
+              markup += rect(left+0.12,b+0.12,width-0.24,top-b-0.24,'wr-face');
+              niches.filter(n=>i>=n.bay&&i<n.bay+n.span&&n.top>b&&n.bottom<top).forEach(n=>{
+                const lo=Math.max(b+0.12,n.bottom), hi=Math.min(top-0.12,n.top);
+                if(hi>lo)markup+=rect(left+0.18,lo,width-0.36,hi-lo,'',`style="fill:color-mix(in srgb,var(--viz-series-${ownership[n.owner].series}) 13%,transparent)"`);
+              });
+              const cx=X(left+width/2), cy=Y((b+top)/2);
+              const hx=rightHinge?left+width-1:left+1, handleX=rightHinge?left+5:left+width-5;
+              [b+(top-b)*0.22,b+(top-b)*0.78].forEach(z=>markup+=line(X(hx),Y(z),X(hx+(rightHinge?-2.5:2.5)),Y(z),'wr-line'));
+              markup += line(X(handleX),Y(handleHeight+3),X(handleX),Y(handleHeight-3),'wr-line','data-handle');
+              const tipX=X(rightHinge?left+width-1:left+1), midY=Y((b+top)/2);
+              markup += line(X(handleX),Y(b+4),tipX,Y((b+top)/2),'wr-dim')+line(tipX,midY,X(handleX),Y(top-4),'wr-dim');
+              const labelHeight=caption.length*15+8;
+              const labelY=cy-(narrow&&doorId===letters[i]?28:0);
+              markup += `<rect x="${cx-24}" y="${labelY-labelHeight/2}" width="48" height="${labelHeight}" fill="var(--background)"/>`+block(cx,labelY,caption);
+              markup += '</g>';
+            };
+            const topMark=ownership[niches.find(n=>n.id===letters[i]+'0').owner].mark;
+            drawDoor(TOP,260,[letters[i]+'0·'+topMark,`${Math.round(width)}×${H-TOP}`]);
+            const bottom=i===3?CORNER_DOOR_BOTTOM:MAIN_DOOR_BOTTOM;
+            const mainCaption=i===3?['Г·Е/Т','+ Г2·О',`${Math.round(width)}×${TOP-bottom}`]:[i<2?letters[i]+'·О':letters[i]+'·Е/Т',`${Math.round(width)}×${TOP-bottom}`];
+            drawDoor(bottom,TOP,mainCaption,i!==0,HANDLE_HEIGHT,letters[i]);
+            if(i===3) {
+              markup += rect(left+0.12,8.12,width-0.24,51.76,'wr-face');
+              markup += rect(160,0,40,52,'wr-dim',`style="fill:url(#wr-hatch-${view})"`);
+              const cx=X(left+width/2),cy=Y(34);
+              markup += `<rect x="${cx-29}" y="${cy-17}" width="58" height="34" fill="var(--background)"/>`;
+              markup += block(cx,cy,['Панель',`${Math.round(width)}×52`]);
+            }
+          }
+        }
+        markup += dim(X(0),X(OUTER),23,'≈ 200, включая добор 5');
+        markup += text(X(W/4),y0-34,'Плечики · 97,5');
+        markup += text(X(3*W/4),y0-34,'Полки · 97,5');
+        letters.forEach((l,i)=>markup+=text(X(bayX(i)+CLEAR/2),y0-10,l));
+        for(let i=0;i<4;i++) {
+          const a=view==='front'?(i===0?0:bayX(i)-T/2):bayX(i);
+          const b=view==='front'?(i===3?W:bayX(i+1)-T/2):bayX(i)+CLEAR;
+          markup+=dim(X(a),X(b),floor+29,view==='front'?fmt(b-a):'46,5');
+        }
+        markup += line(X(0)-23,Y(0),X(0)-23,Y(H));
+        markup += line(X(0)-28,Y(0),X(0)-8,Y(0))+line(X(0)-28,Y(H),X(0)-8,Y(H));
+        markup += text(X(0)-31,Y(130),'≈ 260',`transform="rotate(-90 ${X(0)-31} ${Y(130)})"`);
+        [52,100,CORNER_DOOR_BOTTOM].forEach(z=>{
+          markup+=line(X(OUTER)+3,Y(z),X(OUTER)+13,Y(z));
+          const labelY=Y(z)+4+(z===52?5:z===CORNER_DOOR_BOTTOM?-5:0);
+          markup+=text(X(OUTER)+26,labelY,String(z));
+        });
+        markup += `<circle cx="${X(OUTER)}" cy="${Y(100)}" r="4" fill="var(--viz-series-4)"/>`;
+        markup += text(X(100),floor+52,view==='front'?'Цоколь 195 × 8 · добор справа 5':'Проёмы 46,5 · общий АБ3 — 94,8 см');
+        markup += text(X(100),floor+71,'52 — тумба · 60 — низ Г · 100 — бра');
+        svg.setAttribute('viewBox',`0 0 ${w} ${floor+85}`);
+        svg.style.height=`${floor+85}px`;
+        svg.innerHTML=markup;
+      }
+      const stages=[...root.querySelectorAll('.wr-stage')];
+      stages.forEach(host=>new ResizeObserver(()=>draw(host)).observe(host));
+      stages.forEach(draw);
+    })();
+  </script>
+</div>
+
+
+
+
+<script id="codex-visualization-tabs">
+(() => {
+  const selector = '.nav[role="tablist"] [role="tab"]';
+  const disabled = ':disabled,[aria-disabled="true"]';
+  const selectTab = (selected) => {
+    const panelId = selected.getAttribute("aria-controls");
+    for (const tab of selected.closest('[role="tablist"]').querySelectorAll('[role="tab"]')) {
+      const active = tab === selected;
+      tab.classList.toggle("active", active);
+      tab.setAttribute("aria-selected", String(active));
+      const id = tab.getAttribute("aria-controls");
+      const panel = id && document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden && selected.id) {
+          panel.setAttribute("aria-labelledby", selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) => {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === "click") {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest('[role="tablist"]').querySelectorAll('[role="tab"]'),
+    ).filter((candidate) => !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === "Home") {
+      next = 0;
+    } else if (event.key === "End") {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll('.nav[role="tablist"]')) {
+    const selected =
+      list.querySelector('[role="tab"][aria-selected="true"]') ??
+      list.querySelector('[role="tab"].active') ??
+      list.querySelector('[role="tab"]');
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener("click", interact);
+  document.addEventListener("keydown", interact);
+  window.addEventListener("pagehide", () => {
+    document.removeEventListener("click", interact);
+    document.removeEventListener("keydown", interact);
+  }, { once: true });
+})();
+</script>
+
+
+
+<!-- furniture-preview:start -->
+<style>:root{color-scheme:light!important;--background:#fff;background:#fff!important}
+html{margin:0;min-height:0}html>body{display:flow-root;margin:0;padding:0;min-height:0;background:#fff}
+body>div[id]{max-width:960px;margin-inline:auto}</style>
+<script>
+// Embedded into each standalone preview by tools/prepare-previews.py.
+(() => {
+  'use strict';
+  if (window.parent === window) return;
+  const targetOrigin = location.protocol === 'file:' ? '*' : location.origin;
+  let scheduled = false;
+  let previousHeight = 0;
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => {
+      scheduled = false;
+      if (document.body.getBoundingClientRect().width === 0) return;
+      // Measure content, not the iframe viewport, so shorter tabs can shrink.
+      const height = Math.ceil(document.body.getBoundingClientRect().height) + 2;
+      if (height < 100 || height === previousHeight) return;
+      previousHeight = height;
+      window.parent.postMessage({type: 'furniture:height', height}, targetOrigin);
+    });
+  }
+  new ResizeObserver(schedule).observe(document.body);
+  window.addEventListener('load', schedule);
+  window.addEventListener('message', event => {
+    if (event.source !== window.parent || event.data?.type !== 'furniture:measure') return;
+    if (location.protocol !== 'file:' && event.origin !== location.origin) return;
+    previousHeight = 0;
+    schedule();
+  });
+  document.fonts?.ready.then(schedule);
+  schedule();
+})();
+
+</script>
+<!-- furniture-preview:end -->
+</body>
+</html>

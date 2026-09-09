@@ -1,0 +1,1308 @@
+<!doctype html>
+<html lang="ru" data-furniture-preview>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Шкаф в прихожей — Мебель для дома</title>
+<style>:root {
+  color-scheme: light;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, "Segoe UI", sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath d='M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z'/%3E%3C/svg%3E");
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html > body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive > .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align="right"]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align="center"]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget > :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls > .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls > .form-label > :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled="true"]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type="file"] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type="file"]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type="file"]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type="color"] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type="color"]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type="checkbox"] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type="checkbox"]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type="checkbox"]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: "";
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type="radio"]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: "";
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed="true"],
+  [aria-selected="true"],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed="true"], [aria-selected="true"], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type="file"]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type="color"] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="time"],
+    [type="week"]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget > svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html>body{padding:0}</style>
+</head>
+<body>
+<div id="hallway-wardrobe">
+  <div class="nav nav-pills" role="tablist" aria-label="Шкаф в прихожую">
+    <button class="nav-link active" id="hw-inside-tab" type="button" role="tab" aria-controls="hw-inside" aria-selected="true">Наполнение</button>
+    <button class="nav-link" id="hw-front-tab" type="button" role="tab" aria-controls="hw-front" aria-selected="false">Фасады</button>
+    <button class="nav-link" id="hw-storage-tab" type="button" role="tab" aria-controls="hw-storage" aria-selected="false">Что хранить</button>
+  </div>
+  <div class="text-small hw-meta">Прихожая · концепт 3 · 150 × 60 × 260 см</div>
+  <div class="hw-legend text-small">
+    <span><i class="hw-swatch hw-daily"></i> Быстрый доступ</span>
+    <span><i class="hw-swatch hw-clothes"></i> Одежда и запас</span>
+    <span><i class="hw-swatch hw-cat"></i> Кошачий тоннель</span>
+  </div>
+  <div id="hw-inside" role="tabpanel" aria-labelledby="hw-inside-tab">
+    <div class="text-small">Вид из прихожей · сиденье слева, ближе к входу · размеры в свету, см</div>
+    <div class="hw-stage" data-view="inside"><svg role="img" aria-label="Наполнение шкафа: сиденье, обувница, общая штанга и кошачий тоннель"></svg></div>
+    <div class="text-small hw-meta">Подвес от штанги: слева 167,2; над тоннелем 135,4. Штанга 175*; сиденье 45. *Высоту штанги примерить девушке.</div>
+    <div class="text-small hw-meta">Б1 убран. Б2↓ — продолжение общей ниши вниз, без разделяющей полки. Цоколь 6; верх дна 7,8 см.</div>
+    <details class="hw-details" open>
+      <summary>Размеры всех ниш</summary>
+      <table class="table table-sm text-small"><thead><tr><th>Код</th><th>Ш × В × Г, см</th><th>Низ / верх</th></tr></thead><tbody data-dimensions></tbody></table>
+    </details>
+    <details class="hw-details">
+      <summary>Уровни и конструкция</summary>
+      <table class="table table-sm text-small"><thead><tr><th>Элемент</th><th>Проектный размер, см</th></tr></thead><tbody>
+        <tr><td>Сиденье</td><td>Плита 3,6: от 39,4 до 43; накладка 2: до 45. Опоры и нагрузка — при подборе материала.</td></tr>
+        <tr><td>Крючки</td><td>Около 150 и 170; регулируемое положение</td></tr>
+        <tr><td>Штанга</td><td>Верх 175; проём 95,2; до полки сверху 10. Труба короче проёма на крепления.</td></tr>
+        <tr><td>Дно и полки одежды</td><td>Дно 7,8; только над тоннелем полка 39,6; верхние полки 186,8 и 211,8</td></tr>
+        <tr><td>Глубина</td><td>С дверью 60; в свету 57,4 при двери 1,8 и задней стенке 0,8 заподлицо</td></tr>
+        <tr><td>Корпус</td><td>147 + добор у левой стены 3 = 150; обычные плиты 1,8</td></tr>
+        <tr><td>Кошачий тоннель</td><td>Цоколь 6 + дно 1,8: пол прохода 7,8. Чистая высота 30 — до 37,8; крыша толщиной 1,8 — до 39,6. Лаз в двери В: 25 × 25, от 7,8 до 32,8.</td></tr>
+      </tbody></table>
+    </details>
+  </div>
+  <div id="hw-front" role="tabpanel" aria-labelledby="hw-front-tab" hidden>
+    <div class="text-small">Фасадные поля до назначения зазоров · вершина треугольника — петли</div>
+    <div class="hw-stage" data-view="front"><svg role="img" aria-label="Распашные фасады, открытое сиденье и постоянный лаз справа внизу"></svg></div>
+    <div class="text-small hw-meta">Б и В одинаковые: поля по 48,95 × 204 см, от цоколя до антресоли. Лаз движется вместе с дверью В; при её открывании тоннель доступен для уборки.</div>
+    <table class="table table-sm text-small"><thead><tr><th>Фасад</th><th>Ш × В, см</th><th>Отметки</th></tr></thead><tbody data-facades></tbody></table>
+    <div class="text-small hw-meta">Нижнюю петлю В расположить выше крыши тоннеля 39,6 см; петли и рамку выреза подобрать под материал двери. Точный отступ до входной двери ещё нужен.</div>
+  </div>
+  <div id="hw-storage" role="tabpanel" aria-labelledby="hw-storage-tab" hidden>
+    <div class="hw-stage" data-view="storage"><svg role="img" aria-label="Назначение всех зон шкафа"></svg></div>
+    <table class="table table-sm text-small"><thead><tr><th class="text-nowrap">Зона</th><th>Предложение</th></tr></thead><tbody data-storage></tbody></table>
+    <details class="hw-details" open>
+      <summary>Что ещё уточнить</summary>
+      <table class="table table-sm text-small"><thead><tr><th>Узел</th><th>Статус</th></tr></thead><tbody>
+        <tr><td>Сиденье у входа</td><td>Принято слева на длинном фасаде. Зона крючков продолжается до антресоли, А4 убрана.</td></tr>
+        <tr><td>Отверстие в стене</td><td>Предложена ось 133,2 см от левого края шкафа. Пол тоннеля теперь на 7,8 см: согласовать с высотой отверстия. Маршрут прямой.</td></tr>
+        <tr><td>Обувница</td><td>Поддон и вентиляция за закрытой дверцей. Одна широкая пара; две компактные — после примерки.</td></tr>
+        <tr><td>Куртки над сиденьем</td><td>Только текущие вещи. Объёмная одежда может мешать сидеть в нише шириной 46,4 см.</td></tr>
+        <tr><td>Штанга</td><td>175 см примерить с плечиками. Расчёт опор и усиления — по весу одежды.</td></tr>
+        <tr><td>Монтаж</td><td>Добор, зазоры, петли и конструкция сиденья предварительные. Концепт ещё не является заданием на распил.</td></tr>
+      </tbody></table>
+    </details>
+  </div>
+  <style>
+    #hallway-wardrobe {
+      color-scheme:light;
+      --background:#ffffff;--foreground:#242424;--muted:#f3f3f3;--muted-foreground:#686868;
+      --border:#dedede;--primary:#e7e7e7;--primary-foreground:#242424;--secondary:#f2f2f2;--secondary-foreground:#242424;
+      --accent:#eeeeee;--accent-foreground:#242424;--input:#d4d4d4;--ring:#4b91d6;
+      --viz-series-1:#4b91d6;--viz-series-2:#d8892f;--viz-series-3:#4d9a62;--viz-series-4:#ba6ea7;
+      color:var(--foreground);background:var(--background);padding:12px;
+    }
+    #hallway-wardrobe .hw-meta {margin:8px 0 12px}
+    #hallway-wardrobe .hw-legend {display:flex;flex-wrap:wrap;gap:8px 18px;margin:10px 0 14px}
+    #hallway-wardrobe .hw-legend span {display:inline-flex;align-items:center;gap:6px}
+    #hallway-wardrobe .hw-swatch {width:11px;height:11px;display:inline-block}
+    #hallway-wardrobe .hw-daily {background:var(--viz-series-1)}
+    #hallway-wardrobe .hw-clothes {background:var(--viz-series-2)}
+    #hallway-wardrobe .hw-cat {background:var(--viz-series-3)}
+    #hallway-wardrobe .hw-stage {max-width:640px;margin:0 auto 12px}
+    #hallway-wardrobe .hw-stage svg {display:block;width:100%}
+    #hallway-wardrobe svg text {font-family:inherit;fill:var(--foreground);font-weight:400}
+    #hallway-wardrobe .hw-details {margin:16px 0}
+    #hallway-wardrobe summary {cursor:pointer}
+  </style>
+  <script>
+  (()=>{
+    const root=document.getElementById('hallway-wardrobe');
+    const T=1.8,H=260,W=150;
+    const cells=[
+      {id:'А1',x:4.8,z:7.8,w:46.4,h:31.6,d:40,c:1,name:'Обувь',use:'Грязная обувь за дверцей; съёмный поддон, вентиляция. Размеры указаны до установки поддона.'},
+      {id:'А2',x:4.8,z:39.4,w:46.4,h:5.6,d:43,c:1,name:'Сиденье',use:'Сиденье на одного человека: ширина 46,4, глубина 43, верх на отметке 45 см. Конструкция 3,6 + накладка 2 см.'},
+      {id:'А3',x:4.8,z:45,w:46.4,h:165,d:43,c:1,name:'Крючки',use:'Открытая зона до антресоли: текущая куртка и сумка. Крючки примерно на 150 и 170 см; объёмную одежду придётся отодвигать, чтобы сесть.'},
+      {id:'А0',x:4.8,z:211.8,w:46.4,h:46.4,d:56,c:2,name:'Сезон',use:'Сезонные аксессуары, лёгкий запас. Доступ со ступеньки.'},
+      {id:'Б2↓',x:53,z:7.8,w:63.4,h:31.8,d:57.4,c:2,name:'Для пальто',use:'Продолжение общей ниши вниз; сверху нет полки. На ширине 63,4 см от штанги до дна 167,2 см: свес с плечиками до примерно 164 см с выбранным запасом 3 см. Доступ через левую высокую дверь.'},
+      {id:'Б2',x:53,z:39.6,w:95.2,h:145.4,d:57.4,c:2,name:'Одежда',use:'Одна общая штанга для двоих. Длинные пальто слева; над тоннелем от штанги до полки 135,4 см, свес с плечиками до примерно 132 см с запасом 3 см. Высота 145,4 в таблице относится только к общей верхней части проёма.'},
+      {id:'Б3',x:53,z:186.8,w:46.7,h:23.2,d:56,c:2,name:'Шарфы',use:'Шарфы и перчатки в коробках высотой до 19 см; запасные вещи.'},
+      {id:'В3',x:101.5,z:186.8,w:46.7,h:23.2,d:56,c:2,name:'Шапки',use:'Шапки и дорожные мелочи в невысоких коробках.'},
+      {id:'Б0',x:53,z:211.8,w:46.7,h:46.4,d:56,c:2,name:'Сумки',use:'Мягкие сумки и рюкзаки, если подходят по габаритам; лёгкое редкое хранение.'},
+      {id:'В0',x:101.5,z:211.8,w:46.7,h:46.4,d:56,c:2,name:'Сезон',use:'Сезонные вещи и запасные аксессуары. Доступ со ступеньки.'},
+      {id:'К1',x:118.2,z:7.8,w:30,h:30,d:60,c:3,name:'Тоннель',use:'Проход кота 30 × 30 см в свету, пол на высоте 7,8 см над общим цоколем. Лаз 25 × 25 см в высокой двери В: низ 7,8, верх 32,8. Для уборки открывается вся дверь; длина через стену добавляется отдельно.'}
+    ];
+    const f=n=>Number(n.toFixed(2)).toLocaleString('ru-RU',{maximumFractionDigits:2});
+    const cellOrder=[...cells].sort((a,b)=>a.x-b.x||a.z-b.z);
+    const fill=c=>`color-mix(in srgb,var(--viz-series-${c}) 13%,transparent)`;
+    root.querySelector('[data-dimensions]').innerHTML=cellOrder.map(n=>`<tr data-cell="${n.id}" data-x="${n.x}" data-z="${n.z}" data-width="${n.w}" data-height="${n.h}" data-depth="${n.d}"><td>${n.id}</td><td>${f(n.w)} × ${f(n.h)} × ${f(n.d)}${n.id==='К1'?'*':''}</td><td>${f(n.z)} / ${f(n.z+n.h)}</td></tr>`).join('')+'<tr><td>К-вход</td><td>Лаз 25 × 25</td><td>7,8 / 32,8</td></tr><tr><td colspan="3">Б2 и Б2↓ — части одного проёма без полки между ними. *К1: примерно 60 см до стены; её толщина добавляется к длине маршрута. А2: 5,6 см — конструкция с накладкой.</td></tr>';
+    root.querySelector('[data-storage]').innerHTML=cellOrder.map(n=>`<tr><td class="text-nowrap">${n.id}</td><td>${n.use}</td></tr>`).join('');
+    const doors=[
+      {id:'А1',x:3,z:6,w:49.1,h:33.4,r:false},
+      {id:'А0',x:3,z:210,w:49.1,h:50,r:false},
+      {id:'Б',x:52.1,z:6,w:48.95,h:204,r:false},
+      {id:'В',x:101.05,z:6,w:48.95,h:204,r:true},
+      {id:'Б0',x:52.1,z:210,w:48.95,h:50,r:false},
+      {id:'В0',x:101.05,z:210,w:48.95,h:50,r:true}
+    ];
+    root.querySelector('[data-facades]').innerHTML=doors.map(d=>`<tr data-door-id="${d.id}" data-width="${d.w}" data-height="${d.h}" data-bottom="${d.z}"><td>${d.id} · петли ${d.r?'справа':'слева'}</td><td>${f(d.w)} × ${f(d.h)}</td><td>${f(d.z)}–${f(d.z+d.h)}</td></tr>`).join('')+'<tr><td>Лаз в двери В</td><td>25 × 25</td><td>7,8–32,8</td></tr><tr><td>Общий цоколь</td><td>147 × 6</td><td>0–6</td></tr>';
+    function elevation(host){
+      const width=host.getBoundingClientRect().width;if(!width)return;
+      const view=host.dataset.view,svg=host.querySelector('svg'),s=Math.min((width-80)/W,2.05),x0=(width-W*s)/2,y0=57;
+      const X=x=>x0+x*s,Y=z=>y0+(H-z)*s;
+      const rect=(x,z,w,h,color='var(--muted)',stroke='var(--muted-foreground)',extra='')=>`<rect x="${X(x)}" y="${Y(z+h)}" width="${w*s}" height="${h*s}" fill="${color}" stroke="${stroke}" stroke-width="0.8" ${extra}/>`;
+      const line=(x1,z1,x2,z2,color='var(--foreground)',extra='')=>`<line x1="${X(x1)}" y1="${Y(z1)}" x2="${X(x2)}" y2="${Y(z2)}" stroke="${color}" stroke-width="1.2" ${extra}/>`;
+      const txt=(x,z,text,extra='')=>`<text class="text-small" x="${X(x)}" y="${Y(z)}" text-anchor="middle" ${extra}>${text}</text>`;
+      const block=(x,z,lines)=>lines.map((t,i)=>txt(x,z+(lines.length-1-2*i)*7.5/s,t)).join('');
+      let out=`<title>${view==='front'?'Фасады':view==='storage'?'Что хранить':'Наполнение'} шкафа в прихожую</title><desc>Слева компактное сиденье и закрытая обувница, справа общая штанга шириной проёма 95,2 сантиметра. Внизу справа постоянный лаз 25 на 25 и тоннель 30 на 30 сантиметров, ведущий через шкаф к отверстию в стене.</desc>`;
+      out+=rect(0,0,3,H)+rect(3,0,147,H,'none')+rect(3,0,147,6);
+      cells.forEach(n=>out+=rect(n.x,n.z,n.w,n.h,fill(n.c),'none'));
+      const boards=[[3,6,1.8,254],[51.2,6,1.8,254],[148.2,6,1.8,254],[3,258.2,147,T],[4.8,6,46.4,T],[53,6,95.2,T],[116.4,7.8,T,30],[116.4,37.8,31.8,T],[4.8,39.4,46.4,3.6],[53,185,95.2,T],[4.8,210,143.4,T],[99.7,186.8,T,71.4]];
+      if(view!=='front')boards.forEach(b=>out+=rect(...b));
+      out+=rect(4.8,43,46.4,2,fill(1));
+      out+=line(6,150,9,150)+line(7.5,150,7.5,146)+line(47,170,50,170)+line(48.5,170,48.5,166);
+      if(view==='front'){
+        doors.forEach(d=>{
+          out+=rect(d.x+.12,d.z+.12,d.w-.24,d.h-.24,'var(--background)','var(--foreground)');
+          const hinge=d.r?d.x+d.w-1:d.x+1,free=d.r?d.x+4:d.x+d.w-4,mid=d.z+d.h/2;
+          out+=line(free,d.z+2,hinge,mid,'var(--muted-foreground)')+line(hinge,mid,free,d.z+d.h-2,'var(--muted-foreground)');
+          out+=line(free,mid-2,free,mid+2);
+          if(d.h>40)out+=block(d.x+d.w/2,mid,[d.id,`${Math.round(d.w)}×${f(d.h)}`]);else out+=txt(d.x+d.w/2,mid-2/s,d.id);
+        });
+        out+=rect(120.7,7.8,25,25,fill(3),'var(--viz-series-3)','data-cat-opening data-door="В" data-bottom="7.8"');
+        out+=block(133.2,21.8,['Лаз','25×25']);
+        out+=block(28,127.5,['А3','Крючки','Быстрый','доступ']);
+        out+=txt(28,52,'Сиденье 45');
+      }else{
+        out+=line(53,175,148.2,175,'var(--foreground)','data-rail');
+        cells.forEach(n=>{
+          if(n.id==='А2')return;
+          const cx=n.x+n.w/2,cz=n.z+n.h/2;
+          if(n.id==='Б2'){
+            out+=block(cx,112,view==='inside'?['Б2 · штанга 95,2','Подвес слева 167,2','Справа 135,4']:['Б2 · на двоих','Длинные — слева','Куртки — справа']);
+            out+=txt(cx,164,'Верх 175*');
+            return;
+          }
+          if(n.id==='А3'){
+            out+=block(cx,127.5,view==='inside'?['А3 · крючки','46,4 × 165']:['А3','Куртка','Сумка']);
+            out+=txt(cx,52,'Сиденье 45');
+            return;
+          }
+          const short=n.id==='Б2↓'?'Для пальто':view==='inside'?`${Math.round(n.w)}×${f(n.h)}`:n.name;
+          out+=block(cx,cz,[n.id,short]);
+        });
+      }
+      out+=line(0,0,150,0);
+      out+=line(0,274,150,274,'var(--muted-foreground)')+txt(75,279,'150, включая добор 3');
+      out+=line(-10,0,-10,H,'var(--muted-foreground)')+txt(-17,130,'260',`transform="rotate(-90 ${X(-17)} ${Y(130)})"`);
+      out+=txt(28,266,'А')+txt(77,266,'Б')+txt(126,266,'В');
+      out+=txt(28,-12,'46,4')+txt(100.6,-12,'Проём 95,2');
+      out+=txt(75,-26,'Цоколь 6 · дно тоннеля 7,8 см');
+      svg.setAttribute('viewBox',`0 0 ${width} ${Y(-26)+17}`);svg.style.height=`${Y(-26)+17}px`;svg.innerHTML=out;
+    }
+    root.querySelectorAll('.hw-stage').forEach(host=>{new ResizeObserver(()=>elevation(host)).observe(host);elevation(host);});
+  })();
+  </script>
+</div>
+
+
+
+
+<script id="codex-visualization-tabs">
+(() => {
+  const selector = '.nav[role="tablist"] [role="tab"]';
+  const disabled = ':disabled,[aria-disabled="true"]';
+  const selectTab = (selected) => {
+    const panelId = selected.getAttribute("aria-controls");
+    for (const tab of selected.closest('[role="tablist"]').querySelectorAll('[role="tab"]')) {
+      const active = tab === selected;
+      tab.classList.toggle("active", active);
+      tab.setAttribute("aria-selected", String(active));
+      const id = tab.getAttribute("aria-controls");
+      const panel = id && document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden && selected.id) {
+          panel.setAttribute("aria-labelledby", selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) => {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === "click") {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest('[role="tablist"]').querySelectorAll('[role="tab"]'),
+    ).filter((candidate) => !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === "Home") {
+      next = 0;
+    } else if (event.key === "End") {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll('.nav[role="tablist"]')) {
+    const selected =
+      list.querySelector('[role="tab"][aria-selected="true"]') ??
+      list.querySelector('[role="tab"].active') ??
+      list.querySelector('[role="tab"]');
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener("click", interact);
+  document.addEventListener("keydown", interact);
+  window.addEventListener("pagehide", () => {
+    document.removeEventListener("click", interact);
+    document.removeEventListener("keydown", interact);
+  }, { once: true });
+})();
+</script>
+
+
+
+<!-- furniture-preview:start -->
+<style>:root{color-scheme:light!important;--background:#fff;background:#fff!important}
+html{margin:0;min-height:0}html>body{display:flow-root;margin:0;padding:0;min-height:0;background:#fff}
+body>div[id]{max-width:960px;margin-inline:auto}</style>
+<script>
+// Embedded into each standalone preview by tools/prepare-previews.py.
+(() => {
+  'use strict';
+  if (window.parent === window) return;
+  const targetOrigin = location.protocol === 'file:' ? '*' : location.origin;
+  let scheduled = false;
+  let previousHeight = 0;
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => {
+      scheduled = false;
+      if (document.body.getBoundingClientRect().width === 0) return;
+      // Measure content, not the iframe viewport, so shorter tabs can shrink.
+      const height = Math.ceil(document.body.getBoundingClientRect().height) + 2;
+      if (height < 100 || height === previousHeight) return;
+      previousHeight = height;
+      window.parent.postMessage({type: 'furniture:height', height}, targetOrigin);
+    });
+  }
+  new ResizeObserver(schedule).observe(document.body);
+  window.addEventListener('load', schedule);
+  window.addEventListener('message', event => {
+    if (event.source !== window.parent || event.data?.type !== 'furniture:measure') return;
+    if (location.protocol !== 'file:' && event.origin !== location.origin) return;
+    previousHeight = 0;
+    schedule();
+  });
+  document.fonts?.ready.then(schedule);
+  schedule();
+})();
+
+</script>
+<!-- furniture-preview:end -->
+</body>
+</html>
