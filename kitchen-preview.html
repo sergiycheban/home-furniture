@@ -1059,6 +1059,7 @@ html>body{padding:0}</style>
     <details><summary>Мойка, фильтр и вырезы в столешнице</summary><table class="table table-sm text-small"><tbody>
       <tr><td>GROHE 31574SD1</td><td>Наружный габарит 55 × 45, чаша 50 × 40 × 20, шкаф от 60. Здесь корпус 75. Предварительно подстольный монтаж; вырез 50,2 × 40,2, R1,6 — по текущей документации GROHE, окончательно по шаблону купленной мойки.</td></tr>
       <tr><td>Положение мойки</td><td>Центр 42,5 от правого внутреннего угла, то есть 157,5 от левого свободного торца. По глубине от готовой стены: 9 до наружного края, 45 мойка, 8 до переднего края. Низ чаши ориентировочно 68.</td></tr>
+      <tr><td>Между мойкой и варочной</td><td>85,6 по горизонтали между ближайшими наружными краями: край стекла панели на 44,4, край мойки на 130 от левого торца. Между корпусами — рабочая секция Е шириной 60.</td></tr>
       <tr><td>Roca Aquafy</td><td>A5A8D3GSM0: высота 43,8, вылет 22, основание Ø5,2. Верх крана 134,8 — остаётся 16,2 до шкафа. Ось предварительно в 5 от стены; положение, движение рычагов и крепление проверить по комплекту.</td></tr>
       <tr><td>Под мойкой</td><td>Слева резерв 18 × 52 × 20 под фильтр и доступ: полный узел по чертежу около Ø9,8 × 42. Справа резерв 40 × 38 × 40 под выкатные вёдра. Шланг выдвижного излива должен свободно ходить сзади; объёмы сверить с сифоном.</td></tr>
       <tr><td>Samsung NZ32BG2005FKU2</td><td>28,8 × 5,6 × 52, две зоны; вырез 27 × 50. Центр 30 от левого свободного торца, или 170 от правого угла. Вырез по глубине 6–56: по 6 спереди и сзади. Над верхним ящиком отдельная техническая зона, вентиляционные пути по инструкции.</td></tr>
@@ -1168,7 +1169,7 @@ html>body{padding:0}</style>
       const label=(x,z,text,extra={})=>el(svg,'text',{x:X(x),y:Y(z),'text-anchor':'middle',...extra},text);
       function middle(n,text){const cy=n.z+n.h/2;const lines=Array.isArray(text)?text:[text];lines.forEach((v,i)=>label(n.x+n.w/2,cy,v,{dy:(i-(lines.length-1)/2)*18+4}));}
       function dimV(x,a,b,text){line(x,a,x,b);line(x-1.7,a,x+1.7,a);line(x-1.7,b,x+1.7,b);const px=X(x)-6,py=Y((a+b)/2);el(svg,'text',{x:px,y:py,'text-anchor':'middle',transform:`rotate(-90 ${px} ${py})`},text);}
-      function dimH(x1,x2,z,text){line(x1,z,x2,z);line(x1,z-1,x1,z+1);line(x2,z-1,x2,z+1);label((x1+x2)/2,z,text,{dy:17});}
+      function dimH(x1,x2,z,text,extra={}){line(x1,z,x2,z,extra);line(x1,z-1,x1,z+1);line(x2,z-1,x2,z+1);label((x1+x2)/2,z,text,{dy:17});}
       function door(x,z,w,hh,hinge='left',text=''){
         box(x,z,w,hh,'storage');const hx=hinge==='left'?x:x+w;
         [z+hh*.25,z+hh*.75].forEach(hz=>el(svg,'circle',{cx:X(hx),cy:Y(hz),r:1.8,fill:'var(--muted-foreground)'}));
@@ -1202,6 +1203,9 @@ html>body{padding:0}</style>
         line(42.5,geo.counter,42.5,geo.counter+39);el(svg,'path',{d:`M ${X(42.5)} ${Y(geo.counter+39)} C ${X(42.5)} ${Y(geo.counter+45.4)} ${X(48)} ${Y(geo.counter+45.4)} ${X(48)} ${Y(geo.counter+39)} L ${X(48)} ${Y(geo.counter+21.8)}`,fill:'none',stroke:'var(--muted-foreground)','stroke-width':2});
         box(140,geo.upper,60,3,'check',{'data-hood':''});
         dimV(204,geo.counter,geo.upper,fmt(geo.backsplash)+'*');
+        line(70,geo.counter+1,70,geo.counter+16,{'stroke-dasharray':'2 3'});
+        line(155.6,geo.counter+1,155.6,geo.counter+16,{'stroke-dasharray':'2 3'});
+        dimH(70,155.6,geo.counter+14,narrow?'85,6 см':'85,6 см · между краями',{'data-sink-hob-distance':'85.6'});
         label(109,(geo.counter+geo.upper)/2,narrow?'60 · подготовка':'60 см · свободная поверхность');
         dimH(0,200,-20,'200 · глубина 62');
         if(!narrow){dimV(211,0,geo.counter,fmt(geo.counter));label(5,geo.counter+5,'Угол 5',{'text-anchor':'end'});}

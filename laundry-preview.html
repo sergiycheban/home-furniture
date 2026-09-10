@@ -1031,6 +1031,7 @@ html>body{padding:0}</style>
     <button class="nav-link" id="lw-store-tab" type="button" role="tab" aria-controls="lw-store" aria-selected="false">Что хранить</button>
   </div>
   <div class="lw-meta">Постирочная · 105 × 75 см · слева 235 / справа 255 см</div>
+  <div class="lw-meta text-small">Чистый пол → низ бойлера: <strong>145 см</strong>. От полки на отметке 95 до бойлера — 50 см для обслуживания.</div>
   <div class="lw-legend text-small"><span><i class="lw-swatch lw-stock"></i>Хранение</span><span><i class="lw-swatch lw-service"></i>Бойлер и обслуживание</span><span><i class="lw-swatch lw-machine"></i>Колонна Samsung</span></div>
 
   <div id="lw-fill" role="tabpanel" aria-labelledby="lw-fill-tab">
@@ -1050,7 +1051,8 @@ html>body{padding:0}</style>
       <tr><td>Цоколь и дно слева</td><td>Цоколь 6; дно 6–7,8. Под машинами — готовый пол</td></tr>
       <tr><td>Полка между А1 и А2</td><td>Низ 55 / верх 56,8; глубина 50</td></tr>
       <tr><td>Полка под сервисной зоной</td><td>Низ 93,2 / верх 95; глубина 50</td></tr>
-      <tr><td>Бойлер</td><td>Низ патрубков 145; верх 223,65. Над ним до крыши 6,55</td></tr>
+      <tr><td>Пол → низ бойлера</td><td>145 от чистого пола до нижней заводской точки бойлера (патрубков). Подключённые трубы и арматура ниже; их отметки пока не заданы.</td></tr>
+      <tr><td>Бойлер</td><td>Верх 223,65. Над ним до крыши 6,55; от полки 95 до низа бойлера 145 — сервисная зона 50.</td></tr>
       <tr><td>Положение в глубину</td><td>Бойлер от 13,1 до 70 от передней плоскости; до задней стены 5; до внутренней стороны двери 11,3</td></tr>
       <tr><td>Перегородка над машинами</td><td>Низ 180 / верх 181,8; глубина 45; независимое крепление</td></tr>
       <tr><td>Полка между Б3 и Б4</td><td>Низ 215,1 / верх 216,9; глубина 45</td></tr>
@@ -1162,7 +1164,7 @@ html>body{padding:0}</style>
       const text=(x,z,value,anchor='middle',attrs={})=>element(svg,'text',{x:X(x),y:Y(z),'text-anchor':anchor,'dominant-baseline':'middle','font-size':12,'paint-order':'stroke',stroke:'var(--background)','stroke-width':3,'stroke-linejoin':'round',...attrs},value);
       const lines=(x,z,values)=>values.forEach((v,i)=>text(x,z-i*15/s,v));
       const hd=(a,b,z,label)=>{line(a,z,b,z,'lw-dim');line(a,z-1.4,a,z+1.4,'lw-dim');line(b,z-1.4,b,z+1.4,'lw-dim');text((a+b)/2,z-7/s,label);};
-      const vd=(x,a,b,label)=>{line(x,a,x,b,'lw-dim');line(x-1.4,a,x+1.4,a,'lw-dim');line(x-1.4,b,x+1.4,b,'lw-dim');element(svg,'text',{x:X(x),y:Y((a+b)/2),'text-anchor':'middle','font-size':12,transform:`rotate(-90 ${X(x)-7} ${Y((a+b)/2)})`,dx:-7,dy:-7},label);};
+      const vd=(x,a,b,label,attrs={})=>{const mark=line(x,a,x,b,'lw-dim');Object.entries(attrs).forEach(([k,v])=>mark.setAttribute(k,v));line(x-1.4,a,x+1.4,a,'lw-dim');line(x-1.4,b,x+1.4,b,'lw-dim');const px=X(x)-7,py=Y((a+b)/2);element(svg,'text',{x:px,y:py,'text-anchor':'middle','dominant-baseline':'middle','font-size':12,transform:`rotate(-90 ${px} ${py})`},label);};
       return {svg,s,ox,oy,X,Y,line,box,text,lines,hd,vd};
     }
     function shell(d){
@@ -1173,7 +1175,9 @@ html>body{padding:0}</style>
       box(38.2,0,1.8,252,{class:'lw-panel'});box(0,230.2,38.2,1.8,{class:'lw-panel'});box(40,250.2,65,1.8,{class:'lw-panel'});
       box(103.2,180,1.8,70.2,{class:'lw-panel'});box(40,180,63.2,1.8,{class:'lw-panel'});box(40,215.1,63.2,1.8,{class:'lw-panel'});
       box(2,6,1.8,89,{class:'lw-panel'});box(3.8,6,34.4,1.8,{class:'lw-panel'});box(3.8,55,34.4,1.8,{class:'lw-panel'});box(3.8,93.2,34.4,1.8,{class:'lw-panel'});
-      line(0,235,-4,235,'lw-dim');line(105,255,109,255,'lw-dim');vd(-9,0,235,'235 до короба');vd(114,0,255,'255 доступно');
+      line(0,235,-7/s,235,'lw-dim');line(105,255,109,255,'lw-dim');vd(-7/s,0,235,'235 до короба');vd(114,0,255,'255 доступно');
+      line(0,145,-30/s,145,'lw-guide');line(0,0,-30/s,0,'lw-dim');
+      vd(-30/s,0,145,'145 · пол → низ бойлера',{'data-floor-boiler-distance':'145'});
       hd(0,38.2,-8,'38,2');hd(40,105,-8,'65');hd(0,105,-23,'105 между стенами');
       text(52.5,-36,'Перегородка 1,8 · глубина 75');
     }
