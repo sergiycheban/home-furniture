@@ -14,6 +14,7 @@ PREVIEWS = {
     "hallway-preview.html": "Шкаф в прихожей",
     "laundry-preview.html": "Шкаф в постирочной",
     "bathroom-preview.html": "Тумба в ванной",
+    "kitchen-preview.html": "Г-образная кухня",
 }
 START = "<!-- furniture-preview:start -->"
 END = "<!-- furniture-preview:end -->"
@@ -40,7 +41,7 @@ def prepare(filename, title):
     document = re.sub(re.escape(START) + r".*?" + re.escape(END) + r"\n?", "", document, flags=re.S)
     document = re.sub(r'<html\b[^>]*>', '<html lang="ru" data-furniture-preview>', document, count=1)
     document = re.sub(r'<title>.*?</title>', '<title>' + escape(title) + ' — Мебель для дома</title>', document, count=1, flags=re.S)
-    # These four schemes use neither tooltip triggers nor Lucide icons.
+    # These schemes use neither tooltip triggers nor Lucide icons.
     # Remove the unused CDN runtime so the album works without internet access.
     if not re.search(r'<[^>]+\bdata-(?:tooltip|lucide)\b', document):
         document = re.sub(r'<script\b[^>]*\bsrc="https://unpkg\.com/[^"]*"[^>]*>\s*</script>', '', document)

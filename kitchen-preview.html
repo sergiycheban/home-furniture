@@ -1,0 +1,1361 @@
+<!doctype html>
+<html lang="ru" data-furniture-preview>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Г-образная кухня — Мебель для дома</title>
+<style>:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, "Segoe UI", sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono",
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath d='M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z'/%3E%3C/svg%3E");
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html > body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive > .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align="right"]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align="center"]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget > :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls > .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls > .form-label > :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled="true"]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type="file"] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type="file"]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type="file"]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type="color"] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type="color"]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type="checkbox"] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type="checkbox"]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type="checkbox"]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: "";
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type="radio"] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type="radio"]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: "";
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed="true"],
+  [aria-selected="true"],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed="true"], [aria-selected="true"], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type="file"]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type="color"] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type="date"],
+    [type="datetime-local"],
+    [type="month"],
+    [type="time"],
+    [type="week"]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: "";
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget > svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html>body{padding:0}</style>
+</head>
+<body>
+<div id="kitchen-l-shaped">
+  <div class="nav nav-pills" role="tablist" aria-label="Схема кухни">
+    <button class="nav-link active" type="button" id="kt-fill-tab" role="tab" aria-controls="kt-fill" aria-selected="true">Наполнение</button>
+    <button class="nav-link" type="button" id="kt-front-tab" role="tab" aria-controls="kt-front" aria-selected="false">Фасады</button>
+    <button class="nav-link" type="button" id="kt-store-tab" role="tab" aria-controls="kt-store" aria-selected="false">Что хранить</button>
+  </div>
+  <p>Г-образная кухня · потолок ≈ 261–262 · столешница 90 · фартук 55 см</p>
+  <div class="viz-controls" aria-label="Сторона кухни">
+    <button class="btn" type="button" data-wall="work" aria-pressed="true">Мойка и плита</button>
+    <button class="btn" type="button" data-wall="tall" aria-pressed="false">Высокие шкафы</button>
+  </div>
+  <div class="viz-row text-small kt-legend"><span><i class="kt-key kt-storage"></i>Хранение</span><span><i class="kt-key kt-tech"></i>Техника и коммуникации</span><span><i class="kt-key kt-check"></i>Узел требует проверки</span></div>
+  <div id="kt-fill" role="tabpanel" aria-labelledby="kt-fill-tab">
+    <div class="kt-stage" data-stage="fill"><svg class="kt-drawing" role="img" aria-label="Размерная развёртка кухни без фасадов"></svg></div>
+    <p class="text-small" data-caption></p>
+    <details open><summary>Корпуса и монтажные ниши · Ш × В × Г, см</summary><div class="table-responsive"><table class="table table-sm text-small"><thead><tr><th>Секция</th><th>Размеры</th><th>От пола</th></tr></thead><tbody data-dimensions></tbody></table></div></details>
+    <details><summary>Все ящики и полочные ниши</summary><div class="table-responsive"><table class="table table-sm text-small"><thead><tr><th>Ниша</th><th>Ш × В × Г</th><th>Низ → верх</th></tr></thead><tbody data-niches></tbody></table></div></details>
+    <details><summary>Полезный объём ящиков</summary><table class="table table-sm text-small"><tbody>
+      <tr><td>Е1 · приборы</td><td>Цель для внутреннего короба: около 50 × 12 × 47 см.</td></tr>
+      <tr><td>Е2 / Е3 · посуда</td><td>Цель: около 50 × 20 × 47 см каждый.</td></tr>
+      <tr><td>Ж1 / Ж2 · сковороды и кастрюли</td><td>Цель: около 50 × 20 × 47 и 50 × 27 × 47 см.</td></tr>
+      <tr><td>Статус размеров</td><td>Это цели для подбора направляющих и коробов. Точные внутренние размеры зависят от выбранной системы, толщины дна и боковин; на схеме точно посчитаны поля по высоте фасадов. Проём корпуса 56,4 шириной, расчётная свободная глубина 53.</td></tr>
+    </tbody></table></details>
+    <details><summary>Высоты, глубины и угол</summary><table class="table table-sm text-small"><tbody>
+      <tr><td>По плану</td><td>Короткая стена: 155 + 60 = 215. Длинная: глубина колонн 60 + рабочая линия 200 = 260. Короб 53 вдоль короткой стены × 47 вдоль длинной.</td></tr>
+      <tr><td>Рабочая столешница</td><td>200 × 62 × 3. Предложена глубина 62: вырез панели 50 + передняя и задняя полосы по 6. Столешница 87–90, корпуса 12–87. Цоколь 12 высотой, утоплен на 8 от фасада.</td></tr>
+      <tr><td>Короткая сторона</td><td>До венткороба 215 − 53 = 162. Раскладка от холодильника к углу: 2 добор + 60 холодильник + 63,6 колонна + 36,4 шкаф В = 162. Корпус В примыкает к коробу; его фасад — дверь 22,4 и глухая часть 14.</td></tr>
+      <tr><td>Рабочая сторона</td><td>5 угловой добор + 75 мойка + 60 ящики + 60 варочная = 200. Исходные 80 у мойки включают этот добор. Две двери мойки по 37,5; у угла ограничитель около 90°, проверить по ручкам.</td></tr>
+      <tr><td>Навесные шкафы</td><td>Низ 145, основной ряд 75 до 220, антресоли 40 до 260. Глубина с фасадом 35. Обычная полезная глубина полок 31; антресоли Д/Е — 14 из-за воздуховода сзади.</td></tr>
+      <tr><td>До потолка</td><td>Корпуса до 260, подгоночная планка 1–2. Холодильник выпускает воздух через лицевую решётку, поэтому зашивка к потолку не перекрывает его канал.</td></tr>
+      <tr><td>Примыкание к коробу</td><td>Открытой полосы 9 больше нет: корпус В доведён до короба. Глухая часть 14 = прежний угловой добор 5 + эта полоса 9. Дверь заканчивается за 5 до перпендикулярной столешницы. Короб находится на 13 глубже фасадов колонн; его положение сохранено. Примыкание подогнать по отделке, без открытого зазора.</td></tr>
+    </tbody></table></details>
+    <details><summary>Мойка, фильтр и вырезы в столешнице</summary><table class="table table-sm text-small"><tbody>
+      <tr><td>GROHE 31574SD1</td><td>Наружный габарит 55 × 45, чаша 50 × 40 × 20, шкаф от 60. Здесь корпус 75. Предварительно подстольный монтаж; вырез 50,2 × 40,2, R1,6 — по текущей документации GROHE, окончательно по шаблону купленной мойки.</td></tr>
+      <tr><td>Положение мойки</td><td>Центр 42,5 от правого внутреннего угла, то есть 157,5 от левого свободного торца. По глубине от готовой стены: 9 до наружного края, 45 мойка, 8 до переднего края. Низ чаши ориентировочно 67.</td></tr>
+      <tr><td>Roca Aquafy</td><td>A5A8D3GSM0: высота 43,8, вылет 22, основание Ø5,2. Верх крана 133,8 — остаётся 11,2 до шкафа. Ось предварительно в 5 от стены; положение, движение рычагов и крепление проверить по комплекту.</td></tr>
+      <tr><td>Под мойкой</td><td>Слева резерв 18 × 52 × 20 под фильтр и доступ: полный узел по чертежу около Ø9,8 × 42. Справа резерв 40 × 38 × 40 под выкатные вёдра. Шланг выдвижного излива должен свободно ходить сзади; объёмы сверить с сифоном.</td></tr>
+      <tr><td>Samsung NZ32BG2005FKU2</td><td>28,8 × 5,6 × 52, две зоны; вырез 27 × 50. Центр 30 от левого свободного торца, или 170 от правого угла. Вырез по глубине 6–56: по 6 спереди и сзади. Над верхним ящиком отдельная техническая зона, вентиляционные пути по инструкции.</td></tr>
+    </tbody></table></details>
+    <details open><summary>Несогласованные монтажные узлы</summary><table class="table table-sm text-small"><tbody>
+      <tr><td>55 над панелью</td><td>Показано по вашему выбору. В инструкции Samsung, стр. 9, над панелью до навесного элемента указано минимум 76. Размер 55 не подтверждён для выбранной панели; минимум 43 у вытяжки Bosch не отменяет требования панели.</td></tr>
+      <tr><td>Три прибора в Б</td><td>Желаемая колонна показана условно. Инструкция SMV4EVX09E, стр. 9, требует данных о совместной установке от производителей. Подтверждения для этой комбинации пока нет. Полка между приборами сама по себе не подтверждает совместимость.</td></tr>
+      <tr><td>Микроволновка</td><td>Дно ниши 145,8, посуда располагается ещё выше. Для роста 160 это может быть слишком высоко: проверить возможность видеть и уверенно вынимать посуду. Эту колонну нельзя назвать удобной для обоих без такой примерки.</td></tr>
+      <tr><td>Вытяжка и короб</td><td>Резерв Ø15, верхний канал сзади антресолей. Место, высота и разрешённый способ подключения к венткоробу неизвестны. Трасса пунктиром — предложение; сохраняются доступ и существующая вентиляция помещения.</td></tr>
+      <tr><td>Перед мебелью</td><td>Точная ширина прохода не задана. По рисунку со столом её не определяем: отдельно проверить открытые ПММ, духовку, холодильник и место для человека с учётом выдвинутых стульев.</td></tr>
+    </tbody></table></details>
+    <details><summary>Техника и проверенные источники</summary><table class="table table-sm text-small"><tbody>
+      <tr><td>Холодильник</td><td>Samsung BRB70F30AES0EO. Прибор 54 × 193,5 × 55. Ниша 56–56,8 × 193,8–194,2 × от 56; рекомендована глубина 58. Здесь 56,4 × 194 × 58. <a href="https://www.samsung.com/bg/support/model/BRB70F30AES0EO/" target="_blank" rel="noopener">Samsung, стр. 19–22</a>.</td></tr>
+      <tr><td>Посудомойка</td><td>Bosch SMV4EVX09E. Прибор 59,8 × 81,5–87,5 × 55; проём 60. <a href="https://media3.bosch-home.com/Documents/specsheet/sk-SK/SMV4EVX09E.pdf" target="_blank" rel="noopener">Размеры</a>, <a href="https://media3.bosch-home.com/Documents/9001946662_B.pdf#page=9" target="_blank" rel="noopener">совместная установка</a>.</td></tr>
+      <tr><td>Духовка</td><td>Bosch HBA372EB4. 59,4 × 59,5 × 54,8; в пенале ниша 56–56,8 × 58,5–59,5 × от 55. <a href="https://media3.bosch-home.com/Documents/specsheet/sk-SK/HBA372EB4.pdf" target="_blank" rel="noopener">Bosch, чертёж</a>.</td></tr>
+      <tr><td>Микроволновка</td><td>Bosch BFL520MB0. 59,4 × 38,2 × 31,7; в высоком шкафу ниша 56–56,8 × 38–38,2 × от 55. <a href="https://media3.bosch-home.com/Documents/9001610731_E.pdf#page=18" target="_blank" rel="noopener">Bosch, монтаж в пенале</a>.</td></tr>
+      <tr><td>Панель</td><td>Samsung NZ32BG2005FKU2. 28,8 × 5,6 × 52; вырез 27 × 50. <a href="https://www.samsung.com/bg/support/model/NZ32BG2005FKU2/" target="_blank" rel="noopener">Samsung, стр. 9–10</a>.</td></tr>
+      <tr><td>Вытяжка</td><td>Bosch DBB65CC60. Скрытая часть около 56 × 34 × 30; шкаф 60 с глубиной 32–36, монтажная высота от 35,6, выход Ø15. <a href="https://media3.bosch-home.com/Documents/specsheet/es-ES/DBB65CC60.pdf" target="_blank" rel="noopener">Bosch, чертежи</a>.</td></tr>
+      <tr><td>Мойка / кран</td><td><a href="https://www.grohe-mena.com/fr_cy/k700u-vier-en-acier-inoxydable-31574SD1.html" target="_blank" rel="noopener">GROHE 31574SD1</a>; <a href="https://www.export.roca.com/roca-services/productSheet30/EX/en/A5A8D3GSM0/" target="_blank" rel="noopener">Roca A5A8D3GSM0, чертёж</a>.</td></tr>
+    </tbody></table></details>
+  </div>
+  <div id="kt-front" role="tabpanel" aria-labelledby="kt-front-tab" hidden>
+    <div class="kt-stage" data-stage="front"><svg class="kt-drawing" role="img" aria-label="Фасады кухни, ручки и стороны петель"></svg></div>
+    <p class="text-small">Точки — сторона петель, короткая черта — ручка. Поля фасадов показаны до вычета зазоров; стыки дверей холодильника уточняются по шаблону Samsung.</p>
+    <div class="table-responsive"><table class="table table-sm text-small"><thead><tr><th>Фасад</th><th>Поле Ш × В</th><th>Открывание</th></tr></thead><tbody data-facades></tbody></table></div>
+    <details open><summary>Доступ и вентиляция</summary><table class="table table-sm text-small"><tbody>
+      <tr><td>Холодильник А</td><td>Холодильник справа, петли слева, чтобы дверь уходила от правой стены. Направление подтвердить при перенавеске. Приток и выпуск: не менее 200 см² живого сечения каждый; непрерывный задний канал от 4 × 50.</td></tr>
+      <tr><td>Колонна Б</td><td>ПММ и духовка открываются вниз; микроволновка влево. Каждый прибор снимается вперёд независимо; нагрузка духовки передаётся через опорную полку на боковины, не на ПММ. Допуск такой комбинации пока не получен.</td></tr>
+      <tr><td>Угол</td><td>Двери В — петли справа, со стороны колонны Б. Корпус 36,4 до короба; слева глухая часть 14, дверь 22,4. Вход около 18,8 с передней стойкой; полезная ширина полки внутри 32,8, часть за глухим углом. У мойки ближайшая к углу дверь с ограничителем. Одновременное открывание смежных дверей не предполагается.</td></tr>
+      <tr><td>Верхний ряд</td><td>Распашные двери, без подъёмных створок, требующих доступа к высокой ручке. Антресоли — для редкого хранения. Шкаф вытяжки и верх Ж — технические, с доступом к воздуховоду.</td></tr>
+    </tbody></table></details>
+  </div>
+  <div id="kt-store" role="tabpanel" aria-labelledby="kt-store-tab" hidden>
+    <div class="kt-stage" data-stage="store"><svg class="kt-drawing" role="img" aria-label="Распределение хранения на кухне"></svg></div>
+    <p class="text-small">Основная свободная поверхность — 60 см между мойкой и панелью. Между наружным краем мойки и стеклом панели около 85,6 см с учётом боковых полос. Чайник не занимает эту зону постоянно.</p>
+    <table class="table table-sm text-small"><thead><tr><th>Место</th><th>Что хранить</th></tr></thead><tbody data-storage></tbody></table>
+  </div>
+  <style>
+    #kitchen-l-shaped{color-scheme:light;--background:#fff;--foreground:#292c2b;--muted-foreground:#626966;--border:#d8ddda;--primary:#e8ece9;--primary-foreground:#292c2b;--secondary:#f3f5f3;--secondary-foreground:#292c2b;--accent:#edf1ee;--accent-foreground:#292c2b;--input:#cdd4cf;--ring:#47775e;--viz-series-1:#47775e;--viz-series-2:#a77333;--viz-series-3:#668ba4;background:var(--background);color:var(--foreground);padding:12px}
+    #kitchen-l-shaped [hidden]{display:none!important}
+    #kitchen-l-shaped .kt-stage{max-width:660px;margin:12px auto}
+    #kitchen-l-shaped .kt-drawing{width:100%;display:block;overflow:visible}
+    #kitchen-l-shaped .kt-drawing text{font-size:12px;fill:var(--foreground);font-family:inherit;font-weight:400;paint-order:stroke;stroke:var(--background);stroke-width:2px;stroke-linejoin:round}
+    #kitchen-l-shaped .kt-legend{margin:10px 0}
+    #kitchen-l-shaped .kt-key{display:inline-block;width:11px;height:11px;margin-right:5px;vertical-align:middle}
+    #kitchen-l-shaped .kt-storage{background:var(--viz-series-1)}
+    #kitchen-l-shaped .kt-tech{background:var(--viz-series-3)}
+    #kitchen-l-shaped .kt-check{background:var(--viz-series-2)}
+    #kitchen-l-shaped details{margin:12px 0}
+    #kitchen-l-shaped summary{cursor:pointer;margin-bottom:7px}
+    #kitchen-l-shaped td,#kitchen-l-shaped th{vertical-align:top;overflow-wrap:anywhere}
+  </style>
+  <script>
+  (()=>{
+    const root=document.getElementById('kitchen-l-shaped');
+    const ns='http://www.w3.org/2000/svg';
+    const fmt=n=>Number(n.toFixed(2)).toLocaleString('ru-RU');
+    let wall='work';
+    const geo={counter:90,counterDepth:62,counterT:3,upper:145,top:260,ceiling:261.5,shortWall:215,workLength:200,tallDepth:60,tallLength:162,shaftW:53,shaftD:47,toe:12,toeInset:8,t:1.8};
+    const cabinets={
+      tall:[{id:'А',x:2,w:60,name:'Холодильник'},{id:'Б',x:62,w:63.6,name:'Три прибора'},{id:'В',x:125.6,w:36.4,name:'Шкаф до венткороба'}],
+      work:[{id:'Д',x:5,w:75,name:'Мойка'},{id:'Е',x:80,w:60,name:'Подготовка'},{id:'Ж',x:140,w:60,name:'Варочная'}]
+    };
+    const niches=[];
+    const add=(side,id,x,z,w,h,d,kind='storage',use='')=>niches.push({side,id,x,z,w,h,d,kind,use});
+    add('tall','А1',3.8,13.8,56.4,194,58,'tech','Холодильник и морозильник; внутреннее наполнение заводское.');
+    add('tall','А2',3.8,209.6,56.4,18.4,50,'storage','Плоские формы, запас пакетов и фольги.');
+    add('tall','А3',3.8,229.8,56.4,20.6,50,'storage','Лёгкий редкий запас. Сзади и сверху отдельный вентканал.');
+    add('tall','Б1',63.8,0,60,82,55,'check','Посудомойка на полу. Проём 60; корпус вокруг неё 63,6.');
+    add('tall','Б2',65.6,85,56.4,59,55,'check','Духовка на собственной опоре. Сочетание с ПММ требует подтверждения Bosch.');
+    add('tall','Б3',65.6,145.8,56.4,38,55,'check','Микроволновка. Проверить доступ для роста 160 см.');
+    add('tall','Б4',63.8,185.6,60,38.6,50,'storage','Редко используемые формы и лёгкая сервировочная посуда.');
+    add('tall','Б5',63.8,226,60,32.2,50,'storage','Сезонные принадлежности и лёгкие коробки.');
+    [13.8,47.6,81.4,115.2,149,182.8,216.6].forEach((z,i)=>add('tall','В'+(i+1),127.4,z,32.8,i===6?41.6:32,50,'storage',['Масло и уксус в лотке.','Запас бакалеи.','Крупы и макароны.','Чай, кофе, специи.','Контейнеры и запас упаковок.','Лёгкие редко используемые вещи.','Редкий лёгкий запас.'][i]+' Вход около 18,8; часть полки за глухим углом, без широких выдвижных корзин.'));
+    add('work','Д0',6.8,13.8,71.4,71.4,53,'tech','Сантехника, фильтр слева, мусор справа; свободный ход шланга излива.');
+    [[12,27],[39,28],[67,20]].forEach(([z,h],i)=>add('work','Е'+(3-i),81.8,z,56.4,h,53,'field',['Кастрюли, миски и дуршлаг.','Контейнеры и ежедневная посуда.','Столовые приборы, ножи в органайзере, кухонные мелочи.'][i]));
+    add('work','Ж2',141.8,12,56.4,35,53,'field','Высокие кастрюли и крышки с разделителями.');
+    add('work','Ж1',141.8,47,56.4,28,53,'field','Сковороды и сотейники.');
+    add('work','Ж0',141.8,75,56.4,12,53,'tech','Вентиляция и защитная перегородка под панелью. Не для хранения.');
+    [146.8,171.2,195.6].forEach((z,i)=>{
+      add('work','Д'+(i+1)+'П',6.8,z,34.8,22.6,31,'storage',['Кружки и стаканы.','Чашки и небольшие тарелки.','Лёгкий запас посуды.'][i]);
+      add('work','Д'+(i+1)+'Л',43.4,z,34.8,22.6,31,'storage',['Кружки и стаканы.','Небольшие тарелки.','Лёгкий запас посуды.'][i]);
+      add('work','ЕВ'+(i+1),81.8,z,56.4,22.6,31,'storage',['Ежедневные тарелки.','Чай, кофе и бакалея.','Редкая посуда.'][i]);
+    });
+    add('work','ЖВ',141.8,145,56.4,75,31,'tech','Вытяжка и вертикальный воздуховод. Сервисный доступ.');
+    add('work','Д4',6.8,221.8,71.4,36.4,14,'storage','Лёгкие узкие упаковки; за задней стенкой воздуховод.');
+    add('work','ЕВ4',81.8,221.8,56.4,36.4,14,'storage','Лёгкие узкие коробки; за задней стенкой воздуховод.');
+    add('work','ЖВ4',141.8,221.8,56.4,36.4,31,'tech','Поворот воздуховода; хранение не заложено.');
+    const fronts={tall:[['А','60 × по шаблону','Две двери холодильника: петли слева'],['А2–А3','60 × по месту','Антресоль над холодильником; вентрешётка отдельно'],['Б1','60 × 70','Вниз, поле от 12 до 82; окончательно по шаблону ПММ'],['Б2 / Б3','59,4 × 59,5 / 59,4 × 38,2','Заводские панели: духовка вниз, СВЧ влево'],['Б4','63,6 × 40,4','Две двери по 31,8; петли по внешним краям'],['Б5','63,6 × 34','Две двери по 31,8'],['В · двери','22,4 × 88 / 90 / 70','Три двери на отметках 12–100 / 100–190 / 190–260; петли справа'],['В · глухой угол','14 × 248','12–260; до венткороба, без открытого промежутка']],work:[['Д0','2 × 37,5 × 75','Парные распашные, петли по краям'],['Е1 / Е2 / Е3','60 × 20 / 28 / 27','Ящики: 67–87 / 39–67 / 12–39'],['Ж0','60 × 12','Техническая планка; не ящик'],['Ж1 / Ж2','60 × 28 / 35','Ящики: 47–75 / 12–47'],['ДВ','2 × 37,5 × 75','Парные распашные, 145–220'],['ЕВ / ЖВ','2 × 30 × 75 на шкаф','Парные распашные, 145–220'],['Д4','2 × 37,5 × 40','Парные распашные, 220–260'],['ЕВ4 / ЖВ4','2 × 30 × 40 на шкаф','Парные распашные, 220–260']]};
+    const dimensions={tall:[['А · корпус','60 × 248 × 60','12 → 260'],['А1 · ниша холодильника','56,4 × 194 × 58','13,8 → 207,8'],['Б · корпус','63,6 × 260 × 60','0 → 260'],['Б1 · ПММ','60 × 82 × ≥55','0 → 82'],['Опора над ПММ','60 × 3 × по расчёту','82 → 85'],['Б2 · духовка','56,4 × 59 × ≥55','85 → 144'],['Б3 · микроволновка','56,4 × 38 × ≥55','145,8 → 183,8'],['В · корпус до короба','36,4 × 248 × 60','12 → 260'],['В · полки / доступ','32,8 × по ярусу × 50; вход ≈18,8','за дверью и глухой частью'],['Добор / глухой угол В','2 справа / 14 у короба','12 → 260'],['Венткороб','53 × до потолка × 47','по факту']],work:[['Д · корпус мойки','75 × 75 × 58','12 → 87'],['Д0 · объём под мойкой','71,4 × 71,4 × 53','13,8 → 85,2'],['Е · корпус ящиков','60 × 75 × 58','12 → 87'],['Ж · корпус под панелью','60 × 75 × 58','12 → 87'],['ДВ / ЕВ / ЖВ · корпуса','75 / 60 / 60 × 75 × 35','145 → 220'],['Антресоли · корпуса','75 / 60 / 60 × 40 × 35','220 → 260'],['Столешница','200 × 3 × 62','87 → 90'],['Добор у угла','5 × по высоте ряда','справа от мойки']]};
+    const captions={work:'Вид из комнаты: слева направо — Ж варочная, Е подготовка, Д мойка, внутренний угол. Размер 55 над панелью задан вами и расходится с инструкцией Samsung.',tall:'Вид из комнаты: слева направо — венткороб, В, Б с тремя приборами, А холодильник. Корпус В доходит до короба; у угла глухая часть 14. Совместимость приборов в Б пока не подтверждена.'};
+    function el(svg,name,attrs,text){const e=document.createElementNS(ns,name);Object.entries(attrs||{}).forEach(([k,v])=>e.setAttribute(k,v));if(text!==undefined)e.textContent=text;svg.append(e);return e;}
+    function draw(svg,mode){
+      const width=Math.max(260,svg.parentElement.clientWidth), narrow=width<460;
+      const length=wall==='work'?200:215;
+      const s=Math.min((width-72)/length,2.25),left=(width-length*s)/2,top=42,h=top+geo.ceiling*s+76;
+      svg.replaceChildren();svg.setAttribute('viewBox',`0 0 ${width} ${h}`);svg.style.height=h+'px';
+      el(svg,'title',{},wall==='work'?'Рабочая линия кухни':'Высокие шкафы и венткороб');
+      // Coordinates run from the right end of each front elevation. Mirror
+      // geometry only; text and the microwave's fixed opening direction stay readable.
+      const X=x=>left+(length-x)*s,Y=z=>top+(geo.ceiling-z)*s;
+      const line=(a,b,c,d,extra={})=>el(svg,'line',{x1:X(a),y1:Y(b),x2:X(c),y2:Y(d),stroke:'var(--muted-foreground)','stroke-width':.9,...extra});
+      const box=(x,z,w,hh,kind='structure',extra={})=>el(svg,'rect',{x:X(x+w),y:Y(z+hh),width:w*s,height:hh*s,fill:kind==='structure'?'var(--border)':`var(--viz-series-${kind==='storage'||kind==='field'?1:kind==='check'?2:3})`,'fill-opacity':kind==='structure'?.7:.09,stroke:'var(--muted-foreground)','stroke-width':.8,...extra});
+      const label=(x,z,text,extra={})=>el(svg,'text',{x:X(x),y:Y(z),'text-anchor':'middle',...extra},text);
+      function middle(n,text){const cy=n.z+n.h/2;const lines=Array.isArray(text)?text:[text];lines.forEach((v,i)=>label(n.x+n.w/2,cy,v,{dy:(i-(lines.length-1)/2)*18+4}));}
+      function dimV(x,a,b,text){line(x,a,x,b);line(x-1.7,a,x+1.7,a);line(x-1.7,b,x+1.7,b);const px=X(x)-6,py=Y((a+b)/2);el(svg,'text',{x:px,y:py,'text-anchor':'middle',transform:`rotate(-90 ${px} ${py})`},text);}
+      function dimH(x1,x2,z,text){line(x1,z,x2,z);line(x1,z-1,x1,z+1);line(x2,z-1,x2,z+1);label((x1+x2)/2,z,text,{dy:17});}
+      function door(x,z,w,hh,hinge='left',text=''){
+        box(x,z,w,hh,'storage');const hx=hinge==='left'?x:x+w;
+        [z+hh*.25,z+hh*.75].forEach(hz=>el(svg,'circle',{cx:X(hx),cy:Y(hz),r:1.8,fill:'var(--muted-foreground)'}));
+        const rx=hinge==='left'?x+w-3:x+3;
+        line(rx,hh<45?z+5:z+hh*.45,rx,hh<45?z+11:z+hh*.45+6,{'stroke-width':1.6});
+        if(text)middle({x,z,w,h:hh},text);
+      }
+      function pair(x,z,w,hh,text){door(x,z,w/2,hh,'left',narrow?'':text);door(x+w/2,z,w/2,hh,'right','');if(narrow)middle({x,z,w,h:hh},text);}
+      line(0,0,length,0);line(0,geo.ceiling,length,geo.ceiling,{'stroke-dasharray':'3 3'});
+      label(length/2,geo.ceiling,'Потолок ≈ 261–262',{dy:-13});
+      dimV(-9,0,260,'260');
+      if(wall==='work'){
+        box(0,12,5,75);box(0,145,5,115);
+        cabinets.work.forEach(c=>{box(c.x,0,c.w,12);box(c.x,12,c.w,75,'structure',{'fill-opacity':.25});box(c.x,145,c.w,115,'structure',{'fill-opacity':.15});label(c.x+c.w/2,-10,c.id+' · '+fmt(c.w));});
+        box(0,87,200,3);line(0,220,200,220);
+        if(mode==='front'){
+          pair(5,12,75,75,'Д');
+          niches.filter(n=>n.side==='work'&&n.kind==='field').forEach(n=>{box(n.x-1.8,n.z,60,n.h,'storage');line(n.x+20,n.z+n.h-5,n.x+32,n.z+n.h-5,{'stroke-width':1.6});middle(n,n.id);});
+          box(140,75,60,12,'tech');label(170,80,'Ж0');
+          [145,220].forEach(z=>cabinets.work.forEach(c=>pair(c.x,z,c.w,z===145?75:40,c.id+(z===145?'В':'4'))));
+        }else{
+          const storageLabels={'Е1':'Приборы','Е2':'Посуда','Е3':'Кастрюли','Ж1':'Сковороды','Ж2':'Кастрюли','Д1Л':'Кружки','Д1П':'Стаканы','Д2Л':'Чашки','Д2П':'Блюдца','Д3Л':'Запас','Д3П':'Запас','ЕВ1':'Тарелки','ЕВ2':'Чай / кофе','ЕВ3':'Редкая посуда','Д4':'Узкий запас','ЕВ4':'Узкий запас'};
+          niches.filter(n=>n.side===wall).forEach(n=>{box(n.x,n.z,n.w,n.h,n.kind);if(n.id==='Д0')return;let labelText=n.id;if(!narrow&&n.kind==='field')labelText=[n.id,fmt(n.w)+' × '+fmt(n.h)];if(mode==='store'&&!narrow&&storageLabels[n.id])labelText=[n.id,storageLabels[n.id]];if(n.id==='ЖВ')labelText=['Вытяжка','и канал'];if(n.id==='ЖВ4')labelText=['ЖВ4','Канал'];middle(n,labelText);});
+          box(15,67,55,20,'tech');
+          label(28,58,'Д0');box(8,13.8,40,38,'storage');label(28,30,'Вёдра');box(59,13.8,18,52,'tech');label(68,20,'Ф');
+          line(170,178,170,238,{stroke:'var(--viz-series-3)','stroke-width':15*s,'stroke-opacity':.1});
+          line(170,238,0,238,{stroke:'var(--viz-series-3)','stroke-width':15*s,'stroke-opacity':.1});
+          line(170,179,170,238,{'stroke-dasharray':'4 4'});line(170,238,0,238,{'stroke-dasharray':'4 4'});
+        }
+        line(15,90,70,90,{'stroke-width':3});line(155.6,90,184.4,90,{'stroke-width':3});
+        line(42.5,90,42.5,129);el(svg,'path',{d:`M ${X(42.5)} ${Y(129)} C ${X(42.5)} ${Y(135.4)} ${X(48)} ${Y(135.4)} ${X(48)} ${Y(129)} L ${X(48)} ${Y(111.8)}`,fill:'none',stroke:'var(--muted-foreground)','stroke-width':2});
+        box(140,145,60,3,'check');
+        dimV(204,90,145,'55*');
+        label(109,116,narrow?'60 · подготовка':'60 см · свободная поверхность');
+        dimH(0,200,-20,'200 · глубина 62');
+        if(!narrow){dimV(211,0,90,'90');label(5,95,'Угол 5',{'text-anchor':'end'});}
+      }else{
+        box(0,12,2,248);box(162,0,53,260,'structure',{'fill-opacity':.45,'data-shaft':''});
+        middle({x:162,z:0,w:53,h:260},[narrow?'Короб':'Венткороб','53 × 47']);
+        cabinets.tall.forEach(c=>box(c.x,c.id==='Б'?0:12,c.w,c.id==='Б'?260:248,'structure',{'fill-opacity':.2,'data-cabinet':c.id}));
+        box(2,0,60,12);box(125.6,0,36.4,12);box(63.8,82,60,3);
+        if(mode==='front'){
+          door(2,12,60,76,'right','А · холод');door(2,88,60,120,'right',narrow?'':['Шов по','шаблону']);
+          door(2,209.6,60,42.6,'right','А2–А3');
+          box(63.8,12,60,70,'check');middle({x:63.8,z:12,w:60,h:70},'ПММ ↓');line(87,77,100,77,{'stroke-width':1.6});
+          box(64.1,84.75,59.4,59.5,'check');middle({x:64.1,z:84.75,w:59.4,h:59.5},narrow?'Духовка':['Духовка ↓','HBA372EB4']);
+          box(64.1,145.7,59.4,38.2,'check');middle({x:64.1,z:145.7,w:59.4,h:38.2},'СВЧ ←');
+          pair(62,185.6,63.6,40.4,'Б4');pair(62,226,63.6,34,'Б5');
+          [[12,88],[100,90],[190,70]].forEach(([z,hh])=>door(125.6,z,22.4,hh,'left','В'));
+          box(148,12,14,248,'structure',{'fill-opacity':.55,'data-blind-corner':''});
+          const bx=X(155),by=Y(136);
+          el(svg,'text',{x:bx,y:by,'text-anchor':'middle',transform:`rotate(-90 ${bx} ${by})`},'Глухая часть · 14');
+        }else{
+          niches.filter(n=>n.side===wall).forEach(n=>{box(n.x,n.z,n.w,n.h,n.kind);let t=n.id;if(n.id==='А1')t=narrow?['А1','Холод.']:['А1 · холодильник','56,4 × 194 × 58'];if(n.id==='Б1')t=narrow?['Б1','ПММ']:['Б1 · ПММ','60 × 82'];if(n.id==='Б2')t=narrow?['Б2','Духовка']:['Б2 · духовка','56,4 × 59'];if(n.id==='Б3')t=narrow?['Б3','СВЧ']:['Б3 · СВЧ','56,4 × 38'];if(mode==='store'&&!narrow&&['А2','А3','Б4','Б5'].includes(n.id))t=[n.id,n.id==='А2'?'Плоские формы':'Редкий запас'];middle(n,t);});
+        }
+        box(5,3,54,7,'tech');box(5,252.2,54,6,'tech');
+        if(!narrow){label(32,256,'Выход ≥200 см²');label(32,7,'Приток ≥200 см²');}
+        dimH(0,162,-20,'162 · до короба');dimH(162,215,-20,'53');
+        if(!narrow){label(32,-10,'А · 60');label(93.8,-10,'Б · 63,6');label(143.8,-10,'В · 36,4');}
+      }
+    }
+    function cells(values){return '<tr>'+values.map(v=>'<td>'+v+'</td>').join('')+'</tr>';}
+    function update(){
+      root.querySelector('[data-caption]').textContent=captions[wall];
+      root.querySelector('[data-dimensions]').innerHTML=dimensions[wall].map(cells).join('');
+      root.querySelector('[data-niches]').innerHTML=niches.filter(n=>n.side===wall).map(n=>cells([n.id+(n.kind==='field'?' · поле ящика':''),[n.w,n.h,n.d].map(fmt).join(' × '),fmt(n.z)+' → '+fmt(n.z+n.h)])).join('')+cells(['Толщины / высоты','Панели 1,8, опора над ПММ 3 — предварительно. Поля ящиков не равны внутренней высоте коробов.','По фурнитуре']);
+      root.querySelector('[data-facades]').innerHTML=fronts[wall].map(cells).join('');
+      root.querySelector('[data-storage]').innerHTML=niches.filter(n=>n.side===wall).map(n=>cells([n.id,n.use])).join('');
+      root.querySelectorAll('[data-stage]').forEach(stage=>{if(stage.checkVisibility())draw(stage.querySelector('svg'),stage.dataset.stage);});
+    }
+    root.querySelectorAll('[data-wall]').forEach(b=>b.addEventListener('click',()=>{wall=b.dataset.wall;root.querySelectorAll('[data-wall]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));update();}));
+    root.querySelectorAll('[role="tab"]').forEach(b=>b.addEventListener('click',()=>requestAnimationFrame(update)));
+    new ResizeObserver(update).observe(root);
+    new MutationObserver(()=>requestAnimationFrame(update)).observe(root.querySelector('.nav'),{subtree:true,attributes:true,attributeFilter:['aria-selected']});
+    update();
+  })();
+  </script>
+</div>
+
+
+
+
+<script id="codex-visualization-tabs">
+(() => {
+  const selector = '.nav[role="tablist"] [role="tab"]';
+  const disabled = ':disabled,[aria-disabled="true"]';
+  const selectTab = (selected) => {
+    const panelId = selected.getAttribute("aria-controls");
+    for (const tab of selected.closest('[role="tablist"]').querySelectorAll('[role="tab"]')) {
+      const active = tab === selected;
+      tab.classList.toggle("active", active);
+      tab.setAttribute("aria-selected", String(active));
+      const id = tab.getAttribute("aria-controls");
+      const panel = id && document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden && selected.id) {
+          panel.setAttribute("aria-labelledby", selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) => {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === "click") {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest('[role="tablist"]').querySelectorAll('[role="tab"]'),
+    ).filter((candidate) => !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === "Home") {
+      next = 0;
+    } else if (event.key === "End") {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll('.nav[role="tablist"]')) {
+    const selected =
+      list.querySelector('[role="tab"][aria-selected="true"]') ??
+      list.querySelector('[role="tab"].active') ??
+      list.querySelector('[role="tab"]');
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener("click", interact);
+  document.addEventListener("keydown", interact);
+  window.addEventListener("pagehide", () => {
+    document.removeEventListener("click", interact);
+    document.removeEventListener("keydown", interact);
+  }, { once: true });
+})();
+</script>
+
+
+
+<!-- furniture-preview:start -->
+<style>:root{color-scheme:light!important;--background:#fff;background:#fff!important}
+html{margin:0;min-height:0}html>body{display:flow-root;margin:0;padding:0;min-height:0;background:#fff}
+body>div[id]{max-width:960px;margin-inline:auto}</style>
+<script>
+// Embedded into each standalone preview by tools/prepare-previews.py.
+(() => {
+  'use strict';
+  if (window.parent === window) return;
+  const targetOrigin = location.protocol === 'file:' ? '*' : location.origin;
+  let scheduled = false;
+  let previousHeight = 0;
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(() => {
+      scheduled = false;
+      if (document.body.getBoundingClientRect().width === 0) return;
+      // Measure content, not the iframe viewport, so shorter tabs can shrink.
+      const height = Math.ceil(document.body.getBoundingClientRect().height) + 2;
+      if (height < 100 || height === previousHeight) return;
+      previousHeight = height;
+      window.parent.postMessage({type: 'furniture:height', height}, targetOrigin);
+    });
+  }
+  new ResizeObserver(schedule).observe(document.body);
+  window.addEventListener('load', schedule);
+  window.addEventListener('message', event => {
+    if (event.source !== window.parent || event.data?.type !== 'furniture:measure') return;
+    if (location.protocol !== 'file:' && event.origin !== location.origin) return;
+    previousHeight = 0;
+    schedule();
+  });
+  document.fonts?.ready.then(schedule);
+  schedule();
+})();
+
+</script>
+<!-- furniture-preview:end -->
+</body>
+</html>

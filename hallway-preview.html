@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; style-src 'unsafe-inline' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; img-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; font-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; media-src blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://esm.sh https://fonts.bunny.net https://fonts.googleapis.com https://fonts.gstatic.com https://unpkg.com; worker-src blob:; connect-src blob: data:; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
 <title>Шкаф в прихожей — Мебель для дома</title>
 <style>:root {
-  color-scheme: light;
+  color-scheme: light dark;
   background-color: var(
     --background,
     var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
@@ -1030,14 +1030,20 @@ html>body{padding:0}</style>
     <button class="nav-link" id="hw-front-tab" type="button" role="tab" aria-controls="hw-front" aria-selected="false">Фасады</button>
     <button class="nav-link" id="hw-storage-tab" type="button" role="tab" aria-controls="hw-storage" aria-selected="false">Что хранить</button>
   </div>
-  <div class="text-small hw-meta">Прихожая · концепт 3 · 150 × 60 × 260 см</div>
+  <div class="text-small hw-meta">Прихожая · концепт 4 · скамейка и крючки повёрнуты на 90°</div>
+  <div class="viz-controls" aria-label="Ракурс прихожей">
+    <button class="btn" type="button" data-angle="turn" aria-pressed="true">Поворот</button>
+    <button class="btn" type="button" data-angle="wardrobe" aria-pressed="false">Фасад шкафа</button>
+    <button class="btn" type="button" data-angle="entry" aria-pressed="false">Со стороны входа</button>
+  </div>
+  <div class="text-small hw-meta">Общая ширина принята ≈145 см. Показана ориентация модулей, без привязки к стенам. Вынос скамейки и проход перед ней ещё нужно согласовать с входной дверью.</div>
   <div class="hw-legend text-small">
     <span><i class="hw-swatch hw-daily"></i> Быстрый доступ</span>
     <span><i class="hw-swatch hw-clothes"></i> Одежда и запас</span>
     <span><i class="hw-swatch hw-cat"></i> Кошачий тоннель</span>
   </div>
   <div id="hw-inside" role="tabpanel" aria-labelledby="hw-inside-tab">
-    <div class="text-small">Вид из прихожей · сиденье слева, ближе к входу · размеры в свету, см</div>
+    <div class="text-small">А — открытое место для переодевания без боковых щёк; под сиденьем закрытая обувница. Размеры в сантиметрах.</div>
     <div class="hw-stage" data-view="inside"><svg role="img" aria-label="Наполнение шкафа: сиденье, обувница, общая штанга и кошачий тоннель"></svg></div>
     <div class="text-small hw-meta">Подвес от штанги: слева 167,2; над тоннелем 135,4. Штанга 175*; сиденье 45. *Высоту штанги примерить девушке.</div>
     <div class="text-small hw-meta">Б1 убран. Б2↓ — продолжение общей ниши вниз, без разделяющей полки. Цоколь 6; верх дна 7,8 см.</div>
@@ -1049,17 +1055,19 @@ html>body{padding:0}</style>
       <summary>Уровни и конструкция</summary>
       <table class="table table-sm text-small"><thead><tr><th>Элемент</th><th>Проектный размер, см</th></tr></thead><tbody>
         <tr><td>Сиденье</td><td>Плита 3,6: от 39,4 до 43; накладка 2: до 45. Опоры и нагрузка — при подборе материала.</td></tr>
+        <tr><td>После поворота</td><td>Сиденье 60 шириной × 43 глубиной: сторона 60 занимает всю глубину шкафа. От спины до переднего края сиденья — 43. Сидящий лицом от шкафа к входу; высоких боковых стенок вокруг сиденья нет.</td></tr>
+        <tr><td>Панель с крючками</td><td>Зона 60 × 165, от сиденья 45 до отметки 210. При примыкании к шкафу крючки на его боковине; если скамейка выдвигается дальше боковины, потребуется самостоятельная задняя опора, её положение ещё не назначено.</td></tr>
         <tr><td>Крючки</td><td>Около 150 и 170; регулируемое положение</td></tr>
         <tr><td>Штанга</td><td>Верх 175; проём 95,2; до полки сверху 10. Труба короче проёма на крепления.</td></tr>
         <tr><td>Дно и полки одежды</td><td>Дно 7,8; только над тоннелем полка 39,6; верхние полки 186,8 и 211,8</td></tr>
         <tr><td>Глубина</td><td>С дверью 60; в свету 57,4 при двери 1,8 и задней стенке 0,8 заподлицо</td></tr>
-        <tr><td>Корпус</td><td>147 + добор у левой стены 3 = 150; обычные плиты 1,8</td></tr>
+        <tr><td>Корпус</td><td>Общая ширина 145: слева полоса 46,2, закрытый шкаф Б/В 98,8. Проём одежды 95,2; плиты 1,8. Сиденье занимает 43 вдоль общей ширины. Левая высокая щека убрана; антресоль А0 требует самостоятельного крепления к стене.</td></tr>
         <tr><td>Кошачий тоннель</td><td>Цоколь 6 + дно 1,8: пол прохода 7,8. Чистая высота 30 — до 37,8; крыша толщиной 1,8 — до 39,6. Лаз в двери В: 25 × 25, от 7,8 до 32,8.</td></tr>
       </tbody></table>
     </details>
   </div>
   <div id="hw-front" role="tabpanel" aria-labelledby="hw-front-tab" hidden>
-    <div class="text-small">Фасадные поля до назначения зазоров · вершина треугольника — петли</div>
+    <div class="text-small">Фасадные поля до назначения зазоров · точки — петли · обувница А1 открывается со стороны входа</div>
     <div class="hw-stage" data-view="front"><svg role="img" aria-label="Распашные фасады, открытое сиденье и постоянный лаз справа внизу"></svg></div>
     <div class="text-small hw-meta">Б и В одинаковые: поля по 48,95 × 204 см, от цоколя до антресоли. Лаз движется вместе с дверью В; при её открывании тоннель доступен для уборки.</div>
     <table class="table table-sm text-small"><thead><tr><th>Фасад</th><th>Ш × В, см</th><th>Отметки</th></tr></thead><tbody data-facades></tbody></table>
@@ -1071,10 +1079,11 @@ html>body{padding:0}</style>
     <details class="hw-details" open>
       <summary>Что ещё уточнить</summary>
       <table class="table table-sm text-small"><thead><tr><th>Узел</th><th>Статус</th></tr></thead><tbody>
-        <tr><td>Сиденье у входа</td><td>Принято слева на длинном фасаде. Зона крючков продолжается до антресоли, А4 убрана.</td></tr>
-        <tr><td>Отверстие в стене</td><td>Предложена ось 133,2 см от левого края шкафа. Пол тоннеля теперь на 7,8 см: согласовать с высотой отверстия. Маршрут прямой.</td></tr>
-        <tr><td>Обувница</td><td>Поддон и вентиляция за закрытой дверцей. Одна широкая пара; две компактные — после примерки.</td></tr>
-        <tr><td>Куртки над сиденьем</td><td>Только текущие вещи. Объёмная одежда может мешать сидеть в нише шириной 46,4 см.</td></tr>
+        <tr><td>Сиденье у входа</td><td>Скамейка и крючки развёрнуты на 90°. По исходному плану слева стена: в прежнем месте перед повёрнутым сиденьем почти нет пространства для ног. Вынос и ход входной двери ещё не проверены. Показанный поворот не подтверждает размещение в комнате.</td></tr>
+        <tr><td>Отверстие в стене</td><td>При общей ширине 145 ось лаза 128,2 от левого края, то есть 16,8 от правого. Пол тоннеля на 7,8: согласовать с реальным отверстием. Маршрут прямой.</td></tr>
+        <tr><td>Обувница</td><td>Чистая ширина 56,4; поддон и вентиляция за закрытой дверцей. Вместимость — после примерки вашей обуви и поддона.</td></tr>
+        <tr><td>Куртки над сиденьем</td><td>Только текущие вещи. Сиденье открыто с боков, но висящая за спиной объёмная одежда всё ещё может мешать сидеть.</td></tr>
+        <tr><td>Антресоль А0</td><td>Сохраняется над прежним левым местом. Её нельзя опирать на убранную высокую щеку: отдельные крепления к стене и связь с закрытым корпусом рассчитываются по нагрузке.</td></tr>
         <tr><td>Штанга</td><td>175 см примерить с плечиками. Расчёт опор и усиления — по весу одежды.</td></tr>
         <tr><td>Монтаж</td><td>Добор, зазоры, петли и конструкция сиденья предварительные. Концепт ещё не является заданием на распил.</td></tr>
       </tbody></table>
@@ -1098,18 +1107,20 @@ html>body{padding:0}</style>
     #hallway-wardrobe .hw-cat {background:var(--viz-series-3)}
     #hallway-wardrobe .hw-stage {max-width:640px;margin:0 auto 12px}
     #hallway-wardrobe .hw-stage svg {display:block;width:100%}
-    #hallway-wardrobe svg text {font-family:inherit;fill:var(--foreground);font-weight:400}
+    #hallway-wardrobe .hw-stage svg text {font-family:inherit;fill:var(--foreground);font-weight:400;font-size:12px;paint-order:stroke;stroke:var(--background);stroke-width:2px;stroke-linejoin:round}
+    #hallway-wardrobe td,#hallway-wardrobe th {overflow-wrap:anywhere;vertical-align:top}
     #hallway-wardrobe .hw-details {margin:16px 0}
     #hallway-wardrobe summary {cursor:pointer}
   </style>
   <script>
   (()=>{
     const root=document.getElementById('hallway-wardrobe');
-    const T=1.8,H=260,W=150;
+    const T=1.8,H=260,W=145;
+    let angle='turn';
     const cells=[
-      {id:'А1',x:4.8,z:7.8,w:46.4,h:31.6,d:40,c:1,name:'Обувь',use:'Грязная обувь за дверцей; съёмный поддон, вентиляция. Размеры указаны до установки поддона.'},
-      {id:'А2',x:4.8,z:39.4,w:46.4,h:5.6,d:43,c:1,name:'Сиденье',use:'Сиденье на одного человека: ширина 46,4, глубина 43, верх на отметке 45 см. Конструкция 3,6 + накладка 2 см.'},
-      {id:'А3',x:4.8,z:45,w:46.4,h:165,d:43,c:1,name:'Крючки',use:'Открытая зона до антресоли: текущая куртка и сумка. Крючки примерно на 150 и 170 см; объёмную одежду придётся отодвигать, чтобы сесть.'},
+      {id:'А1',x:4.8,z:7.8,w:56.4,h:31.6,d:40,c:1,name:'Обувь',use:'Грязная обувь за дверцей; съёмный поддон, вентиляция. Чистый проём 56,4 × 31,6 × 40 до установки поддона.'},
+      {id:'А2',x:4.8,z:39.4,w:60,h:5.6,d:43,c:1,name:'Сиденье',use:'Развёрнутое сиденье: ширина 60 вдоль всей глубины шкафа, глубина сидения 43, верх 45. Конструкция 3,6 + накладка 2 см; по бокам нет высоких щёк.'},
+      {id:'А3',x:4.8,z:45,w:60,h:165,d:43,c:1,name:'Крючки',use:'Текущая куртка и сумка за спиной сидящего. Зона крючков шириной 60, от 45 до 210; точки примерно 150 и 170. Это открытая зона, а не замкнутая ниша. При выносе скамейки за пределы боковины нужна отдельная задняя опора.'},
       {id:'А0',x:4.8,z:211.8,w:46.4,h:46.4,d:56,c:2,name:'Сезон',use:'Сезонные аксессуары, лёгкий запас. Доступ со ступеньки.'},
       {id:'Б2↓',x:53,z:7.8,w:63.4,h:31.8,d:57.4,c:2,name:'Для пальто',use:'Продолжение общей ниши вниз; сверху нет полки. На ширине 63,4 см от штанги до дна 167,2 см: свес с плечиками до примерно 164 см с выбранным запасом 3 см. Доступ через левую высокую дверь.'},
       {id:'Б2',x:53,z:39.6,w:95.2,h:145.4,d:57.4,c:2,name:'Одежда',use:'Одна общая штанга для двоих. Длинные пальто слева; над тоннелем от штанги до полки 135,4 см, свес с плечиками до примерно 132 см с запасом 3 см. Высота 145,4 в таблице относится только к общей верхней части проёма.'},
@@ -1119,74 +1130,125 @@ html>body{padding:0}</style>
       {id:'В0',x:101.5,z:211.8,w:46.7,h:46.4,d:56,c:2,name:'Сезон',use:'Сезонные вещи и запасные аксессуары. Доступ со ступеньки.'},
       {id:'К1',x:118.2,z:7.8,w:30,h:30,d:60,c:3,name:'Тоннель',use:'Проход кота 30 × 30 см в свету, пол на высоте 7,8 см над общим цоколем. Лаз 25 × 25 см в высокой двери В: низ 7,8, верх 32,8. Для уборки открывается вся дверь; длина через стену добавляется отдельно.'}
     ];
+    cells.forEach(n=>{if(n.id==='А0')n.w=41.4;else if(!['А1','А2','А3'].includes(n.id))n.x-=5;});
     const f=n=>Number(n.toFixed(2)).toLocaleString('ru-RU',{maximumFractionDigits:2});
     const cellOrder=[...cells].sort((a,b)=>a.x-b.x||a.z-b.z);
     const fill=c=>`color-mix(in srgb,var(--viz-series-${c}) 13%,transparent)`;
-    root.querySelector('[data-dimensions]').innerHTML=cellOrder.map(n=>`<tr data-cell="${n.id}" data-x="${n.x}" data-z="${n.z}" data-width="${n.w}" data-height="${n.h}" data-depth="${n.d}"><td>${n.id}</td><td>${f(n.w)} × ${f(n.h)} × ${f(n.d)}${n.id==='К1'?'*':''}</td><td>${f(n.z)} / ${f(n.z+n.h)}</td></tr>`).join('')+'<tr><td>К-вход</td><td>Лаз 25 × 25</td><td>7,8 / 32,8</td></tr><tr><td colspan="3">Б2 и Б2↓ — части одного проёма без полки между ними. *К1: примерно 60 см до стены; её толщина добавляется к длине маршрута. А2: 5,6 см — конструкция с накладкой.</td></tr>';
+    root.querySelector('[data-dimensions]').innerHTML=cellOrder.map(n=>`<tr data-cell="${n.id}" data-z="${n.z}" data-width="${n.w}" data-height="${n.h}" data-depth="${n.d}"><td>${n.id}</td><td>${f(n.w)} × ${f(n.h)} × ${f(n.d)}${n.id==='К1'?'*':''}</td><td>${f(n.z)} / ${f(n.z+n.h)}</td></tr>`).join('')+'<tr><td>К-вход</td><td>Лаз 25 × 25</td><td>7,8 / 32,8</td></tr><tr><td colspan="3">А1–А3 измерены со стороны входа; остальные секции — со стороны фасадов шкафа. А2 — габарит сиденья, А3 — открытая зона. Б2 и Б2↓ составляют один проём без полки между ними. *К1: около 60 до стены; её толщина добавляется отдельно.</td></tr>';
     root.querySelector('[data-storage]').innerHTML=cellOrder.map(n=>`<tr><td class="text-nowrap">${n.id}</td><td>${n.use}</td></tr>`).join('');
     const doors=[
-      {id:'А1',x:3,z:6,w:49.1,h:33.4,r:false},
+      {id:'А1',x:0,z:6,w:60,h:33.4,r:false,side:'entry'},
       {id:'А0',x:3,z:210,w:49.1,h:50,r:false},
       {id:'Б',x:52.1,z:6,w:48.95,h:204,r:false},
       {id:'В',x:101.05,z:6,w:48.95,h:204,r:true},
       {id:'Б0',x:52.1,z:210,w:48.95,h:50,r:false},
       {id:'В0',x:101.05,z:210,w:48.95,h:50,r:true}
     ];
-    root.querySelector('[data-facades]').innerHTML=doors.map(d=>`<tr data-door-id="${d.id}" data-width="${d.w}" data-height="${d.h}" data-bottom="${d.z}"><td>${d.id} · петли ${d.r?'справа':'слева'}</td><td>${f(d.w)} × ${f(d.h)}</td><td>${f(d.z)}–${f(d.z+d.h)}</td></tr>`).join('')+'<tr><td>Лаз в двери В</td><td>25 × 25</td><td>7,8–32,8</td></tr><tr><td>Общий цоколь</td><td>147 × 6</td><td>0–6</td></tr>';
+    doors.forEach(d=>{if(d.id==='А0')d.w-=5;else if(d.side!=='entry')d.x-=5;});
+    root.querySelector('[data-facades]').innerHTML=doors.map(d=>`<tr data-door-id="${d.id}" data-width="${d.w}" data-height="${d.h}" data-bottom="${d.z}"><td>${d.id}${d.side?' · к входу':''} · петли ${d.r?'справа':'слева'}</td><td>${f(d.w)} × ${f(d.h)}</td><td>${f(d.z)}–${f(d.z+d.h)}</td></tr>`).join('')+'<tr><td>Лаз в двери В</td><td>25 × 25</td><td>7,8–32,8</td></tr><tr><td>Цоколь Б/В; отдельно под А1</td><td>Высота 6</td><td>0–6</td></tr>';
+    function perspective(svg,width){
+      const raw=([x,y,z])=>[x*.85+y*.65,-x*.25+y*.28-z];
+      const bounds={left:-30,right:164,top:-310,bottom:48};
+      const s=Math.min((width-80)/(bounds.right-bounds.left),1.85),x0=(width-(bounds.right+bounds.left)*s)/2,y0=32-bounds.top*s;
+      const P=p=>{const [x,y]=raw(p);return [x0+x*s,y0+y*s]};
+      const tone=(c,p=12)=>`color-mix(in srgb,var(--viz-series-${c}) ${p}%,var(--background))`;
+      const poly=(ps,color,extra='')=>`<polygon points="${ps.map(p=>P(p).join(',')).join(' ')}" fill="${color}" stroke="var(--muted-foreground)" stroke-width=".8" ${extra}/>`;
+      const line=(a,b,extra='')=>{const p=P(a),q=P(b);return `<line x1="${p[0]}" y1="${p[1]}" x2="${q[0]}" y2="${q[1]}" stroke="var(--muted-foreground)" stroke-width="1.1" ${extra}/>`};
+      const txt=(p,t,dy=0,anchor='middle')=>{const [x,y]=P(p);return `<text x="${x}" y="${y+dy}" text-anchor="${anchor}">${t}</text>`};
+      const cube=(x,y,z,w,d,h,c)=>poly([[x,y,z],[x,y+d,z],[x,y+d,z+h],[x,y,z+h]],tone(c,8))+poly([[x,y+d,z],[x+w,y+d,z],[x+w,y+d,z+h],[x,y+d,z+h]],tone(c,5))+poly([[x,y,z+h],[x+w,y,z+h],[x+w,y+d,z+h],[x,y+d,z+h]],tone(c,16));
+      let out='<title>Поворот скамейки и крючков на 90 градусов</title><desc>Скамейка шириной 60 занимает всю глубину шкафа. Глубина сидения 43, высота 45. Скамейка обращена влево от фасадов, крючки на боковине за спиной. Высоких боковых щёк вокруг сиденья нет. Изображена ориентация, а не проверенное размещение у стен и двери.</desc>';
+      out+=cube(46.2,0,0,98.8,60,260,2);
+      out+=line([96.05,60,6],[96.05,60,260])+line([46.2,60,210],[145,60,210])+line([46.2,60,6],[145,60,6]);
+      out+=line([92,60,105],[92,60,115])+line([100,60,105],[100,60,115]);
+      out+=poly([[115.7,60,7.8],[140.7,60,7.8],[140.7,60,32.8],[115.7,60,32.8]],tone(3,25),'data-cat-opening data-door="В" data-bottom="7.8"');
+      out+=txt([73,60,120],'Б')+txt([120,60,120],'В')+txt([128.2,60,20],'К1');
+      out+=cube(3,0,210,43.2,60,50,2)+txt([24,60,233],'А0');
+      out+=poly([[46.2,0,45],[46.2,60,45],[46.2,60,210],[46.2,0,210]],tone(1,11),'data-hook-plane');
+      [[15,150],[45,170]].forEach(([y,z])=>{out+=line([46.2,y,z],[42.2,y,z])+line([42.2,y,z],[42.2,y,z+3]);});
+      out+=txt([46.2,30,129],'Крючки');
+      out+=cube(3.2,0,0,43,60,43,1);
+      out+=poly([[3.2,0,6],[3.2,60,6],[3.2,60,39.4],[3.2,0,39.4]],tone(1,16),'data-entry-door');
+      out+=line([3.2,48,23],[3.2,54,23]);
+      out+=cube(3.2,0,43,43,60,2,1);
+      out+=txt([3.2,30,22],'А1')+txt([24.7,30,46],'А2',-6);
+      out+=line([3.2,30,0],[-30,30,0])+line([-30,30,0],[-24,26,0])+line([-30,30,0],[-24,34,0]);
+      out+=txt([-30,30,0],'К входу',22);
+      out+=txt([92,0,272],'260 см',-4);
+      const height=y0+bounds.bottom*s+35;
+      svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.style.height=height+'px';svg.innerHTML=out;
+    }
     function elevation(host){
       const width=host.getBoundingClientRect().width;if(!width)return;
-      const view=host.dataset.view,svg=host.querySelector('svg'),s=Math.min((width-80)/W,2.05),x0=(width-W*s)/2,y0=57;
-      const X=x=>x0+x*s,Y=z=>y0+(H-z)*s;
-      const rect=(x,z,w,h,color='var(--muted)',stroke='var(--muted-foreground)',extra='')=>`<rect x="${X(x)}" y="${Y(z+h)}" width="${w*s}" height="${h*s}" fill="${color}" stroke="${stroke}" stroke-width="0.8" ${extra}/>`;
-      const line=(x1,z1,x2,z2,color='var(--foreground)',extra='')=>`<line x1="${X(x1)}" y1="${Y(z1)}" x2="${X(x2)}" y2="${Y(z2)}" stroke="${color}" stroke-width="1.2" ${extra}/>`;
-      const txt=(x,z,text,extra='')=>`<text class="text-small" x="${X(x)}" y="${Y(z)}" text-anchor="middle" ${extra}>${text}</text>`;
-      const block=(x,z,lines)=>lines.map((t,i)=>txt(x,z+(lines.length-1-2*i)*7.5/s,t)).join('');
-      let out=`<title>${view==='front'?'Фасады':view==='storage'?'Что хранить':'Наполнение'} шкафа в прихожую</title><desc>Слева компактное сиденье и закрытая обувница, справа общая штанга шириной проёма 95,2 сантиметра. Внизу справа постоянный лаз 25 на 25 и тоннель 30 на 30 сантиметров, ведущий через шкаф к отверстию в стене.</desc>`;
-      out+=rect(0,0,3,H)+rect(3,0,147,H,'none')+rect(3,0,147,6);
-      cells.forEach(n=>out+=rect(n.x,n.z,n.w,n.h,fill(n.c),'none'));
-      const boards=[[3,6,1.8,254],[51.2,6,1.8,254],[148.2,6,1.8,254],[3,258.2,147,T],[4.8,6,46.4,T],[53,6,95.2,T],[116.4,7.8,T,30],[116.4,37.8,31.8,T],[4.8,39.4,46.4,3.6],[53,185,95.2,T],[4.8,210,143.4,T],[99.7,186.8,T,71.4]];
-      if(view!=='front')boards.forEach(b=>out+=rect(...b));
-      out+=rect(4.8,43,46.4,2,fill(1));
-      out+=line(6,150,9,150)+line(7.5,150,7.5,146)+line(47,170,50,170)+line(48.5,170,48.5,166);
-      if(view==='front'){
-        doors.forEach(d=>{
-          out+=rect(d.x+.12,d.z+.12,d.w-.24,d.h-.24,'var(--background)','var(--foreground)');
-          const hinge=d.r?d.x+d.w-1:d.x+1,free=d.r?d.x+4:d.x+d.w-4,mid=d.z+d.h/2;
-          out+=line(free,d.z+2,hinge,mid,'var(--muted-foreground)')+line(hinge,mid,free,d.z+d.h-2,'var(--muted-foreground)');
-          out+=line(free,mid-2,free,mid+2);
-          if(d.h>40)out+=block(d.x+d.w/2,mid,[d.id,`${Math.round(d.w)}×${f(d.h)}`]);else out+=txt(d.x+d.w/2,mid-2/s,d.id);
-        });
-        out+=rect(120.7,7.8,25,25,fill(3),'var(--viz-series-3)','data-cat-opening data-door="В" data-bottom="7.8"');
-        out+=block(133.2,21.8,['Лаз','25×25']);
-        out+=block(28,127.5,['А3','Крючки','Быстрый','доступ']);
-        out+=txt(28,52,'Сиденье 45');
+      const svg=host.querySelector('svg'),view=host.dataset.view;
+      svg.dataset.angle=angle;
+      if(angle==='turn'){perspective(svg,width);return;}
+      const entry=angle==='entry',height=entry?210:H,len=entry?143:W,s=Math.min((width-80)/len,2.05),x0=(width-len*s)/2,y0=56;
+      const X=x=>x0+x*s,Y=z=>y0+(height-z)*s;
+      const rect=(x,z,w,h,color='var(--muted)',stroke='var(--muted-foreground)',extra='')=>`<rect x="${X(x)}" y="${Y(z+h)}" width="${w*s}" height="${h*s}" fill="${color}" stroke="${stroke}" stroke-width=".8" ${extra}/>`;
+      const line=(x1,z1,x2,z2,extra='')=>`<line x1="${X(x1)}" y1="${Y(z1)}" x2="${X(x2)}" y2="${Y(z2)}" stroke="var(--muted-foreground)" stroke-width="1.1" ${extra}/>`;
+      const txt=(x,z,text,extra='')=>`<text x="${X(x)}" y="${Y(z)}" text-anchor="middle" ${extra}>${text}</text>`;
+      const block=(x,z,lines)=>lines.map((t,i)=>txt(x,z+(lines.length-1-2*i)*9/s,t)).join('');
+      const heightDimension=h=>{const px=Math.max(18,X(-17)),py=Y(h/2);return line(-10,0,-10,h)+`<text x="${px}" y="${py}" text-anchor="middle" transform="rotate(-90 ${px} ${py})">${h}</text>`;};
+      const door=d=>{
+        let result=rect(d.x,d.z,d.w,d.h,'var(--background)');
+        const hinge=d.r?d.x+d.w-1:d.x+1,free=d.r?d.x+4:d.x+d.w-4;
+        [d.z+d.h*.22,d.z+d.h*.78].forEach(z=>{result+=`<circle cx="${X(hinge)}" cy="${Y(z)}" r="1.8" fill="var(--muted-foreground)"/>`;});
+        result+=line(free,d.z+d.h*.46,free,d.z+d.h*.46+6);
+        return result+block(d.x+d.w/2,d.z+d.h/2,[d.id,width<500?`В ${f(d.h)}`:`${f(d.w)} × ${f(d.h)}`]);
+      };
+      let out=`<title>${entry?'Раздевалка со стороны входа':'Шкаф со стороны основных фасадов'}</title><desc>Размеры относятся к модулям. Размещение у входной двери требует замера.</desc>`;
+      if(entry){
+        out+=rect(0,45,60,165,fill(1),'none','data-hook-plane');
+        out+=rect(0,0,60,6)+rect(0,6,60,37)+rect(0,43,60,2,fill(1));
+        if(view==='front')out+=door({x:0,z:6,w:60,h:33.4,r:false,id:'А1'});
+        else{out+=rect(1.8,7.8,56.4,31.6,fill(1));out+=block(30,23.6,['А1',view==='storage'||width<500?'Обувь':'56,4 × 31,6']);}
+        out+=line(15,150,20,150)+line(15,150,15,154)+line(45,170,50,170)+line(45,170,45,174);
+        out+=block(30,112,view==='storage'?['А3','Куртка / сумка']:['А3 · крючки','60 × 165']);
+        out+=txt(30,54,'А2 · верх 45');
+        out+=line(0,219,60,219)+txt(30,227,'Ширина 60');
+        out+=heightDimension(210);
+        out+=rect(93,0,43,6)+rect(93,6,43,37)+rect(93,43,43,2,fill(1));
+        out+=line(136,45,136,210)+line(131,150,136,150)+line(131,170,136,170);
+        out+=block(111,120,['Крючки','150 / 170']);
+        out+=txt(114.5,65,'Боковой профиль');
+        out+=line(93,-10,136,-10)+txt(114.5,-23,'Глубина 43');
+        out+=txt(30,-23,'К входу');
       }else{
-        out+=line(53,175,148.2,175,'var(--foreground)','data-rail');
-        cells.forEach(n=>{
-          if(n.id==='А2')return;
-          const cx=n.x+n.w/2,cz=n.z+n.h/2;
-          if(n.id==='Б2'){
-            out+=block(cx,112,view==='inside'?['Б2 · штанга 95,2','Подвес слева 167,2','Справа 135,4']:['Б2 · на двоих','Длинные — слева','Куртки — справа']);
-            out+=txt(cx,164,'Верх 175*');
-            return;
-          }
-          if(n.id==='А3'){
-            out+=block(cx,127.5,view==='inside'?['А3 · крючки','46,4 × 165']:['А3','Куртка','Сумка']);
-            out+=txt(cx,52,'Сиденье 45');
-            return;
-          }
-          const short=n.id==='Б2↓'?'Для пальто':view==='inside'?`${Math.round(n.w)}×${f(n.h)}`:n.name;
-          out+=block(cx,cz,[n.id,short]);
-        });
+        out+=rect(46.2,0,98.8,H,'none')+rect(46.2,0,98.8,6);
+        const visible=cells.filter(n=>!['А1','А2','А3'].includes(n.id));
+        visible.forEach(n=>out+=rect(n.x,n.z,n.w,n.h,fill(n.c),'none'));
+        const boards=[[3,210,T,50],[46.2,6,T,254],[143.2,6,T,254],[3,258.2,142,T],[48,6,95.2,T],[111.4,7.8,T,30],[111.4,37.8,31.8,T],[48,185,95.2,T],[4.8,210,138.4,T],[94.7,186.8,T,71.4]];
+        if(view==='front'){
+          doors.filter(d=>d.side!=='entry').forEach(d=>out+=door(d));
+          out+=rect(115.7,7.8,25,25,fill(3),'var(--viz-series-3)','data-cat-opening data-door="В" data-bottom="7.8"');
+          out+=block(128.2,21,['Лаз','25×25']);
+        }else{
+          boards.forEach(b=>out+=rect(...b));
+          out+=line(48,175,143.2,175,'data-rail');
+          visible.forEach(n=>{
+            const cx=n.x+n.w/2,cz=n.z+n.h/2;
+            if(n.id==='Б2'){
+              out+=block(cx,112,view==='inside'?['Б2 · штанга 95,2','Подвес 167,2 / 135,4']:['Б2 · на двоих','Пальто / куртки']);
+              out+=txt(cx,163,'Верх 175*');return;
+            }
+            out+=block(cx,cz,[n.id,n.id==='Б2↓'?'Для пальто':view==='storage'?n.name:width<500?`В ${f(n.h)}`:`${f(n.w)} × ${f(n.h)}`]);
+          });
+        }
+        out+=rect(3.2,0,43,6)+rect(3.2,6,43,37)+rect(3.2,43,43,2,fill(1));
+        out+=block(24.7,126,['А','Боком','к входу ←']);
+        out+=txt(24.7,56,'Сиденье 45');
+        out+=line(0,273,145,273)+txt(72.5,280,'Общая ширина ≈145');
+        out+=heightDimension(H);
+        out+=txt(24.7,-14,'Глубина 43')+txt(95.6,-14,'Проём 95,2');
+        out+=txt(72.5,-31,'Цоколь 6 · пол тоннеля 7,8');
       }
-      out+=line(0,0,150,0);
-      out+=line(0,274,150,274,'var(--muted-foreground)')+txt(75,279,'150, включая добор 3');
-      out+=line(-10,0,-10,H,'var(--muted-foreground)')+txt(-17,130,'260',`transform="rotate(-90 ${X(-17)} ${Y(130)})"`);
-      out+=txt(28,266,'А')+txt(77,266,'Б')+txt(126,266,'В');
-      out+=txt(28,-12,'46,4')+txt(100.6,-12,'Проём 95,2');
-      out+=txt(75,-26,'Цоколь 6 · дно тоннеля 7,8 см');
-      svg.setAttribute('viewBox',`0 0 ${width} ${Y(-26)+17}`);svg.style.height=`${Y(-26)+17}px`;svg.innerHTML=out;
+      const total=Y(-31)+24;
+      svg.setAttribute('viewBox',`0 0 ${width} ${total}`);svg.style.height=total+'px';svg.innerHTML=out;
     }
+    const drawAll=()=>root.querySelectorAll('.hw-stage').forEach(elevation);
+    root.querySelectorAll('[data-angle]').forEach(button=>button.addEventListener('click',()=>{
+      angle=button.dataset.angle;root.querySelectorAll('button[data-angle]').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));drawAll();
+    }));
     root.querySelectorAll('.hw-stage').forEach(host=>{new ResizeObserver(()=>elevation(host)).observe(host);elevation(host);});
   })();
   </script>
