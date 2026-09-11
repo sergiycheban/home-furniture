@@ -20,8 +20,8 @@
   <!-- One uninterrupted boxing: x=0..25, y=94..258. -->
   <rect x="0" y="235" width="62.5" height="410" fill="url(#boxing)" stroke="#887b67" stroke-width="1.5"/>
   <path d="M62.5 235V645" stroke="#796d5c" stroke-width="3"/>
-  <!-- Built-in cupboard above toilet shown as a dashed overhead footprint. -->
-  <rect x="12.5" y="265" width="50" height="175" fill="#8a6545" fill-opacity=".18" stroke="#6d4a32" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <!-- Overhead niche projection: 70 along the wall x full 25 boxing depth. No internal cabinet dimensions are assigned. -->
+  <rect id="cabinet-niche" x="0" y="265" width="62.5" height="175" fill="#8a6545" fill-opacity=".18" stroke="#6d4a32" stroke-width="1.5" stroke-dasharray="5 4"/>
   <!-- Undermount basin and 175 x 60 vanity at the opposite wall. -->
   <rect x="62.5" y="495" width="437.5" height="150" fill="#f1ede5" stroke="#786c5c" stroke-width="2"/>
   <path d="M62.5 495H500" stroke="#5a3d2a" stroke-width="9"/>
@@ -34,7 +34,7 @@
   <path d="M62.5 303.75H134C215 303.75 215 401.25 134 401.25H62.5Z" fill="#fff" stroke="#8e9990" stroke-width="2"/>
   <path d="M91 315.5H136C198 315.5 198 389.5 136 389.5H91Z" fill="#f1f3ef" stroke="#bac1b8" stroke-width="1.5"/>
   <text x="220" y="344.5" class="label">Унитаз</text>
-  <text x="220" y="367.5" class="small muted">шкаф над ним</text>
+  <text x="220" y="367.5" class="small muted">Ниша 70 × 120 (Ш × В)</text>
   <!-- Glass from the end of the boxing, 100 cm wide, 200 cm tall. -->
   <path d="M62.5 235H312.5" stroke="#fff" stroke-width="10"/>
   <path d="M62.5 235H312.5" stroke="#4388a1" stroke-width="5"/>
@@ -72,14 +72,17 @@
 <text x="161" y="297.5" text-anchor="middle" class="dimtext" transform="rotate(-90 161 297.5)">≈ 94</text>
 <path d="M205 415H170M205 825H170M178 415V825M173 821 183 829" class="dim"/>
 <text x="161" y="620" text-anchor="middle" class="dimtext" transform="rotate(-90 161 620)">≈ 164</text>
+<path d="M220 440V425M282.5 440V425M220 430H282.5" class="dim"/>
+<text x="251.25" y="425" text-anchor="middle" class="small">25</text>
+<path d="M213 445H193M213 620H193M200 445V620" class="dim"/>
+<text x="193" y="532.5" text-anchor="middle" class="small" transform="rotate(-90 193 532.5)">70 · вдоль стены</text>
 <path d="M282.5 842.5V868.5M720 842.5V868.5M282.5 858.5H720M278.5 863.5 286.5 853.5M716 863.5 724 853.5" class="dim"/>
 <text x="501" y="884.5" text-anchor="middle" class="dimtext">175 между коробом и стеной</text>
 <path d="M739 180H955M739 437.5H955M947 180V437.5M942 176 952 184M942 433.5 952 441.5" class="dim"/>
 <text x="972" y="309" text-anchor="middle" class="small muted" transform="rotate(-90 972 309)">103 до начала дверного проёма</text>
 
 <!-- External labels do not alter the straight box footprint. -->
-<path d="M104 555H211" stroke="#887b67" fill="none"/>
-<text x="45" y="518" class="tag">КOРОБ</text><text x="45" y="541" class="small">25 см</text>
+<text x="45" y="518" class="tag">КОРОБ</text><text x="45" y="541" class="small">25 см</text>
 <text x="45" y="580" class="small muted">Одна прямая</text><text x="45" y="600" class="small muted">по всей длине</text>
 <path d="M105 745H271" stroke="#89998c" fill="none"/>
 <text x="45" y="721.5" class="small">Вытяжка высоко</text><text x="45" y="768.5" class="small muted">на стенке короба</text>
@@ -88,6 +91,6 @@
 <text x="750" y="341" class="small muted">Душевая уходит</text><text x="750" y="363" class="small muted">за торец короба:</text><text x="750" y="385" class="small muted">стена душа на 25 см</text><text x="750" y="407" class="small muted">глубже его фасада.</text>
 <path d="M50 942H950" stroke="#d8dcd5"/>
 <text x="50" y="972" font-size="18">Если стоять во входе: справа душ, слева тумба, напротив унитаз.</text>
-<text x="50" y="1000" class="small muted">Высота комнаты 260. Ниша шкафа над унитазом показана пунктиром; её фасад заподлицо.</text>
+<text x="50" y="1000" class="small muted">Пунктир — ниша 70 вдоль стены × 25 в глубину короба; высота 120. Наполнение пока не задано.</text>
 <text x="50" y="1024" class="tiny muted">94 — глубина душевой; 103 — до дверного проёма. Трап 90 см: полный монтажный габарит проверить перед заказом.</text>
 </svg>

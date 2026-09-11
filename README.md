@@ -18,8 +18,8 @@
 - `index.html` — общая страница.
 - `assets/site.css`, `assets/site.js` — оформление и вкладки.
 - `wardrobe-preview.html`, `hallway-preview.html`, `laundry-preview.html`, `bathroom-preview.html`, `kitchen-preview.html` — самостоятельные интерактивные схемы. Каждую можно открыть отдельно.
-- `bathroom-room.html` — план всей ванной, прямая ссылка `index.html#bathroom-room`. Файлы `assets/bathroom-room.css`, `assets/bathroom-room.js` и шесть SVG-схем в `assets/bathroom-room/` обслуживают эту страницу; её не нужно обрабатывать скриптом экспорта схем. Есть увеличение и печать всех видов, отдельное наполнение шкафа над унитазом.
-- `bathroom-room-concept.md` — уточнения планировки и выбранные изделия. `tools/build-bathroom-elevations.py` пересоздаёт четыре развёртки стен и наполнение шкафа; план `assets/bathroom-room/plan.svg` редактируется отдельно. Фотореалистичных изображений на сайте нет.
+- `bathroom-room.html` — план всей ванной, прямая ссылка `index.html#bathroom-room`. Файлы `assets/bathroom-room.css`, `assets/bathroom-room.js` и шесть SVG-схем в `assets/bathroom-room/` обслуживают эту страницу; её не нужно обрабатывать скриптом экспорта схем. Есть увеличение и печать всех видов, отдельный габарит ниши под шкаф над унитазом.
+- `bathroom-room-concept.md` — уточнения планировки и выбранные изделия. `tools/build-bathroom-elevations.py` пересоздаёт четыре развёртки стен и нишу под шкаф; план `assets/bathroom-room/plan.svg` редактируется отдельно. Фотореалистичных изображений на сайте нет.
 - `*-concept.md`, `wardrobe-audit.md` — пояснения, расчёты, источники и условия, которые нужно проверить перед изготовлением.
 - `tools/prepare-previews.py` и `assets/preview.js` — подготовка новых экспортов схем для общей страницы.
 
