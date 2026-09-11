@@ -22,14 +22,14 @@
     standalone.href = frame.dataset.src;
     standalone.setAttribute('aria-label', `Открыть отдельно: ${selected.textContent.slice(2).trim()}`);
     document.title = `${selected.textContent.slice(2).trim()} — Мебель для дома`;
-    status.textContent = frame.dataset.ready ? '' : 'Загружается схема…';
+    status.textContent = frame.dataset.ready ? '' : 'Загружается проект…';
     clearTimeout(slowTimer);
     if (!frame.hasAttribute('src')) frame.src = frame.dataset.src;
     frame.contentWindow?.postMessage({type: 'furniture:measure'}, targetOrigin);
     if (!frame.dataset.ready) {
       slowTimer = setTimeout(() => {
         if (!frame.dataset.ready && frame.dataset.room === activeRoom) {
-          status.textContent = 'Схема не загрузилась. Попробуйте открыть её отдельно.';
+          status.textContent = 'Страница не загрузилась. Попробуйте открыть её отдельно.';
         }
       }, 8000);
     }

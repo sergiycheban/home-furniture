@@ -18,7 +18,7 @@
         <p class="eyebrow">Альбом проектов</p>
         <h1>Мебель для дома<span aria-hidden="true">.</span></h1>
       </div>
-      <p class="edition">Пять помещений<br><span>Размеры и наполнение</span></p>
+      <p class="edition">Пять помещений<br><span>Схемы и размеры</span></p>
     </header>
 
     <main id="projects">
@@ -26,8 +26,9 @@
         <button type="button" role="tab" id="tab-bedroom" aria-controls="panel-bedroom" aria-selected="true" tabindex="0" data-room="bedroom"><span class="room-number" aria-hidden="true">01</span>Спальня</button>
         <button type="button" role="tab" id="tab-hallway" aria-controls="panel-hallway" aria-selected="false" tabindex="-1" data-room="hallway"><span class="room-number" aria-hidden="true">02</span>Прихожая</button>
         <button type="button" role="tab" id="tab-laundry" aria-controls="panel-laundry" aria-selected="false" tabindex="-1" data-room="laundry"><span class="room-number" aria-hidden="true">03</span>Постирочная</button>
-        <button type="button" role="tab" id="tab-bathroom" aria-controls="panel-bathroom" aria-selected="false" tabindex="-1" data-room="bathroom"><span class="room-number" aria-hidden="true">04</span>Ванная</button>
-        <button type="button" role="tab" id="tab-kitchen" aria-controls="panel-kitchen" aria-selected="false" tabindex="-1" data-room="kitchen"><span class="room-number" aria-hidden="true">05</span>Кухня</button>
+        <button type="button" role="tab" id="tab-bathroom" aria-controls="panel-bathroom" aria-selected="false" tabindex="-1" data-room="bathroom"><span class="room-number" aria-hidden="true">04</span>Тумба в ванной</button>
+        <button type="button" role="tab" id="tab-bathroom-room" aria-controls="panel-bathroom-room" aria-selected="false" tabindex="-1" data-room="bathroom-room"><span class="room-number" aria-hidden="true">05</span>Ванная целиком</button>
+        <button type="button" role="tab" id="tab-kitchen" aria-controls="panel-kitchen" aria-selected="false" tabindex="-1" data-room="kitchen"><span class="room-number" aria-hidden="true">06</span>Кухня</button>
       </div>
       <div class="project-sheet">
         <div class="sheet-toolbar">
@@ -46,6 +47,9 @@
         <section role="tabpanel" id="panel-bathroom" aria-labelledby="tab-bathroom" hidden>
           <iframe title="Тумба в ванной: схемы и размеры" data-src="bathroom-preview.html" data-room="bathroom" height="740"></iframe>
         </section>
+        <section role="tabpanel" id="panel-bathroom-room" aria-labelledby="tab-bathroom-room" hidden>
+          <iframe title="Ванная целиком: план и развёртки четырёх стен" data-src="bathroom-room.html" data-room="bathroom-room" height="740"></iframe>
+        </section>
         <section role="tabpanel" id="panel-kitchen" aria-labelledby="tab-kitchen" hidden>
           <iframe title="Г-образная кухня: схемы, техника и размеры" data-src="kitchen-preview.html" data-room="kitchen" height="740"></iframe>
         </section>
@@ -55,7 +59,8 @@
             <li><a href="wardrobe-preview.html">Спальня</a></li>
             <li><a href="hallway-preview.html">Прихожая</a></li>
             <li><a href="laundry-preview.html">Постирочная</a></li>
-            <li><a href="bathroom-preview.html">Ванная</a></li>
+            <li><a href="bathroom-preview.html">Тумба в ванной</a></li>
+            <li><a href="bathroom-room.html">Ванная целиком</a></li>
             <li><a href="kitchen-preview.html">Кухня</a></li>
           </ul>
           <style>.room-tabs,[role="tabpanel"],.sheet-toolbar{display:none}</style>

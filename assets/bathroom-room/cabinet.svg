@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1060" viewBox="0 0 1000 1060" role="img" aria-labelledby="title desc">
+<title id="title">Шкаф над унитазом — наполнение</title><desc id="desc">Предложение: ниша 70 × 120, низ 130, верх 250. Короб и размеры ниши проверяются по замеру.</desc>
+<defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f1ede5"/><path d="M0 0V10" stroke="#dbd2c4"/></pattern></defs>
+<style>text{font-family:'Segoe UI',sans-serif;fill:#29342e}.small{font-size:14px}.dim{fill:none;stroke:#778178;stroke-width:1}.dimtext{font-size:16px;fill:#58635b}.muted{fill:#687169}.blue{fill:#286b81}.projection{fill:none;stroke:#8e9d94;stroke-width:1.5;stroke-dasharray:6 5}.woodtext{fill:#fff;font-size:13px}.metal{fill:none;stroke:#738277;stroke-width:3}</style>
+<rect width="1000" height="1060" fill="#fff"/>
+<text x="45" y="39" font-size="12" letter-spacing="2" class="muted">ВАННАЯ · РАЗВЁРТКА СТЕНЫ</text>
+<text x="45" y="77" font-size="27">Шкаф над унитазом — наполнение</text>
+<text x="45" y="106" class="small muted">Предложение: ниша 70 × 120, низ 130, верх 250. Короб и размеры ниши проверяются по замеру.</text>
+<rect x="320" y="165" width="360" height="624" rx="0" fill="#faf9f5" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="320" y="165" width="360" height="624" rx="0" fill="url(#hatch)" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="416" y="189" width="168" height="288" rx="0" fill="#fff" stroke="#614d3d" stroke-width="2" class=""/>
+<rect x="417.2" y="190.2" width="165.6" height="285.6" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<rect x="421.52" y="194.52" width="156.96" height="276.96" rx="0" fill="#f4ede3" stroke="#614d3d" stroke-width="1" class=""/>
+<rect x="421.52" y="390.36" width="156.96" height="4.32" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<rect x="421.52" y="323.64" width="156.96" height="4.32" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<rect x="421.52" y="256.92" width="156.96" height="4.32" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<text x="500" y="429.24" font-size="13" class="" text-anchor="middle">Флаконы · ежедневное</text>
+<text x="500" y="446.04" font-size="12" class="muted" text-anchor="middle">Высота в свету 32</text>
+<text x="500" y="356.04" font-size="13" class="" text-anchor="middle">Бумага, салфетки</text>
+<text x="500" y="372.84" font-size="12" class="muted" text-anchor="middle">Высота в свету 26</text>
+<text x="500" y="289.32" font-size="13" class="" text-anchor="middle">Небольшой запас</text>
+<text x="500" y="306.12" font-size="12" class="muted" text-anchor="middle">Высота в свету 26</text>
+<text x="500" y="222.6" font-size="13" class="" text-anchor="middle">Редкий запас</text>
+<text x="500" y="239.4" font-size="12" class="muted" text-anchor="middle">Высота в свету 26</text>
+<path d="M416 136V150M584 136V150M416 143H584" class="dim"/><text x="500" y="133" class="dimtext" text-anchor="middle">70 · ниша</text>
+<path d="M598.6 477H612.6M598.6 189H612.6M605.6 477V189" class="dim"/><text x="595.6" y="333" class="dimtext" text-anchor="middle" transform="rotate(-90 595.6 333)">120 · ниша</text>
+<path d="M286 789H300M286 477H300M293 789V477" class="dim"/><text x="283" y="633" class="dimtext" text-anchor="middle" transform="rotate(-90 283 633)">130 до низа ниши</text>
+<text x="500" y="177" font-size="13" class="" text-anchor="middle">10 до потолка</text>
+<path d="M421.52 489.2V503.2M578.48 489.2V503.2M421.52 496.2H578.48" class="dim"/><text x="500" y="486.2" class="dimtext" text-anchor="middle">65,4 внутри</text>
+<text x="500" y="539.4" font-size="15" class="" text-anchor="middle">Две дверцы ≈ 35 × 120</text>
+<text x="500" y="563.4" font-size="13" class="muted" text-anchor="middle">Петли по внешним бокам</text>
+<text x="500" y="587.4" font-size="13" class="muted" text-anchor="middle">Ручки на высоте ≈ 145</text>
+<text x="500" y="611.4" font-size="13" class="muted" text-anchor="middle">Открывание около 90°</text>
+<text x="500" y="654.6" font-size="15" class="" text-anchor="middle">Цель по полезной глубине: 20</text>
+<text x="500" y="678.6" font-size="12" class="muted" text-anchor="middle">Нужна свободная глубина ниши ≥ 23,1</text>
+<text x="500" y="724.2" font-size="14" class="" text-anchor="middle">Под шкафом — инсталляция</text>
+<path d="M247 789H261M247 165H261M254 789V165" class="dim"/><text x="244" y="477" class="dimtext" text-anchor="middle" transform="rotate(-90 244 477)">260 от чистого пола</text>
+<path d="M45 878H955" stroke="#d8dcd5"/>
+<text x="45" y="909" font-size="14" class="muted">Расчётный пример: ниша 70 × 120; зазоры по 0,5; наружный корпус 69 × 119; панели и полки 1,8.</text>
+<text x="45" y="936" font-size="14" class="muted">Внутри по ширине 65,4. Четыре ячейки: 32 + 26 + 26 + 26; три полки по 1,8.</text>
+<text x="45" y="963" font-size="14" class="muted">Уровни опоры вещей: 132,3 / 166,1 / 193,9 / 221,7. Верхние ячейки — для редко нужного.</text>
+<text x="45" y="990" font-size="14" class="muted">Глубина 20 в свету: 20 + фасад 1,8 + задник 0,8 + запас 0,5 = 23,1; коммуникации не учтены.</text>
+<text x="45" y="1040" font-size="12" class="muted">Сантехника обозначена условно. Размеры в см; монтажные уровни оборудования уточняются по изделиям.</text></svg>

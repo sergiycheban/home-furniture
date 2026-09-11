@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1060" viewBox="0 0 1000 1060" role="img" aria-labelledby="title desc">
+<title id="title">Стена с тумбой</title><desc id="desc">Смотрим от душевой к тумбе. Короб справа; слева — сторона входной двери.</desc>
+<defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f1ede5"/><path d="M0 0V10" stroke="#dbd2c4"/></pattern></defs>
+<style>text{font-family:'Segoe UI',sans-serif;fill:#29342e}.small{font-size:14px}.dim{fill:none;stroke:#778178;stroke-width:1}.dimtext{font-size:16px;fill:#58635b}.muted{fill:#687169}.blue{fill:#286b81}.projection{fill:none;stroke:#8e9d94;stroke-width:1.5;stroke-dasharray:6 5}.woodtext{fill:#fff;font-size:13px}.metal{fill:none;stroke:#738277;stroke-width:3}</style>
+<rect width="1000" height="1060" fill="#fff"/>
+<text x="45" y="39" font-size="12" letter-spacing="2" class="muted">ВАННАЯ · РАЗВЁРТКА СТЕНЫ</text>
+<text x="45" y="77" font-size="27">Стена с тумбой</text>
+<text x="45" y="106" class="small muted">Смотрим от душевой к тумбе. Короб справа; слева — сторона входной двери.</text>
+<rect x="260" y="165" width="480" height="624" rx="0" fill="#faf9f5" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="680" y="165" width="60" height="624" rx="0" fill="url(#hatch)" stroke="#879389" stroke-width="1.5" class=""/>
+<text x="710" y="414.6" font-size="15" text-anchor="middle" transform="rotate(-90 710 414.6)">БОКОВАЯ СТЕНКА КОРОБА · 25</text>
+<rect x="264.8" y="765" width="410.4" height="24" rx="0" fill="#574635" stroke="#574635" stroke-width="1.5" class=""/>
+<rect x="264.8" y="667.08" width="102.6" height="97.92" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<path d="M304.1 690.6L328.1 690.6" fill="none" stroke="#cbd0c8" stroke-width="3" class=""/>
+<rect x="367.4" y="667.08" width="102.6" height="97.92" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<path d="M406.7 690.6L430.7 690.6" fill="none" stroke="#cbd0c8" stroke-width="3" class=""/>
+<rect x="470" y="667.08" width="102.6" height="97.92" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<path d="M509.3 690.6L533.3 690.6" fill="none" stroke="#cbd0c8" stroke-width="3" class=""/>
+<rect x="572.6" y="667.08" width="102.6" height="97.92" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<path d="M611.9 690.6L635.9 690.6" fill="none" stroke="#cbd0c8" stroke-width="3" class=""/>
+<rect x="264.8" y="626.04" width="123.12" height="41.04" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<path d="M314.36 638.28L338.36 638.28" fill="none" stroke="#cbd0c8" stroke-width="3" class=""/>
+<text x="326.36" y="659.88" font-size="13" class="woodtext" text-anchor="middle">17,1</text>
+<rect x="264.8" y="585" width="123.12" height="41.04" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<path d="M314.36 597.24L338.36 597.24" fill="none" stroke="#cbd0c8" stroke-width="3" class=""/>
+<text x="326.36" y="618.84" font-size="13" class="woodtext" text-anchor="middle">17,1</text>
+<rect x="552.08" y="626.04" width="123.12" height="41.04" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<path d="M601.64 638.28L625.64 638.28" fill="none" stroke="#cbd0c8" stroke-width="3" class=""/>
+<text x="613.64" y="659.88" font-size="13" class="woodtext" text-anchor="middle">17,1</text>
+<rect x="552.08" y="585" width="123.12" height="41.04" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<path d="M601.64 597.24L625.64 597.24" fill="none" stroke="#cbd0c8" stroke-width="3" class=""/>
+<text x="613.64" y="618.84" font-size="13" class="woodtext" text-anchor="middle">17,1</text>
+<rect x="387.92" y="585" width="164.16" height="82.08" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1" class=""/>
+<path d="M458 599.4L482 599.4" fill="none" stroke="#cbd0c8" stroke-width="3" class=""/>
+<text x="470" y="637.8" font-size="13" class="woodtext" text-anchor="middle">Ящик под чашей</text>
+<rect x="260" y="580.2" width="420" height="4.8" rx="0" fill="#e8e8df" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="279.2" y="769.8" width="81.6" height="14.4" rx="0" fill="#364239" stroke="#364239" stroke-width="1" class=""/>
+<path d="M281.6 780.6L358.4 780.6" fill="none" stroke="#a7aa94" stroke-width="0.8" class=""/>
+<path d="M281.6 777L358.4 777" fill="none" stroke="#a7aa94" stroke-width="0.8" class=""/>
+<path d="M281.6 773.4L358.4 773.4" fill="none" stroke="#a7aa94" stroke-width="0.8" class=""/>
+<rect x="380" y="769.8" width="81.6" height="14.4" rx="0" fill="#364239" stroke="#364239" stroke-width="1" class=""/>
+<path d="M382.4 780.6L459.2 780.6" fill="none" stroke="#a7aa94" stroke-width="0.8" class=""/>
+<path d="M382.4 777L459.2 777" fill="none" stroke="#a7aa94" stroke-width="0.8" class=""/>
+<path d="M382.4 773.4L459.2 773.4" fill="none" stroke="#a7aa94" stroke-width="0.8" class=""/>
+<rect x="398" y="585" width="144" height="38.4" rx="6" fill="none" stroke="#a9b3a9" stroke-width="1" class="projection"/>
+<path d="M470 580.2L470 539.4" fill="none" stroke="#738277" stroke-width="4" class=""/>
+<path d="M470 541.8L456.8 541.8" fill="none" stroke="#738277" stroke-width="3" class=""/>
+<circle cx="470" cy="393" r="120" fill="#edf1ed" stroke="#78887b" stroke-width="2"/>
+<text x="470" y="390.6" font-size="19" class="" text-anchor="middle">Зеркало Ø100</text>
+<text x="470" y="417" font-size="14" class="muted" text-anchor="middle">Центр 165</text>
+<circle cx="305" cy="393" r="18" fill="#fbf5e5" stroke="#434c44" stroke-width="2"/>
+<text x="305" y="431.4" font-size="13" class="" text-anchor="middle">Бра Ø15</text>
+<circle cx="635" cy="393" r="18" fill="#fbf5e5" stroke="#434c44" stroke-width="2"/>
+<text x="635" y="431.4" font-size="13" class="" text-anchor="middle">Бра Ø15</text>
+<path d="M260 136V150M680 136V150M260 143H680" class="dim"/><text x="470" y="133" class="dimtext" text-anchor="middle">175 между стенами</text>
+<path d="M680 136V150M740 136V150M680 143H740" class="dim"/><text x="710" y="133" class="dimtext" text-anchor="middle">25</text>
+<path d="M350 234.8V248.8M590 234.8V248.8M350 241.8H590" class="dim"/><text x="470" y="231.8" class="dimtext" text-anchor="middle">100</text>
+<path d="M771 789H785M771 580.2H785M778 789V580.2" class="dim"/><text x="768" y="684.6" class="dimtext" text-anchor="middle" transform="rotate(-90 768 684.6)">87 столешница</text>
+<path d="M226 789H240M226 393H240M233 789V393" class="dim"/><text x="223" y="591" class="dimtext" text-anchor="middle" transform="rotate(-90 223 591)">165 ось зеркала и бра</text>
+<path d="M187 789H201M187 165H201M194 789V165" class="dim"/><text x="184" y="477" class="dimtext" text-anchor="middle" transform="rotate(-90 184 477)">260 от чистого пола</text>
+<path d="M260 831V845M740 831V845M260 838H740" class="dim"/><text x="500" y="828" class="dimtext" text-anchor="middle">200 — ширина этой стены</text>
+<path d="M45 878H955" stroke="#d8dcd5"/>
+<text x="45" y="909" font-size="14" class="muted">Тумба 175 × 60 × 87; светлая столешница 2; фасады — тёмный орех. Корпус 171 + доборы по 2.</text>
+<text x="45" y="936" font-size="14" class="muted">Пять верхних ящиков и четыре нижние дверцы. Цоколь 10, углубление для ног 9; слева две решётки.</text>
+<text x="45" y="963" font-size="14" class="muted">Зеркало: низ 115, верх 215. Оси бра: 18,75 и 156,25 от левой стены, высота 165.</text>
+<text x="45" y="990" font-size="14" class="muted">Вытяжка находится на боковой стенке короба — она показана на соседней развёртке.</text>
+<text x="45" y="1040" font-size="12" class="muted">Сантехника обозначена условно. Размеры в см; монтажные уровни оборудования уточняются по изделиям.</text></svg>

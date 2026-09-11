@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1060" viewBox="0 0 1000 1060" role="img" aria-labelledby="title desc">
+<title id="title">Душевая — вид со стороны тумбы</title><desc id="desc">Смотрим к дальней стене душевой. Короб и колонна слева, открытый вход в душ справа.</desc>
+<defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f1ede5"/><path d="M0 0V10" stroke="#dbd2c4"/></pattern></defs>
+<style>text{font-family:'Segoe UI',sans-serif;fill:#29342e}.small{font-size:14px}.dim{fill:none;stroke:#778178;stroke-width:1}.dimtext{font-size:16px;fill:#58635b}.muted{fill:#687169}.blue{fill:#286b81}.projection{fill:none;stroke:#8e9d94;stroke-width:1.5;stroke-dasharray:6 5}.woodtext{fill:#fff;font-size:13px}.metal{fill:none;stroke:#738277;stroke-width:3}</style>
+<rect width="1000" height="1060" fill="#fff"/>
+<text x="45" y="39" font-size="12" letter-spacing="2" class="muted">ВАННАЯ · РАЗВЁРТКА СТЕНЫ</text>
+<text x="45" y="77" font-size="27">Душевая — вид со стороны тумбы</text>
+<text x="45" y="106" class="small muted">Смотрим к дальней стене душевой. Короб и колонна слева, открытый вход в душ справа.</text>
+<rect x="260" y="165" width="480" height="624" rx="0" fill="#faf9f5" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="260" y="165" width="480" height="624" rx="0" fill="#eef3ef" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="260" y="165" width="60" height="624" rx="0" fill="url(#hatch)" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="320" y="309" width="240" height="480" rx="0" fill="#e6f1f2" stroke="#4388a1" stroke-width="2" class=""/>
+<path d="M375.2 669L468.8 405M411.2 673.8L504.8 409.8" stroke="#c3dee2" fill="none"/>
+<text x="440" y="481.8" font-size="21" class="blue" text-anchor="middle">Стекло</text>
+<text x="440" y="513" font-size="17" class="blue" text-anchor="middle">100 × 200</text>
+<text x="651.2" y="477" font-size="21" class="" text-anchor="middle">Вход</text>
+<text x="651.2" y="510.6" font-size="19" class="" text-anchor="middle">≈ 75</text>
+<text x="500" y="220.2" font-size="16" class="" text-anchor="middle">Потолок без светильников</text>
+<text x="442.4" y="268.2" font-size="14" class="muted" text-anchor="middle">60 до потолка</text>
+<path d="M260 136V150M320 136V150M260 143H320" class="dim"/><text x="290" y="133" class="dimtext" text-anchor="middle">25</text>
+<path d="M320 136V150M560 136V150M320 143H560" class="dim"/><text x="440" y="133" class="dimtext" text-anchor="middle">100 · стекло</text>
+<path d="M560 136V150M740 136V150M560 143H740" class="dim"/><text x="650" y="133" class="dimtext" text-anchor="middle">75 · проход</text>
+<path d="M765 789H779M765 309H779M772 789V309" class="dim"/><text x="762" y="549" class="dimtext" text-anchor="middle" transform="rotate(-90 762 549)">200 высота стекла</text>
+<path d="M187 789H201M187 165H201M194 789V165" class="dim"/><text x="184" y="477" class="dimtext" text-anchor="middle" transform="rotate(-90 184 477)">260 от чистого пола</text>
+<path d="M260 831V845M740 831V845M260 838H740" class="dim"/><text x="500" y="828" class="dimtext" text-anchor="middle">200 — ширина этой стены</text>
+<path d="M45 878H955" stroke="#d8dcd5"/>
+<text x="45" y="909" font-size="14" class="muted">Здесь показана проекция стекла и торца короба на дальнюю стену. Пол душа глубиной 94.</text>
+<text x="45" y="936" font-size="14" class="muted">Колонна не на дальней стене: она на левой боковой стене за торцом короба. См. развёртку короба.</text>
+<text x="45" y="963" font-size="14" class="muted">Трап 90 расположен параллельно левой стене с колонной; его направление видно на плане сверху.</text>
+<text x="45" y="990" font-size="14" class="muted">Проход: 200 − 25 − 100 = 75. Стекло высотой 200, до потолка 260 − 200 = 60.</text>
+<text x="45" y="1040" font-size="12" class="muted">Сантехника обозначена условно. Размеры в см; монтажные уровни оборудования уточняются по изделиям.</text></svg>

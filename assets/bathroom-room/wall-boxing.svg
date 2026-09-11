@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1060" viewBox="0 0 1000 1060" role="img" aria-labelledby="title desc">
+<title id="title">Стена с коробом и душевой колонной</title><desc id="desc">Смотрим от двери на противоположную стену. Тумба слева, душевая справа.</desc>
+<defs><pattern id="hatch" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="10" height="10" fill="#f1ede5"/><path d="M0 0V10" stroke="#dbd2c4"/></pattern></defs>
+<style>text{font-family:'Segoe UI',sans-serif;fill:#29342e}.small{font-size:14px}.dim{fill:none;stroke:#778178;stroke-width:1}.dimtext{font-size:16px;fill:#58635b}.muted{fill:#687169}.blue{fill:#286b81}.projection{fill:none;stroke:#8e9d94;stroke-width:1.5;stroke-dasharray:6 5}.woodtext{fill:#fff;font-size:13px}.metal{fill:none;stroke:#738277;stroke-width:3}</style>
+<rect width="1000" height="1060" fill="#fff"/>
+<text x="45" y="39" font-size="12" letter-spacing="2" class="muted">ВАННАЯ · РАЗВЁРТКА СТЕНЫ</text>
+<text x="45" y="77" font-size="27">Стена с коробом и душевой колонной</text>
+<text x="45" y="106" class="small muted">Смотрим от двери на противоположную стену. Тумба слева, душевая справа.</text>
+<rect x="190.4" y="165" width="619.2" height="624" rx="0" fill="#faf9f5" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="190.4" y="165" width="393.6" height="624" rx="0" fill="url(#hatch)" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="584" y="165" width="225.6" height="624" rx="0" fill="#eef3ef" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="190.4" y="585" width="141.6" height="180" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1.5" class=""/>
+<rect x="190.4" y="765" width="120" height="24" rx="0" fill="#574635" stroke="#574635" stroke-width="1.5" class=""/>
+<rect x="190.4" y="580.2" width="144" height="4.8" rx="0" fill="#e8e8df" stroke="#879389" stroke-width="1.5" class=""/>
+<text x="262.4" y="669" font-size="16" class="woodtext" text-anchor="middle">Тумба</text>
+<text x="262.4" y="697.8" font-size="13" class="woodtext" text-anchor="middle">глубина 60</text>
+<circle cx="267.2" cy="225" r="19.2" fill="#fff" stroke="#738277" stroke-width="1.5"/>
+<text x="267.2" y="263.4" font-size="15" class="" text-anchor="middle">PAX Norte</text>
+<text x="267.2" y="287.4" font-size="13" class="muted" text-anchor="middle">ось ≈ 235*</text>
+<rect x="387.2" y="189" width="84" height="288" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1.5" class=""/>
+<rect x="471.2" y="189" width="84" height="288" rx="0" fill="#8a674b" stroke="#614d3d" stroke-width="1.5" class=""/>
+<path d="M462.8 453L462.8 429" fill="none" stroke="#cbd0c8" stroke-width="3" class=""/>
+<path d="M479.6 453L479.6 429" fill="none" stroke="#cbd0c8" stroke-width="3" class=""/>
+<text x="471.2" y="299.4" font-size="15" class="woodtext" text-anchor="middle">Шкаф 70 × 120</text>
+<text x="471.2" y="328.2" font-size="13" class="woodtext" text-anchor="middle">внутри короба</text>
+<text x="471.2" y="357" font-size="13" class="woodtext" text-anchor="middle">фасад заподлицо</text>
+<path d="M387.2 167.6V181.6M555.2 167.6V181.6M387.2 174.6H555.2" class="dim"/><text x="471.2" y="164.6" class="dimtext" text-anchor="middle">70</text>
+<path d="M365.8 477H379.8M365.8 189H379.8M372.8 477V189" class="dim"/><text x="362.8" y="333" class="dimtext" text-anchor="middle" transform="rotate(-90 362.8 333)">120 · ниша*</text>
+<rect x="441.2" y="515.4" width="60" height="38.4" rx="0" fill="#fff" stroke="#879389" stroke-width="1.5" class=""/>
+<circle cx="459.2" cy="534.6" r="9.6" fill="none" stroke="#879389" stroke-width="1.5"/>
+<circle cx="483.2" cy="534.6" r="7.2" fill="none" stroke="#879389" stroke-width="1.5"/>
+<rect x="424.4" y="685.8" width="93.6" height="60" rx="20" fill="#fff" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="424.4" y="683.4" width="93.6" height="7.2" rx="5" fill="#f2f4ef" stroke="#879389" stroke-width="1" class=""/>
+<text x="471.2" y="647.4" font-size="15" class="" text-anchor="middle">Roca Ona</text>
+<path d="M696.8 525L696.8 256.2" fill="none" stroke="#738277" stroke-width="3" class=""/>
+<path d="M660.8 525L732.8 525" fill="none" stroke="#738277" stroke-width="5" class=""/>
+<path d="M696.8 256.2L728 256.2" fill="none" stroke="#738277" stroke-width="3" class=""/>
+<ellipse cx="728" cy="263.4" rx="37.2" ry="4" fill="#b8c2b7" stroke="#738277"/>
+<path d="M696.8 405L725.6 373.8" fill="none" stroke="#738277" stroke-width="3" class=""/>
+<circle cx="730.4" cy="366.6" r="9.6" fill="#b8c2b7" stroke="#738277" stroke-width="1.5"/>
+<path d="M696.8 409.8 Q764 705 720.8 525" class="metal"/>
+<text x="704" y="205.8" font-size="15" class="" text-anchor="middle">Колонна душа</text>
+<path d="M584 789L584 309" fill="none" stroke="#4388a1" stroke-width="4" class=""/>
+<rect x="588.8" y="786.6" width="216" height="2.4" rx="0" fill="#839687" stroke="#52695b" stroke-width="1" class=""/>
+<text x="701.6" y="760.2" font-size="14" class="" text-anchor="middle">Трап 90 вдоль стены</text>
+<path d="M190.4 136V150M584 136V150M190.4 143H584" class="dim"/><text x="387.2" y="133" class="dimtext" text-anchor="middle">164 · прямой короб</text>
+<path d="M584 136V150M809.6 136V150M584 143H809.6" class="dim"/><text x="696.8" y="133" class="dimtext" text-anchor="middle">94 · душевая</text>
+<path d="M834.6 789H848.6M834.6 309H848.6M841.6 789V309" class="dim"/><text x="831.6" y="549" class="dimtext" text-anchor="middle" transform="rotate(-90 831.6 549)">200 · стекло с ребра</text>
+<path d="M117.4 789H131.4M117.4 165H131.4M124.4 789V165" class="dim"/><text x="114.4" y="477" class="dimtext" text-anchor="middle" transform="rotate(-90 114.4 477)">260 от чистого пола</text>
+<path d="M190.4 831V845M809.6 831V845M190.4 838H809.6" class="dim"/><text x="500" y="828" class="dimtext" text-anchor="middle">258 — ширина этой стены</text>
+<path d="M45 878H955" stroke="#d8dcd5"/>
+<text x="45" y="909" font-size="14" class="muted">Короб глубиной 25 идёт без ступенек от стены с тумбой до душа. За торцом стена уходит назад на 25.</text>
+<text x="45" y="936" font-size="14" class="muted">Ниша шкафа — предложение: ширина 70, низ 130, верх 250. Над ней до потолка 10.</text>
+<text x="45" y="963" font-size="14" class="muted">Колонна на этой же стороне комнаты; трап 90 параллелен стене. Стекло здесь видно с ребра.</text>
+<text x="45" y="990" font-size="14" class="muted">* Ось вытяжки 235 и положение шкафа предварительные. Уровни колонны и унитаза условные.</text>
+<text x="45" y="1040" font-size="12" class="muted">Сантехника обозначена условно. Размеры в см; монтажные уровни оборудования уточняются по изделиям.</text></svg>

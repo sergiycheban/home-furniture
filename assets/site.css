@@ -25,8 +25,8 @@ h1 { margin: 0; font: 400 38px/1.15 Georgia, "Times New Roman", serif; letter-sp
 h1 span { color: var(--green); }
 .edition { flex-shrink: 0; margin: 0 0 3px; font-size: 12px; line-height: 1.6; text-align: right; }
 .edition span { color: var(--muted); }
-.room-tabs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--line); }
-.room-tabs button { appearance: none; position: relative; display: flex; align-items: center; gap: 12px; min-height: 60px; margin: 0; padding: 12px 18px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--muted); font: 500 15px/1.25 "Segoe UI", "Helvetica Neue", sans-serif; text-align: left; cursor: pointer; }
+.room-tabs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+.room-tabs button { appearance: none; position: relative; display: flex; align-items: center; gap: 8px; min-height: 60px; margin: 0; padding: 12px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--muted); font: 500 15px/1.25 "Segoe UI", "Helvetica Neue", sans-serif; text-align: left; cursor: pointer; }
 .room-tabs button:hover { background: #eeefe8; color: var(--ink); }
 .room-tabs button[aria-selected="true"] { border-bottom-color: var(--green); color: var(--green); background: #fff; }
 .room-number { font: 11px/1.2 Consolas, monospace; color: var(--muted); }
@@ -45,7 +45,6 @@ footer { display: flex; justify-content: space-between; gap: 16px; padding: 20px
   h1 { font-size: 33px; }
   .room-tabs { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .room-tabs button { grid-column: span 2; gap: 8px; padding: 12px; font-size: 14px; }
-  .room-tabs button:nth-last-child(-n+2) { grid-column: span 3; }
   .project-sheet { padding: 0 4px 12px; }
 }
 @media (max-width: 520px) {
@@ -54,8 +53,7 @@ footer { display: flex; justify-content: space-between; gap: 16px; padding: 20px
   h1 { font-size: 32px; }
   .edition { display: none; }
   .room-tabs { grid-template-columns: repeat(2, 1fr); }
-  .room-tabs button, .room-tabs button:nth-last-child(-n+2) { grid-column: auto; min-height: 48px; padding: 11px 14px; }
-  .room-tabs button:last-child { grid-column: 1 / -1; }
+  .room-tabs button { grid-column: auto; min-height: 48px; padding: 11px 14px; }
   .project-sheet { padding: 0 0 10px; }
   .sheet-toolbar { padding: 5px 12px; min-height: 42px; }
   footer { display: block; padding-left: 6px; }

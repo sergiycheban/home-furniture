@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="План ванной сверху и развёртки четырёх стен с размерами: душевая, тумба, единый короб и встроенный шкаф.">
+  <title>Ванная целиком — Мебель для дома</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="assets/bathroom-room.css">
+  <script src="assets/bathroom-room.js" defer></script>
+  <script src="assets/preview.js" defer></script>
+</head>
+<body>
+  <main class="room-album">
+    <header class="room-heading">
+      <p class="eyebrow">План и развёртки стен · 11 сентября 2026</p>
+      <h1>Ванная целиком</h1>
+      <p class="intro">При входе справа — душевая, слева — тумба; напротив — единый короб с унитазом и встроенным шкафом. Здесь план сверху, четыре стены и отдельная схема наполнения шкафа.</p>
+      <ul class="measurements" aria-label="Основные размеры">
+        <li><span>Потолок</span><strong>260 см</strong></li>
+        <li><span>Тумба · Ш × Г × В</span><strong>175 × 60 × 87 см</strong></li>
+        <li><span>Стекло · Ш × В</span><strong>100 × 200 см</strong></li>
+        <li><span>Душевая · Ш × Г</span><strong>200 × 94 см</strong></li>
+      </ul>
+    </header>
+
+    <div class="view-picker" role="group" aria-label="Выберите схему" hidden>
+      <button type="button" aria-pressed="true" aria-controls="view-plan" data-view="plan">01 <span>План</span></button>
+      <button type="button" aria-pressed="false" aria-controls="view-vanity" data-view="vanity">02 <span>Тумба</span></button>
+      <button type="button" aria-pressed="false" aria-controls="view-boxing" data-view="boxing">03 <span>Короб и душ</span></button>
+      <button type="button" aria-pressed="false" aria-controls="view-entrance" data-view="entrance">04 <span>Входная стена</span></button>
+      <button type="button" aria-pressed="false" aria-controls="view-shower" data-view="shower">05 <span>Душ спереди</span></button>
+      <button type="button" aria-pressed="false" aria-controls="view-cabinet" data-view="cabinet">06 <span>Шкаф над WC</span></button>
+    </div>
+    <div class="drawing-tools" hidden><label for="drawing-zoom">Масштаб схемы</label><select id="drawing-zoom"><option value="1">По ширине</option><option value="1.5">150%</option><option value="2">200%</option><option value="3">300%</option></select><button type="button" id="print-drawings">Печать всех схем</button></div>
+
+    <figure id="view-plan" class="room-view plan-view">
+      <div class="drawing-viewport">
+        <img src="assets/bathroom-room/plan.svg" width="1000" height="1050" fetchpriority="high" alt="План сверху. Душевая сверху, тумба снизу, вход справа. Прямой короб слева заканчивается перед душевой. Колонна и параллельный ей трап на левой стене душа. Стекло шириной 100 и высотой 200 сантиметров, справа проход около 75 сантиметров.">
+      </div>
+      <figcaption><div><strong>Размещение по плану комнаты</strong><p>Короб проходит одной прямой от стены у тумбы до душевой. В душевой стена уходит за его торец на 25 см. Колонна стоит на этой стене, трап идёт параллельно ей.</p></div><a href="assets/bathroom-room/plan.svg" target="_blank" rel="noopener">Полный размер ↗</a></figcaption>
+    </figure>
+
+    <figure id="view-vanity" class="room-view">
+      <div class="drawing-viewport"><img src="assets/bathroom-room/wall-vanity.svg" width="1000" height="1060" loading="lazy" alt="Развёртка стены с тумбой: ширина 175, столешница на высоте 87, зеркало диаметром 100 и два бра с центрами на высоте 165. Боковая стенка короба справа."></div>
+      <figcaption><div><strong>Стена с тумбой</strong><p>Смотрим от душевой. Тумба между стенами, короб справа. Размеры её ящиков и внутренних ниш также сохранены в <a href="bathroom-preview.html">отдельном проекте тумбы</a>.</p></div><a href="assets/bathroom-room/wall-vanity.svg" target="_blank" rel="noopener">Полный размер ↗</a></figcaption>
+    </figure>
+
+    <figure id="view-boxing" class="room-view">
+      <div class="drawing-viewport"><img src="assets/bathroom-room/wall-boxing.svg" width="1000" height="1060" loading="lazy" alt="Развёртка стены напротив входа: тумба слева, унитаз со встроенным шкафом в середине, колонна и трап справа в душевой. Короб одной глубины 25, длина 164, душевая 94."></div>
+      <figcaption><div><strong>Короб, шкаф и душевая колонна</strong><p>Смотрим от входа: слева тумба, справа душ. Короб заканчивается у душевой. Ниша шкафа предложена над инсталляцией, вытяжка — на стенке короба у тумбы.</p></div><a href="assets/bathroom-room/wall-boxing.svg" target="_blank" rel="noopener">Полный размер ↗</a></figcaption>
+    </figure>
+
+    <figure id="view-entrance" class="room-view">
+      <div class="drawing-viewport"><img src="assets/bathroom-room/wall-entrance.svg" width="1000" height="1060" loading="lazy" alt="Развёртка стены с дверью: от дальней стены до проёма 103, дверь шириной 82, до стены с тумбой 73. Глубина тумбы 60, остаток до проёма 13."></div>
+      <figcaption><div><strong>Входная стена</strong><p>Смотрим от короба к двери. 103 см относятся к началу проёма. Душевая глубиной 94 см заканчивается на 9 см раньше. Высота двери пока не задана.</p></div><a href="assets/bathroom-room/wall-entrance.svg" target="_blank" rel="noopener">Полный размер ↗</a></figcaption>
+    </figure>
+
+    <figure id="view-shower" class="room-view">
+      <div class="drawing-viewport"><img src="assets/bathroom-room/wall-shower.svg" width="1000" height="1060" loading="lazy" alt="Фронтальная схема душевой: слева торец короба 25, далее стекло шириной 100 и высотой 200, справа открытый проход 75. До потолка над стеклом 60."></div>
+      <figcaption><div><strong>Душевая спереди</strong><p>Смотрим от тумбы. Показаны стекло и торец короба; колонна находится на левой боковой стене, её размещение видно на развёртке «Короб и душ».</p></div><a href="assets/bathroom-room/wall-shower.svg" target="_blank" rel="noopener">Полный размер ↗</a></figcaption>
+    </figure>
+
+    <figure id="view-cabinet" class="room-view">
+      <div class="drawing-viewport"><img src="assets/bathroom-room/cabinet.svg" width="1000" height="1060" loading="lazy" alt="Наполнение шкафа над унитазом. Ниша 70 на 120, от высоты 130 до 250, до потолка 10. Четыре ячейки высотой 32, 26, 26, 26. Полезная глубина 20 — цель для проверки по месту."></div>
+      <figcaption><div><strong>Наполнение шкафа над инсталляцией</strong><p>Нижняя ячейка для флаконов, выше — салфетки, бумага и запас. Две дверцы с петлями по внешним бокам, ручки около 145 см. Ограничение открытия примерно до 90° защищает стекло душевой.</p></div><a href="assets/bathroom-room/cabinet.svg" target="_blank" rel="noopener">Полный размер ↗</a></figcaption>
+    </figure>
+
+    <section class="design-notes" aria-labelledby="decisions-title">
+      <h2 id="decisions-title">Размеры и размещение</h2>
+      <dl>
+        <div><dt>Геометрия комнаты</dt><dd>Ширина 200 см, общая длина около 258 см: душевая 94 + сухая часть 164. До начала двери 103 см, проём 82 см. Площадь с учётом короба: 2,00 × 2,58 − 0,25 × 1,64 = 4,75 м².</dd></div>
+        <div><dt>Единый короб</dt><dd>Одна глубина 25 см по плану, без ступенек от стены у тумбы до душевой. В душевой он заканчивается: стена душа утоплена на 25 см относительно его фасада. Шкаф над инсталляцией встроен внутрь, фасады заподлицо.</dd></div>
+        <div><dt>Ниша под шкаф</dt><dd>Предложение: 70 × 120 см, низ 130, верх 250, до потолка 10. Две дверцы примерно по 35 см, ручки на 145. Три переставные полки дают четыре ячейки: 32 / 26 / 26 / 26 см в свету. Цель по полезной глубине — 20 см, для этого нужна свободная ниша глубиной не менее 23,1 см при принятой конструкции.</dd></div>
+        <div><dt>Доступ и двери шкафа</dt><dd>Нижний уровень хранения около 132 см; следующий — 166 см. Верхний запас на уровнях 194 и 222 см потребует устойчивой ступени. От края ниши до стекла на плане 12 см: нужен ограничитель открытия примерно до 90°, конкретные петли и фасады проверяются вместе.</dd></div>
+        <div><dt>Тумба</dt><dd>Пять верхних ящиков и четыре нижние дверцы. Закрытый цоколь с местом для ног и двумя решётками слева; кошачий отсек скрыт за фасадами. Светлая столешница, фасады — тёмный орех.</dd></div>
+        <div><dt>Душ и отделка</dt><dd>Ровный пол без поддона и порога. Колонна на стене со стороны унитаза, трап 90 см параллельно этой стене. Стекло 100 × 200 см, проход справа предварительно 75 см: 200 − 25 − 100. На стенах и полу — Concept Light 60 × 120 см. Потолок белый, без светильников.</dd></div>
+      </dl>
+      <p class="render-note">Схемы выполнены в ортогональных проекциях. Высота дверного проёма и монтажные отметки сантехники пока не заданы; её контуры условные. Ниша шкафа 70 × 120 см и ось вытяжки около 235 см — предложения для замера. Для трапа 90 см вдоль стены 94 см нужно проверить полный габарит корпуса и фланцев выбранного исполнения.</p>
+    </section>
+
+    <details class="specification">
+      <summary>Выбранные изделия и материалы</summary>
+      <dl>
+        <div><dt>Унитаз и инсталляция</dt><dd><a href="https://www.roca.bg/produkti/inwash-portselanova-smart-okachena-toaletna-chinija-803150..1" target="_blank" rel="noopener">Roca In-Wash Ona A803150S01</a>, Duplo S Smart A8900A8020. Кнопка PS2 A890223307, белая матовая.</dd></div>
+        <div><dt>Душевая система</dt><dd>GROHE Euphoria System 310, 26075DC0 — выбранная пользователем модель.</dd></div>
+        <div><dt>Раковина и смеситель</dt><dd><a href="https://www.roca.bg/produkti/umivalnik-za-vgrazhdane-pod-plot-3270YF..0?sku=A3270YF000" target="_blank" rel="noopener">Roca The Gap 60 A3270YF000</a>, под столешницу; GROHE Essence S 24172DC1, за чашей.</dd></div>
+        <div><dt>Стекло</dt><dd>Обычное прозрачное, ширина 100 см, высота 200 см по последнему уточнению пользователя. Начинается у торца короба, вход справа.</dd></div>
+        <div><dt>Линейный трап</dt><dd><a href="https://rosco.bg/product/lineen-sifon-za-vgrajdane-na-plochka-tece-linus-tile/" target="_blank" rel="noopener">TECE Linus Tile</a>, 90 см, под плитку.</dd></div>
+        <div><dt>Зеркало</dt><dd><a href="https://mexen.bg/25726-mexen-loft-krglo-ogledalo-za-bana-100-sm-ramka-inoks-9850-100-100-000-10-5905315069429.html" target="_blank" rel="noopener">Mexen Loft Ø100 см</a>, тонкая рамка inox, без подсветки.</dd></div>
+        <div><dt>Бра</dt><dd><a href="https://kavehome.com/en/en/p/bamila-wall-lamp-in-smoked-glass-and-black-metal-o15cm" target="_blank" rel="noopener">Kave Home Bamila Ø15 см</a>, стекло и чёрное основание, по обе стороны зеркала.</dd></div>
+        <div><dt>Вытяжка</dt><dd><a href="https://praktiker.bg/bg/Ventilatori-za-banya/VENTILATOR-ZA-BANYa-PAX-NORTE/p/464400" target="_blank" rel="noopener">PAX Norte</a>, на боковой стенке короба у тумбы.</dd></div>
+        <div><dt>Плитка</dt><dd><a href="https://tedceramica.bg/product/60120-kalibrovan-granitogres-prissmacer-gv-lab-concept-light-144m2" target="_blank" rel="noopener">Prissmacer GV Lab Concept Light 60 × 120 см</a>, матовая светлая фактура. Рисунок и раскладка показаны приблизительно.</dd></div>
+      </dl>
+    </details>
+  </main>
+</body>
+</html>
