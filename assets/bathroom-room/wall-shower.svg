@@ -6,26 +6,26 @@
 <text x="45" y="39" font-size="12" letter-spacing="2" class="muted">ВАННАЯ · РАЗВЁРТКА СТЕНЫ</text>
 <text x="45" y="77" font-size="27">Душевая — вид со стороны тумбы</text>
 <text x="45" y="106" class="small muted">Смотрим к дальней стене душевой. Короб и колонна слева, открытый вход в душ справа.</text>
-<rect x="260" y="165" width="480" height="624" rx="0" fill="#faf9f5" stroke="#879389" stroke-width="1.5" class=""/>
-<rect x="260" y="165" width="480" height="624" rx="0" fill="#eef3ef" stroke="#879389" stroke-width="1.5" class=""/>
-<rect x="260" y="165" width="60" height="624" rx="0" fill="url(#hatch)" stroke="#879389" stroke-width="1.5" class=""/>
-<rect x="320" y="309" width="240" height="480" rx="0" fill="#e6f1f2" stroke="#4388a1" stroke-width="2" class=""/>
-<path d="M375.2 669L468.8 405M411.2 673.8L504.8 409.8" stroke="#c3dee2" fill="none"/>
-<text x="440" y="481.8" font-size="21" class="blue" text-anchor="middle">Стекло</text>
-<text x="440" y="513" font-size="17" class="blue" text-anchor="middle">100 × 200</text>
-<text x="651.2" y="477" font-size="21" class="" text-anchor="middle">Вход</text>
-<text x="651.2" y="510.6" font-size="19" class="" text-anchor="middle">≈ 75</text>
-<text x="500" y="220.2" font-size="16" class="" text-anchor="middle">Потолок без светильников</text>
-<text x="442.4" y="268.2" font-size="14" class="muted" text-anchor="middle">60 до потолка</text>
-<path d="M260 136V150M320 136V150M260 143H320" class="dim"/><text x="290" y="133" class="dimtext" text-anchor="middle">25</text>
-<path d="M320 136V150M560 136V150M320 143H560" class="dim"/><text x="440" y="133" class="dimtext" text-anchor="middle">100 · стекло</text>
-<path d="M560 136V150M740 136V150M560 143H740" class="dim"/><text x="650" y="133" class="dimtext" text-anchor="middle">75 · проход</text>
-<path d="M765 789H779M765 309H779M772 789V309" class="dim"/><text x="762" y="549" class="dimtext" text-anchor="middle" transform="rotate(-90 762 549)">200 высота стекла</text>
-<path d="M187 789H201M187 165H201M194 789V165" class="dim"/><text x="184" y="477" class="dimtext" text-anchor="middle" transform="rotate(-90 184 477)">260 от чистого пола</text>
-<path d="M260 831V845M740 831V845M260 838H740" class="dim"/><text x="500" y="828" class="dimtext" text-anchor="middle">200 — ширина этой стены</text>
+<rect x="264.8" y="165" width="470.4" height="624" rx="0" fill="#faf9f5" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="264.8" y="165" width="470.4" height="624" rx="0" fill="#eef3ef" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="264.8" y="165" width="60" height="624" rx="0" fill="url(#hatch)" stroke="#879389" stroke-width="1.5" class=""/>
+<rect x="324.8" y="309" width="264" height="480" rx="0" fill="#e6f1f2" stroke="#4388a1" stroke-width="2" class=""/>
+<path d="M380 669L473.6 405M416 673.8L509.6 409.8" stroke="#c3dee2" fill="none"/>
+<text x="456.8" y="481.8" font-size="21" class="blue" text-anchor="middle">Стекло</text>
+<text x="456.8" y="513" font-size="17" class="blue" text-anchor="middle">110 × 200</text>
+<text x="662" y="477" font-size="21" class="" text-anchor="middle">Вход</text>
+<text x="662" y="510.6" font-size="19" class="" text-anchor="middle">61</text>
+<text x="504.8" y="220.2" font-size="16" class="" text-anchor="middle">Потолок без светильников</text>
+<text x="447.2" y="268.2" font-size="14" class="muted" text-anchor="middle">60 до потолка</text>
+<path d="M264.8 136V150M324.8 136V150M264.8 143H324.8" class="dim"/><text x="294.8" y="133" class="dimtext" text-anchor="middle">25</text>
+<path d="M324.8 136V150M588.8 136V150M324.8 143H588.8" class="dim"/><text x="456.8" y="133" class="dimtext" text-anchor="middle">110 · стекло</text>
+<path d="M588.8 136V150M735.2 136V150M588.8 143H735.2" class="dim"/><text x="662" y="133" class="dimtext" text-anchor="middle">61 · проход</text>
+<path d="M760.2 789H774.2M760.2 309H774.2M767.2 789V309" class="dim"/><text x="757.2" y="549" class="dimtext" text-anchor="middle" transform="rotate(-90 757.2 549)">200 высота стекла</text>
+<path d="M191.8 789H205.8M191.8 165H205.8M198.8 789V165" class="dim"/><text x="188.8" y="477" class="dimtext" text-anchor="middle" transform="rotate(-90 188.8 477)">260 от чистого пола</text>
+<path d="M264.8 831V845M735.2 831V845M264.8 838H735.2" class="dim"/><text x="500" y="828" class="dimtext" text-anchor="middle">196 — ширина этой стены</text>
 <path d="M45 878H955" stroke="#d8dcd5"/>
-<text x="45" y="909" font-size="14" class="muted">Здесь показана проекция стекла и торца короба на дальнюю стену. Пол душа глубиной 94.</text>
+<text x="45" y="909" font-size="14" class="muted">Здесь показана проекция стекла и торца короба на дальнюю стену. Пол душа глубиной 90.</text>
 <text x="45" y="936" font-size="14" class="muted">Колонна не на дальней стене: она на левой боковой стене за торцом короба. См. развёртку короба.</text>
 <text x="45" y="963" font-size="14" class="muted">Трап 90 расположен параллельно левой стене с колонной; его направление видно на плане сверху.</text>
-<text x="45" y="990" font-size="14" class="muted">Проход: 200 − 25 − 100 = 75. Стекло высотой 200, до потолка 260 − 200 = 60.</text>
+<text x="45" y="990" font-size="14" class="muted">Проход: 196 − 25 − 110 = 61. Стекло высотой 200, до потолка 260 − 200 = 60.</text>
 <text x="45" y="1040" font-size="12" class="muted">Сантехника обозначена условно. Размеры в см; монтажные уровни оборудования уточняются по изделиям.</text></svg>

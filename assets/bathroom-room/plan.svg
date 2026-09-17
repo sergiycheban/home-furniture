@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1050" viewBox="0 0 1000 1050" role="img" aria-labelledby="title desc">
 <title id="title">План ванной сверху — душевая справа при входе, тумба слева</title>
-<desc id="desc">Душевая в верхней части плана, тумба в нижней, дверь справа, единый короб глубиной 25 сантиметров слева. Душевая колонна на левой стене внутри душа, трап параллельно этой стене. Стекло шириной 100 и высотой 200 сантиметров от торца короба, проход справа около 75 сантиметров.</desc>
+<desc id="desc">Комната 196 на 254 сантиметра. Душевая глубиной 90 в верхней части плана, тумба шириной 171 в нижней, дверь справа, единый короб глубиной 25 сантиметров слева. Унитаз шириной 39 расположен между стеклом и фасадом тумбы: 26 сантиметров до стекла и 39 сантиметров до тумбы. Стекло шириной 110 и высотой 200 сантиметров, проход справа 61 сантиметр.</desc>
 <defs>
   <pattern id="boxing" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="9" height="9" fill="#ece5da"/><path d="M0 0V9" stroke="#d4c9b9" stroke-width="2"/></pattern>
   <pattern id="tile" width="300" height="150" patternUnits="userSpaceOnUse"><rect width="300" height="150" fill="#faf8f3"/><path d="M0 150V0H300" fill="none" stroke="#ebe7de" stroke-width="1"/></pattern>
@@ -12,85 +12,89 @@
 <text x="50" y="79" font-size="27">Душевая, тумба и единый короб</text>
 <text x="50" y="106" class="small muted">Размеры в см. Общий контур — по приблизительному плану комнаты.</text>
 
-<!-- Scale: 2.5 px per cm. Internal room origin (220,180), width 200, length about 258 = 94 + 164. Door starts 103 from north wall. -->
+<!-- Scale: 2.5 px per cm. Internal room origin (220,180), width 196, length 254 = 90 + 164. Door starts 99 from north wall. -->
 <g transform="translate(220 180)">
-  <rect x="-15" y="-15" width="530" height="675" fill="#dedfd9"/>
-  <rect width="500" height="645" fill="url(#tile)"/>
-  <rect width="500" height="235" fill="#e9f0ed" fill-opacity=".8"/>
-  <!-- One uninterrupted boxing: x=0..25, y=94..258. -->
-  <rect x="0" y="235" width="62.5" height="410" fill="url(#boxing)" stroke="#887b67" stroke-width="1.5"/>
-  <path d="M62.5 235V645" stroke="#796d5c" stroke-width="3"/>
+  <rect x="-15" y="-15" width="520" height="665" fill="#dedfd9"/>
+  <rect width="490" height="635" fill="url(#tile)"/>
+  <rect width="490" height="225" fill="#e9f0ed" fill-opacity=".8"/>
+  <!-- One uninterrupted boxing: x=0..25, y=90..254. -->
+  <rect x="0" y="225" width="62.5" height="410" fill="url(#boxing)" stroke="#887b67" stroke-width="1.5"/>
+  <path d="M62.5 225V635" stroke="#796d5c" stroke-width="3"/>
   <!-- Overhead niche projection: 70 along the wall x full 25 boxing depth. No internal cabinet dimensions are assigned. -->
-  <rect id="cabinet-niche" x="0" y="265" width="62.5" height="175" fill="#8a6545" fill-opacity=".18" stroke="#6d4a32" stroke-width="1.5" stroke-dasharray="5 4"/>
-  <!-- Undermount basin and 175 x 60 vanity at the opposite wall. -->
-  <rect x="62.5" y="495" width="437.5" height="150" fill="#f1ede5" stroke="#786c5c" stroke-width="2"/>
-  <path d="M62.5 495H500" stroke="#5a3d2a" stroke-width="9"/>
-  <rect x="206.25" y="525" width="150" height="100" rx="15" fill="#fff" stroke="#9b9c93" stroke-width="1.5"/>
-  <rect x="212.5" y="531.25" width="137.5" height="87.5" rx="16" fill="#edf0ec" stroke="#bbc0b8"/>
-  <circle cx="281.25" cy="575" r="4" fill="#b8bcb4"/>
-  <circle cx="281.25" cy="635" r="6" fill="#969e95"/><path d="M281.25 635V611" stroke="#969e95" stroke-width="5"/>
-  <text x="281" y="468.5" text-anchor="middle" class="tag">ТУМБА · 175 × 60</text>
+  <rect id="cabinet-niche" x="0" y="251.25" width="62.5" height="175" fill="#8a6545" fill-opacity=".18" stroke="#6d4a32" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <!-- Undermount basin and 171 x 60 vanity at the opposite wall. -->
+  <rect x="62.5" y="485" width="427.5" height="150" fill="#f1ede5" stroke="#786c5c" stroke-width="2"/>
+  <path d="M62.5 485H490" stroke="#5a3d2a" stroke-width="9"/>
+  <rect x="201.25" y="515" width="150" height="100" rx="15" fill="#fff" stroke="#9b9c93" stroke-width="1.5"/>
+  <rect x="207.5" y="521.25" width="137.5" height="87.5" rx="16" fill="#edf0ec" stroke="#bbc0b8"/>
+  <circle cx="276.25" cy="565" r="4" fill="#b8bcb4"/>
+  <circle cx="276.25" cy="625" r="6" fill="#969e95"/><path d="M276.25 625V601" stroke="#969e95" stroke-width="5"/>
+  <text x="276.25" y="458.5" text-anchor="middle" class="tag">ТУМБА · 171 × 60</text>
   <!-- WC: 53 cm projection, approx 39 cm across, at west boxing. -->
-  <path d="M62.5 303.75H134C215 303.75 215 401.25 134 401.25H62.5Z" fill="#fff" stroke="#8e9990" stroke-width="2"/>
-  <path d="M91 315.5H136C198 315.5 198 389.5 136 389.5H91Z" fill="#f1f3ef" stroke="#bac1b8" stroke-width="1.5"/>
-  <text x="220" y="344.5" class="label">Унитаз</text>
-  <text x="220" y="367.5" class="small muted">Ниша 70 × 120 (Ш × В)</text>
-  <!-- Glass from the end of the boxing, 100 cm wide, 200 cm tall. -->
-  <path d="M62.5 235H312.5" stroke="#fff" stroke-width="10"/>
-  <path d="M62.5 235H312.5" stroke="#4388a1" stroke-width="5"/>
-  <circle cx="62.5" cy="235" r="5" fill="#4388a1"/>
-  <text x="191" y="210.5" text-anchor="middle" class="label blue">Стекло 100 · высота 200</text>
-  <path d="M327.5 235H485M327.5 227V243M485 227V243" class="dim"/>
-  <text x="406" y="219.5" text-anchor="middle" class="small">проход ≈ 75</text>
+  <path d="M62.5 290H130C195 290 195 387.5 130 387.5H62.5Z" fill="#fff" stroke="#8e9990" stroke-width="2"/>
+  <path d="M91 301.75H132C183 301.75 183 375.75 132 375.75H91Z" fill="#f1f3ef" stroke="#bac1b8" stroke-width="1.5"/>
+  <text x="210" y="330.75" class="label">Унитаз · 39 × 53</text>
+  <text x="210" y="353.75" class="small muted">26 до стекла · 39 до тумбы</text>
+  <path d="M205 225H220M205 290H220M213 225V290" class="dim"/>
+  <text x="226" y="265" class="small">26</text>
+  <path d="M205 387.5H220M205 485H220M213 387.5V485" class="dim"/>
+  <text x="226" y="405" class="small">39</text>
+  <!-- Glass from the end of the boxing, 110 cm wide, 200 cm tall. -->
+  <path d="M62.5 225H337.5" stroke="#fff" stroke-width="10"/>
+  <path d="M62.5 225H337.5" stroke="#4388a1" stroke-width="5"/>
+  <circle cx="62.5" cy="225" r="5" fill="#4388a1"/>
+  <text x="200" y="200.5" text-anchor="middle" class="label blue">Стекло 110 · высота 200</text>
+  <path d="M337.5 225H490M337.5 217V233M490 217V233" class="dim"/>
+  <text x="413.75" y="209.5" text-anchor="middle" class="small">проход 61</text>
   <!-- Shower column ON WEST WALL, same side as WC. -->
-  <path d="M0 117.5H80" stroke="#738277" stroke-width="5"/>
-  <rect x="-2" y="92.5" width="10" height="50" rx="3" fill="#738277"/>
-  <circle cx="80" cy="117.5" r="38.75" fill="#f8faf7" fill-opacity=".8" stroke="#738277" stroke-width="2" stroke-dasharray="4 3"/>
-  <circle cx="80" cy="117.5" r="4" fill="#738277"/>
+  <path d="M0 112.5H80" stroke="#738277" stroke-width="5"/>
+  <rect x="-2" y="87.5" width="10" height="50" rx="3" fill="#738277"/>
+  <circle cx="80" cy="112.5" r="38.75" fill="#f8faf7" fill-opacity=".8" stroke="#738277" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="80" cy="112.5" r="4" fill="#738277"/>
   <!-- 90 cm drain parallel to WEST wall, provisional 10 cm from it. -->
-  <rect x="21" y="5" width="8" height="225" fill="#bbc5bc" stroke="#52695b" stroke-width="1.5"/>
-  <text x="300" y="78" text-anchor="middle" font-size="23">ДУШЕВАЯ</text>
-  <text x="300" y="104" text-anchor="middle" class="label">≈ 200 × 94</text>
-  <text x="300" y="132" text-anchor="middle" class="small muted">Пол без поддона и порога</text>
+  <rect x="21" y="0" width="8" height="225" fill="#bbc5bc" stroke="#52695b" stroke-width="1.5"/>
+  <text x="295" y="73" text-anchor="middle" font-size="23">ДУШЕВАЯ</text>
+  <text x="295" y="99" text-anchor="middle" class="label">196 × 90</text>
+  <text x="295" y="127" text-anchor="middle" class="small muted">Пол без поддона и порога</text>
   <!-- Entry on east side: approximate position, 82 cm opening. -->
-  <rect x="498" y="257.5" width="19" height="205" fill="#fff"/>
-  <path d="M500 257.5V462.5" stroke="#b6bcb5" stroke-dasharray="5 4"/>
-  <path d="M500 257.5 355 402.5" stroke="#8f9990" stroke-width="3"/>
-  <path d="M500 462.5A205 205 0 0 1 355 402.5" fill="none" stroke="#b6bcb5" stroke-width="1.5"/>
-  <path d="M622 427.5H442" fill="none" stroke="#365f47" stroke-width="2" marker-end="url(#arrow)"/>
-  <text x="563" y="402.5" text-anchor="middle" class="tag">ВХОД</text>
-  <text x="563" y="452.5" text-anchor="middle" class="small">дверь ≈ 82</text>
+  <rect x="488" y="247.5" width="19" height="205" fill="#fff"/>
+  <path d="M490 247.5V452.5" stroke="#b6bcb5" stroke-dasharray="5 4"/>
+  <path d="M490 247.5 345 392.5" stroke="#8f9990" stroke-width="3"/>
+  <path d="M490 452.5A205 205 0 0 1 345 392.5" fill="none" stroke="#b6bcb5" stroke-width="1.5"/>
+  <path d="M612 417.5H432" fill="none" stroke="#365f47" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="553" y="392.5" text-anchor="middle" class="tag">ВХОД</text>
+  <text x="553" y="442.5" text-anchor="middle" class="small">дверь ≈ 82</text>
   <!-- High side-wall fan, marked as an overhead symbol. -->
-  <circle cx="62.5" cy="565" r="10" fill="#fff" stroke="#89998c" stroke-dasharray="3 2"/>
-  <path d="M55.5 558 69.5 572M69.5 558 55.5 572" stroke="#89998c"/>
+  <circle cx="62.5" cy="555" r="10" fill="#fff" stroke="#89998c" stroke-dasharray="3 2"/>
+  <path d="M55.5 548 69.5 562M69.5 548 55.5 562" stroke="#89998c"/>
 </g>
 
 <!-- Overall dimensions and clear wall offsets. -->
-<path d="M220 165V137M720 165V137M220 145H720M216 150 224 140M716 150 724 140" class="dim"/>
-<text x="470" y="136" text-anchor="middle" class="dimtext">≈ 200</text>
-<path d="M205 180H170M205 415H170M178 180V415M173 176 183 184M173 411 183 419" class="dim"/>
-<text x="161" y="297.5" text-anchor="middle" class="dimtext" transform="rotate(-90 161 297.5)">≈ 94</text>
-<path d="M205 415H170M205 825H170M178 415V825M173 821 183 829" class="dim"/>
-<text x="161" y="620" text-anchor="middle" class="dimtext" transform="rotate(-90 161 620)">≈ 164</text>
-<path d="M220 440V425M282.5 440V425M220 430H282.5" class="dim"/>
-<text x="251.25" y="425" text-anchor="middle" class="small">25</text>
-<path d="M213 445H193M213 620H193M200 445V620" class="dim"/>
-<text x="193" y="532.5" text-anchor="middle" class="small" transform="rotate(-90 193 532.5)">70 · вдоль стены</text>
-<path d="M282.5 842.5V868.5M720 842.5V868.5M282.5 858.5H720M278.5 863.5 286.5 853.5M716 863.5 724 853.5" class="dim"/>
-<text x="501" y="884.5" text-anchor="middle" class="dimtext">175 между коробом и стеной</text>
-<path d="M739 180H955M739 437.5H955M947 180V437.5M942 176 952 184M942 433.5 952 441.5" class="dim"/>
-<text x="972" y="309" text-anchor="middle" class="small muted" transform="rotate(-90 972 309)">103 до начала дверного проёма</text>
+<path d="M220 165V137M710 165V137M220 145H710M216 150 224 140M706 150 714 140" class="dim"/>
+<text x="465" y="136" text-anchor="middle" class="dimtext">196</text>
+<path d="M205 180H170M205 405H170M178 180V405M173 176 183 184M173 401 183 409" class="dim"/>
+<text x="161" y="292.5" text-anchor="middle" class="dimtext" transform="rotate(-90 161 292.5)">90</text>
+<path d="M205 405H170M205 815H170M178 405V815M173 811 183 819" class="dim"/>
+<text x="161" y="610" text-anchor="middle" class="dimtext" transform="rotate(-90 161 610)">164</text>
+<path d="M220 430V415M282.5 430V415M220 420H282.5" class="dim"/>
+<text x="251.25" y="415" text-anchor="middle" class="small">25</text>
+<path d="M213 431.25H193M213 606.25H193M200 431.25V606.25" class="dim"/>
+<text x="193" y="518.75" text-anchor="middle" class="small" transform="rotate(-90 193 518.75)">70 · вдоль стены</text>
+<path d="M282.5 832.5V858.5M710 832.5V858.5M282.5 848.5H710M278.5 853.5 286.5 843.5M706 853.5 714 843.5" class="dim"/>
+<text x="496.25" y="874.5" text-anchor="middle" class="dimtext">171 между коробом и стеной</text>
+<path d="M729 180H955M729 427.5H955M947 180V427.5M942 176 952 184M942 423.5 952 431.5" class="dim"/>
+<text x="972" y="304" text-anchor="middle" class="small muted" transform="rotate(-90 972 304)">99 до начала дверного проёма</text>
 
 <!-- External labels do not alter the straight box footprint. -->
 <text x="45" y="518" class="tag">КОРОБ</text><text x="45" y="541" class="small">25 см</text>
 <text x="45" y="580" class="small muted">Одна прямая</text><text x="45" y="600" class="small muted">по всей длине</text>
-<path d="M105 745H271" stroke="#89998c" fill="none"/>
-<text x="45" y="721.5" class="small">Вытяжка высоко</text><text x="45" y="768.5" class="small muted">на стенке короба</text>
+<path d="M105 735H271" stroke="#89998c" fill="none"/>
+<text x="45" y="711.5" class="small">Вытяжка высоко</text><text x="45" y="758.5" class="small muted">на стенке короба</text>
 <text x="750" y="215" class="small">Колонна — слева,</text><text x="750" y="237" class="small">со стороны унитаза.</text>
 <text x="750" y="274" class="small">Трап 90 см — вдоль</text><text x="750" y="296" class="small">той же левой стены.</text>
 <text x="750" y="341" class="small muted">Душевая уходит</text><text x="750" y="363" class="small muted">за торец короба:</text><text x="750" y="385" class="small muted">стена душа на 25 см</text><text x="750" y="407" class="small muted">глубже его фасада.</text>
 <path d="M50 942H950" stroke="#d8dcd5"/>
 <text x="50" y="972" font-size="18">Если стоять во входе: справа душ, слева тумба, напротив унитаз.</text>
 <text x="50" y="1000" class="small muted">Пунктир — ниша 70 вдоль стены × 25 в глубину короба; высота 120. Наполнение пока не задано.</text>
-<text x="50" y="1024" class="tiny muted">94 — глубина душевой; 103 — до дверного проёма. Трап 90 см: полный монтажный габарит проверить перед заказом.</text>
+<text x="50" y="1024" class="tiny muted">90 — глубина душевой; 99 — до дверного проёма. Номинальный трап 90 занимает всю стену: полный монтажный габарит проверить.</text>
 </svg>
